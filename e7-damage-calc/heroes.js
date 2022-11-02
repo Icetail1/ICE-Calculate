@@ -6980,7 +6980,7 @@ const heroes = {
       }
     },
   Astromancer Elena	: {
-    name: 'Astromancer Elena	',
+    name: 'Astromancer Elena',
     element: element.light,
     classType: classType.ranger,
     baseAtk: 1079,
