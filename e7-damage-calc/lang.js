@@ -1376,6 +1376,7 @@ const i18n = {
       zealot_carmainerose: '传道者卡麦萝兹',
       zeno: '杰诺',
       zerato: '杰拉图',
+      Astromancer_Elena: '星辰的神谕艾蕾娜',
     },
     nicknames: {
       achates: '火奶',
