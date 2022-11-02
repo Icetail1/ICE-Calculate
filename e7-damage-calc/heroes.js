@@ -6980,6 +6980,39 @@ const heroes = {
       }
     }
   },
+  arunka: {
+    name: 'Arunka',
+    element: element.earth,
+    classType: classType.warrior,
+    baseAtk: 1570,
+    form: [elements.target_has_barrier],
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+        noCrit: true,
+      },
+      s1_extra: {
+        name: infoLabel('s1_extra_attack'),
+        rate: 1.3,
+        pow: 1.3,
+        enhance_from: 's1',
+        single: true,
+      },
+      s3: {
+        rate: 0.9,
+        pow: 1,
+        mult: () => 1 + elements.target_has_barrier.value() ? 1.2 : 1,
+        multTip: () => ({ target_has_barrier: 1.2 }),
+        penetrate: () => 0.7,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        single: true,
+        noCrit: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
