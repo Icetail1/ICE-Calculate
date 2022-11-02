@@ -7005,7 +7005,7 @@ const heroes = {
       s3: {
         rate: 0.9,
         pow: 1,
-        mult: () => 1 + elements.target_has_barrier.value() ? 1.2 : 1,
+        mult: () => elements.target_has_barrier.value() ? 2.2 : 1,
         multTip: () => ({ target_has_barrier: 120 }),
         penetrate: () => 0.7,
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
