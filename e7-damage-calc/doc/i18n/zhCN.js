@@ -183,7 +183,7 @@ const zhCN = {
     yuna: '尤娜',
     zeno: '杰诺',
     zerato: '杰拉图',
-    Astromancer_Elena: '星辰的神谕艾蕾娜',
+    astromancer_Elena: '星辰的神谕艾蕾娜',
   },
   artifacts: {
     no_proc: '无神器',
