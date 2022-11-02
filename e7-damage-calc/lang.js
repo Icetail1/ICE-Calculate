@@ -83,6 +83,7 @@ const i18n = {
         target_debuff: 'Target Debuff: {v}%',
         target_has_buff: 'Target has Buff: {v}%',
         target_has_debuff: 'Target has Debuff: {v}%',
+        target_has_barrier: 'Target has Barrier: {v}%',
         target_has_no_buff: 'Target has no Buff: {v}%',
         target_lost_hp_pc: '{v}% Target lost HP%',
         target_magic_nail: 'Magic Nail: {v}%',
