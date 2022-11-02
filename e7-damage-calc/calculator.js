@@ -134,6 +134,11 @@ const getGlobalDamageMult = (hero, skill) => {
     mult += elem.checked ? Number(elem.value)-1 : 0.0;
   }
 
+  for (let checkboxId of ['jiliu-set']) {
+    const elem = document.getElementById(checkboxId);
+    mult += elem.checked ? Number(elem.value)-1 : 0.0;
+  }
+  
   const defPresetSelector = document.getElementById('def-preset');
   const selected = defPresetSelector.options[defPresetSelector.selectedIndex];
   if (hero.element === selected.dataset.elemExtraDmg) {
