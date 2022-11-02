@@ -340,6 +340,6 @@ const zhCN = {
     s1_soulburn: '1技能 灵魂燃烧',
     s2_soulburn: '2技能 灵魂燃烧',
     s3_soulburn: '3技能 灵魂燃烧',
-    target_has_barrier: '目标有Debuff: {v}%',
+    target_has_barrier: '目标有防护罩: {v}%',
   }
 };
