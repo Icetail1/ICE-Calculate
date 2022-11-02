@@ -6979,7 +6979,7 @@ const heroes = {
         aoe: true,
       }
     },
-  Astromancer_Elena: {
+  astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
     classType: classType.ranger,
