@@ -1721,6 +1721,7 @@ const i18n = {
         target_bleed: '目标流血: {v}%',
         target_debuff: '目标Debuff: {v}%',
         target_has_buff: '目标有Buff: {v}%',
+        target_has_barrier: '目标有防护罩: {v}%',
         target_has_debuff: '目标有Debuff: {v}%',
         target_has_no_buff: '目标没有Buff: {v}%',
         target_lost_hp_pc: '{v}% 目标失去生命值百分比',
