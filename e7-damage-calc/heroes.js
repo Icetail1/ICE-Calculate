@@ -6978,7 +6978,8 @@ const heroes = {
         enhance: [0.05, 0.05, 0, 0, 0, 0.1, 0.1],
         aoe: true,
       }
-    },
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
