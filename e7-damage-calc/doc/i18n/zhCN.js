@@ -329,7 +329,7 @@ const zhCN = {
     exclusive_equipment_1: '专属装备 #1',
     exclusive_equipment_2: '专属装备 #2',
     exclusive_equipment_3: '专属装备 #3',
-    Astromancer Elena: '星辰的神谕艾蕾娜',
+    Astromancer_Elena: '星辰的神谕艾蕾娜',
   },
   skills: {
     non_applicable: '无',
