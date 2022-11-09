@@ -3017,7 +3017,7 @@ const heroes = {
 
           return Math.min(Math.max(0, penDiff), 1);
         },
-        penetrateTip: () => ({ caster_vs_target_hp_diff: 0.091 })),
+        penetrateTip: () => ({ caster_vs_target_hp_diff: 0.091 }),
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         single: true,
         noCrit: true,
