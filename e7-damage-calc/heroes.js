@@ -2997,33 +2997,27 @@ const heroes = {
     baseAtk: 1510,
     form: [elements.caster_has_buff, elements.caster_max_hp, elements.target_max_hp],
     barrier: (hero) => hero.getAtk()*0.45,
-    innateAtkUp: () => {
-      let boost = 0.35;
-      for (let i = 0; i < Number(document.getElementById(`molagora-s2`).value); i++) {
-        boost += heroes.hwayoung.skills.s2.enhance[i];
-      }
-      return boost;
-    },
     skills: {
       s1: {
-        rate: 0.6,
+        rate: 0.8,
         pow: 1,
-        afterMath: () => elements.caster_has_buff.value() ? ({ atkPercent: 0.5, penetrate: 0.7 }) : null,
+        afterMath: () => elements.caster_has_buff.value() ? ({ atkPercent: 0.25}) : null,
         enhance: [0.05, 0, 0.1, 0, 0.15],
         single: true,
         noCrit: true,
       },
-      s2: {
-        enhance: [0.02, 0.03, 0.03, 0.03, 0.04],
-      },
       s3: {
-        rate: 0.55,
+        rate: 1.25,
         pow: 1,
-        mult: () => elements.caster_max_hp.value() < elements.target_max_hp.value()
-            ? 1 + Math.min((elements.target_max_hp.value() - elements.caster_max_hp.value())*0.00015, 1)
-            : 1,
-        multTip: () => ({ caster_vs_target_hp_diff: 15 }),
-        penetrate: () => 1,
+        penetrate: () => {
+          const targetHp = elements.target_max_hp.value();
+          const casterHp = elements.caster_max_hp.value();
+
+          const penDiff = ( targetHp - casterHp  ) * 0.000091;
+
+          return Math.min(Math.max(0, penDiff), 1);
+        },
+        penetrateTip: () => ({caster_target_atk_diff: 0.035}),
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         single: true,
         noCrit: true,
@@ -6055,11 +6049,11 @@ const heroes = {
           const targetAtk = elements.target_attack.value();
           const casterAtk = currentHero.getAtk('s3');
 
-          const penDiff = (casterAtk - targetAtk) * 0.0003;
+          const penDiff = (casterAtk - targetAtk) * 0.00035;
 
           return Math.min(Math.max(0, penDiff) + 0.3, 1);
         },
-        penetrateTip: () => ({caster_target_atk_diff: 0.03}),
+        penetrateTip: () => ({caster_target_atk_diff: 0.035}),
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         aoe: true,
       },
