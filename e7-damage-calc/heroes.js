@@ -466,22 +466,22 @@ const heroes = {
     classType: classType.mage,
     baseAtk: 1039,
     form: [elements.caster_hp_pc, elements.caster_defense],
-    barrier: () => elements.caster_defense.value()*0.8,
+    barrier: () => elements.caster_defense.value()*1,
     info: infoLabel('aria_scaling'),
     skills: {
       s1: {
-        rate: 0.6,
+        rate: 0.7,
         pow: 1,
-        flat: () => elements.caster_defense.value()*0.7,
-        flatTip: () => ({ caster_defense: 70 }),
+        flat: () => elements.caster_defense.value()*0.85,
+        flatTip: () => ({ caster_defense: 85 }),
         critDmgBoost: () => (100-elements.caster_hp_pc.value())*0.005,
         enhance: [0.05, 0.05, 0, 0.05, 0, 0.05, 0.1],
       },
       s2: {
-        rate: 0.6,
+        rate: 0.7,
         pow: 1.3,
-        flat: () => elements.caster_defense.value()*1.15,
-        flatTip: () => ({ caster_defense: 115 }),
+        flat: () => elements.caster_defense.value()*1.4,
+        flatTip: () => ({ caster_defense: 140 }),
         critDmgBoost: () => (100-elements.caster_hp_pc.value())*0.005,
         aoe: true,
       }
@@ -700,8 +700,8 @@ const heroes = {
       s3: {
         rate: 1.3,
         pow: 1,
-        flat: () => elements.caster_max_hp.value()*0.2,
-        flatTip: () => ({ caster_max_hp: 20 }),
+        flat: () => elements.caster_max_hp.value()*0.16,
+        flatTip: () => ({ caster_max_hp: 16 }),
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         single: true,
       },
@@ -5023,8 +5023,9 @@ const heroes = {
         single: true,
       },
       s3: {
-        rate: 1.2,
+        rate: 0.85,
         pow: 0.95,
+        penetrate: () => 0.7,
         enhance: [0.05, 0.05, 0, 0.05, 0.05],
         aoe: true,
       }
@@ -6564,14 +6565,14 @@ const heroes = {
     form: [elements.caster_speed, elements.exclusive_equipment_2],
     skills: {
       s1: {
-        rate: 0.85,
+        rate: 0.9,
         pow: 0.95,
         mult: () => 1 + elements.caster_speed.value()*0.00075,
         multTip: () => ({ caster_speed: 0.075 }),
         enhance: [0.05, 0.05, 0.05, 0.1, 0.1]
       },
       s2: {
-        rate: 0.5,
+        rate: 0.7,
         pow: 1,
         enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
         aoe: true,
@@ -6580,8 +6581,8 @@ const heroes = {
         soulburn: true,
         rate: (soulburn) => soulburn ? 1.1 : 0.85,
         pow: 1,
-        mult: (soulburn) => 1 + elements.caster_speed.value()*(soulburn ? 0.0009 : 0.00075),
-        multTip: (soulburn) => ({ caster_speed: soulburn ? 0.09 : 0.075 }),
+        mult: (soulburn) => 1 + elements.caster_speed.value()*(soulburn ? 0.001125 : 0.001125),
+        multTip: (soulburn) => ({ caster_speed: soulburn ? 0.1125 : 0.1125 }),
         exEq: () => elements.exclusive_equipment_2.value() ? 0.1 : 0,
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         aoe: true,
