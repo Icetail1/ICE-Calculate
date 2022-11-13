@@ -1379,6 +1379,7 @@ const i18n = {
       zerato: '杰拉图',
       arunka: '亚露嘉',
       zio: '智武',
+      savior_adin: '光艾庭',
       astromancer_Elena: '星辰的神谕艾蕾娜',
     },
     nicknames: {
