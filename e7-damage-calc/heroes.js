@@ -7009,6 +7009,38 @@ const heroes = {
       }
     }
   },
+  zio: {
+    name: 'Zio',
+    element: element.dark,
+    classType: classType.mage,
+    baseAtk: 1255,
+    form: [elements.target_hp],
+    skills: {
+      s1: {
+        rate: 0.7,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      },
+      s1_extra: {
+        name: infoLabel('s1_extra_attack'),
+        rate: 1,
+        pow: 1,
+        enhance_from: 's1',
+        penetrate: () => 0.7,
+        single: true,
+      },
+      s3: {
+        rate: 0.2,
+        pow: 1,
+        flat: () => elements.target_hp.value()*0.1875,
+        flatTip: () => ({ target_hp:18.75}),
+        penetrate: () => 1,
+        single: true,
+        noCrit: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
