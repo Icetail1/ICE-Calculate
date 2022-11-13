@@ -7046,7 +7046,6 @@ const heroes = {
     element: element.light,
     classType: classType.thief,
     baseAtk: 1081,
-    form: [elements.target_hp],
     skills: {
       s1: {
         rate: 1,
