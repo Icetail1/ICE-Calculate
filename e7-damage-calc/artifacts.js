@@ -377,6 +377,6 @@ const artifacts = {
     name: 'Sword Of Adin',
     type: artifactDmgType.damage,
     exclusive: classType.thief,
-    value: () => 0.25
+    value: () => (document.getElementById(`elem-adv`).checked ? 0.25 : 0)
   }
 };
