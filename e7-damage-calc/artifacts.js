@@ -372,4 +372,11 @@ const artifacts = {
     type: artifactDmgType.damage,
     exclusive: classType.knight,
   },
+  sword_of_adin: {
+    id: 'sword_of_adin',
+    name: 'Sword Of Adin',
+    type: artifactDmgType.damage,
+    exclusive: classType.thief,
+    value:  => (document.getElementById(`elem-adv`).checked ? 0.25 : 0),
+  },
 };
