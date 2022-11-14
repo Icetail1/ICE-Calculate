@@ -1603,6 +1603,7 @@ const i18n = {
       violet_talisman: '紫色护身符',
       wind_rider: '乘风者',
       wings_of_light_and_shadow:'明暗双翼',
+      sword_of_adin:'循环之剑',
     },
     form: {
       allies_nb_buff: '我军Buff数量',
