@@ -378,5 +378,5 @@ const artifacts = {
     type: artifactDmgType.damage,
     exclusive: classType.thief,
     value:  => (document.getElementById(`elem-adv`).checked ? 0.25 : 0),
-  },
+  }
 };
