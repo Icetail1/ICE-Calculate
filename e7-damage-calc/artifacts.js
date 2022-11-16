@@ -364,8 +364,8 @@ const artifacts = {
     type: artifactDmgType.attack,
     scale: [0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2],
     form: [elements.target_has_been_killed],
-    exclusive: classType.thief
-    value: (artiScale) => artiScale* (1+ elements.target_has_been_killed.value() * 2)  ,
+    exclusive: classType.thief,
+    value: (artiScale) => artiScale* (1+ elements.target_has_been_killed.value() * 2)
   },
   wings_of_light_and_shadow: {
     id: 'wings_of_light_and_shadow',
