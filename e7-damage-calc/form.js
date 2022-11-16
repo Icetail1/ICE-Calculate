@@ -737,9 +737,9 @@ elements.target_attack.sub_elements = [elements.target_atk_up, elements.target_a
 
 var t = document.getElementById('jiliu-div');
 if (document.getElementById('jiliu-set').checked) {
-    t.style.display = 'none';
-  }else {
     t.style.display = 'block';
+  }else {
+    t.style.display = 'none';
   }
 
 const slide = (fieldId) => {
