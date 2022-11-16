@@ -1103,6 +1103,15 @@ $(() => {
   });
 });
 
+    function divclick() {
+        var t = document.getElementById('jiliu-div');
+        if (document.getElementById('jiliu-set').checked) {
+            t.style.display = 'block';
+            }else {
+            t.style.display = 'none';
+            }
+    }
+
 (function() {
   let darkSwitch = document.getElementById('dark-switch');
   if (darkSwitch) {
@@ -1114,6 +1123,9 @@ $(() => {
         event_label: darkSwitch.checked ? 'dark' : 'light',
       });
     });
+
+    
+    
     function initTheme() {
       const darkThemeSelected =
           localStorage.getItem('dark-switch') !== null &&
