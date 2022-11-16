@@ -137,9 +137,9 @@ const getGlobalDamageMult = (hero, skill) => {
   for (let checkboxId of ['jiliu-set']) {
     const elem = document.getElementById(checkboxId);
     const num = document.getElementById("jiliu");
-    console.log("elem tag is ",elem.value);
-    console.log("elem tag is ",num.value);
-    mult += elem.checked ? Number(elem.value)-1: 0.0;
+    const ans=  (Number(elem.value) - 1)* Number(num.value)
+    console.log("ans tag is ",ans.value);
+    mult += elem.checked ? : 0.0;
   }
   
   const defPresetSelector = document.getElementById('def-preset');
