@@ -144,6 +144,13 @@ const elements = {
     type: 'checkbox',
     value: () => document.getElementById('target-has-buff').checked
   },
+  target_has_been_killed: {
+    ref: 'target_has_been_killed',
+    id: 'target-has-been-killed',
+    label: 'Target has been killed',
+    type: 'checkbox',
+    value: () => document.getElementById('target-has-been-killed').checked
+  },
   target_has_debuff: {
     ref: 'target_has_debuff',
     id: 'target-has-debuff',
