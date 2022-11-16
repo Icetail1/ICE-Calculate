@@ -137,7 +137,7 @@ const getGlobalDamageMult = (hero, skill) => {
   for (let checkboxId of ['jiliu-set']) {
     const elem = document.getElementById(checkboxId);
     const num = document.getElementById("jiliu");
-    console.log(num);
+    console.log(num.value);
     mult += elem.checked ? Number(elem.value)-1: 0.0;
   }
   
