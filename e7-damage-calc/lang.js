@@ -1610,6 +1610,7 @@ const i18n = {
       nb_targets: '敌人数量',
       nb_hits: '攻击次数',
       target_atk_down: '目标攻击力下降',
+      target_has_been_killed: '目标已被击杀',
       target_atk_up_great: '目标攻击力增加（大幅）',
       target_atk_up: '目标攻击力增加',
       target_attack: '目标攻击力',
