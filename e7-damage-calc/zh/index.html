@@ -221,7 +221,13 @@
                             <label class="custom-control-label" for="jiliu-set">
                                 <img src="../img/jiliu.png" width="20" height="20" /> 激流套装
                             </label>
-                            <input type="range" class="custom-range" id="jiliu-count" min="1" max="3" value="1">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary" type="button" id="jiliu-minus" onclick="minus('jiliu')">&minus;</button>
+                            </div>
+                            <input type="number" class="form-control text-center" id="jiliu" value="1" onkeyup="update('jiliu')">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="jiliu-plus" onclick="plus('jiliu')">&plus;</button>
+                            </div>
                         </div>
                     </div>
                     <hr />
