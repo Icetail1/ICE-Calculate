@@ -138,7 +138,7 @@ const getGlobalDamageMult = (hero, skill) => {
     const elem = document.getElementById(checkboxId);
     const num = document.getElementById("jiliu");
     const ans=  (Number(elem.value) - 1)* Number(num.value)
-    console.log("ans tag is ",ans);
+    console.log("ans tag is ", ans);
     mult += elem.checked ? ans : 0.0;
   }
   
