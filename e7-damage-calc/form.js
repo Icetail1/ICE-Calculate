@@ -1104,6 +1104,12 @@ $(() => {
 });
 
 (function() {
+  var t = document.getElementById('jiliu-div');
+  if (document.getElementById('jiliu-set').checked) {
+      t.style.display = 'block';
+      }else {
+      t.style.display = 'none';
+      }
   let darkSwitch = document.getElementById('dark-switch');
   if (darkSwitch) {
     initTheme();
