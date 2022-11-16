@@ -735,7 +735,14 @@ elements.caster_defense.sub_elements = [elements.caster_defense_up];
 elements.highest_ally_attack.sub_elements = [elements.ally_atk_up, elements.ally_atk_up_great];
 elements.target_attack.sub_elements = [elements.target_atk_up, elements.target_atk_up_great, elements.target_atk_down];
 
-const slide = (fieldId) => {
+var t = document.getElementById('jiliu-div');
+if (document.getElementById('jiliu-set').checked) {
+    t.style.display = 'none';
+  }else {
+    t.style.display = 'block';
+  }
+
+const slide = (fieldId) => {jiliu-div
   document.getElementById(fieldId).value = document.getElementById(`${fieldId}-slide`).value;
   resolve();
   resetPreset(fieldId);
