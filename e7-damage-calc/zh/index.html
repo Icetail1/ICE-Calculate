@@ -5,8 +5,14 @@
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
+          
           gtag('config', 'G-VBQ8W4W1QK', { 'page_title' : 'calculator', 'page_path': '/e7-damage-calc/zh/' });
+          var t = document.getElementById('jiliu-div');
+          if (document.getElementById('jiliu-set').checked) {
+              t.style.display = 'block';
+          }else {
+              t.style.display = 'none';
+          }
         </script>
 
         <meta charset="utf-8" />
