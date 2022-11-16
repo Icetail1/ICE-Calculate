@@ -735,12 +735,6 @@ elements.caster_defense.sub_elements = [elements.caster_defense_up];
 elements.highest_ally_attack.sub_elements = [elements.ally_atk_up, elements.ally_atk_up_great];
 elements.target_attack.sub_elements = [elements.target_atk_up, elements.target_atk_up_great, elements.target_atk_down];
 
-var t = document.getElementById('jiliu-div');
-if (document.getElementById('jiliu-set').checked) {
-    t.style.display = 'block';
-  }else {
-    t.style.display = 'none';
-  }
 
 const slide = (fieldId) => {
   document.getElementById(fieldId).value = document.getElementById(`${fieldId}-slide`).value;
@@ -1110,6 +1104,13 @@ $(() => {
 });
 
 (function() {
+  var t = document.getElementById('jiliu-div');
+  if (document.getElementById('jiliu-set').checked) {
+    t.style.display = 'block';
+  }else {
+    t.style.display = 'none';
+  }
+
   let darkSwitch = document.getElementById('dark-switch');
   if (darkSwitch) {
     initTheme();
