@@ -742,7 +742,7 @@ if (document.getElementById('jiliu-set').checked) {
     t.style.display = 'block';
   }
 
-const slide = (fieldId) => {jiliu-div
+const slide = (fieldId) => {
   document.getElementById(fieldId).value = document.getElementById(`${fieldId}-slide`).value;
   resolve();
   resetPreset(fieldId);
