@@ -7027,7 +7027,7 @@ const heroes = {
         rate: 1,
         pow: 1,
         enhance_from: 's1',
-        penetrate: () => 0.7,
+        penetrate: () => 0.5,
         single: true,
       },
       s3: {
