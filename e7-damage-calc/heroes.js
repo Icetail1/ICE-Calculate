@@ -3139,7 +3139,6 @@ const heroes = {
         name: infoLabel('s1_extra_attack'),
         rate: 1.1,
         pow: 1,
-        enhance_from: 's1',
         single: true,
       },
       s3: {
@@ -6993,7 +6992,6 @@ const heroes = {
         name: infoLabel('s1_extra_attack'),
         rate: 1.3,
         pow: 1.3,
-        enhance_from: 's1',
         single: true,
         noCrit: true,
       },
@@ -7026,7 +7024,6 @@ const heroes = {
         name: infoLabel('s1_extra_attack'),
         rate: 1,
         pow: 1,
-        enhance_from: 's1',
         penetrate: () => 0.5,
         single: true,
       },
