@@ -7082,7 +7082,7 @@ const heroes = {
       s3: {
         rate: 0.8,
         pow: 0.95,
-        fixed: (hitType) => (hitType == hitTypes.crit) ? Math.max(5000*elements.s3_stack, 5000) : 0,
+        fixed: (hitType) => (hitType == hitTypes.crit) ? Math.max(5000*elements.s3_stack.value(), 5000) : 0,
         enhance: [0.05, 0.05, 0, 0.05, 0.05, 0.1, 0.1],
         single: true,
       },
