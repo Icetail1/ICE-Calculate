@@ -7066,6 +7066,28 @@ const heroes = {
       }
     }
   },
+  winter: {
+    name: 'ae-WINTER',
+    element: element.fire,
+    classType: classType.thief,
+    baseAtk: 1119,
+    form: [elements.attack_skill_stack_3],
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0, 0.05, 0, 0.05, 0.1],
+        single: true,
+      },
+      s3: {
+        rate: 0.8,
+        pow: 0.95,
+        fixed: (hitType) => (hitType == hitTypes.crit) ? Math.max(5000*elements.attack_skill_stack_3, 5000) : 0,
+        enhance: [0.05, 0.05, 0, 0.05, 0.05, 0.1, 0.1],
+        single: true,
+      },
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
