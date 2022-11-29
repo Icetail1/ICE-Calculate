@@ -7071,7 +7071,7 @@ const heroes = {
     element: element.fire,
     classType: classType.thief,
     baseAtk: 1119,
-    form: [elements.attack_skill_stack_3],
+    form: [elements.s3_stack],
     skills: {
       s1: {
         rate: 1,
@@ -7082,7 +7082,7 @@ const heroes = {
       s3: {
         rate: 0.8,
         pow: 0.95,
-        fixed: (hitType) => (hitType == hitTypes.crit) ? Math.max(5000*elements.attack_skill_stack_3, 5000) : 0,
+        fixed: (hitType) => (hitType == hitTypes.crit) ? Math.max(5000*elements.s3_stack, 5000) : 0,
         enhance: [0.05, 0.05, 0, 0.05, 0.05, 0.1, 0.1],
         single: true,
       },
