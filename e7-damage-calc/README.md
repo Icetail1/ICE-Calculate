@@ -27,3 +27,6 @@ Ice修改版伤害计算器(原作者(Discord): Maphe#1384)
 
 2022.11.29：
 增加英雄ae-winter
+
+2022.12.12：
+增加英雄ae-GISELLE
