@@ -7096,6 +7096,7 @@ const heroes = {
     form: [elements.target_hp_pc],
     skills: {
       s1: {
+        soulburn: true,
         rate: (soulburn) => soulburn ? 1.7 : 1,
         pow: 1,
         mult: () => 1 + elements.target_hp_pc.value()*0.002,
