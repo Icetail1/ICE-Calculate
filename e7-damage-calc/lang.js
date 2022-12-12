@@ -1732,6 +1732,7 @@ const i18n = {
         target_magic_nail: '魔法钉: {v}%',
         target_max_hp: '{v}% 目标最大生命值',
         target_speed: '{v}% 目标速度',
+        target_hp_pc: '目标当前生命值: {v}%',
         target_hp: '{v}%目标当前生命值',
         under_threshold: '低于阈值: {v}%',
       }
