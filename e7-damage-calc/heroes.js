@@ -7117,7 +7117,8 @@ const heroes = {
     element: element.light,
     classType: classType.ranger,
     baseAtk: 1079,
-    form: [elements.target_has_debuff],
+    atkUp: () => elements.caster_starshelter.value() ? 1.15 : 1,
+    form: [elements.target_has_debuff, elements.caster_starshelter],
     skills: {
       s1: {
         rate: 1,
