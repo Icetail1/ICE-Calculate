@@ -438,6 +438,13 @@ const elements = {
     value: () => document.getElementById('caster-perception') ? document.getElementById('caster-perception').checked : false,
     icon: 'https://epic7x.com/wp-content/uploads/2021/05/Perception.png'
   },
+  caster_starshelter: {
+    ref: 'caster_starshelter',
+    id: 'caster-starshelter',
+    label: 'Caster has Starshelter',
+    type: 'checkbox',
+    value: () => document.getElementById('caster-starshelter') ? document.getElementById('caster-starshelter').checked : false,
+  },
   caster_vigor: {
     value: () => document.getElementById('vigor') ? document.getElementById('vigor').checked : false,
   },
