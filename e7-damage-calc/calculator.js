@@ -224,7 +224,8 @@ class Hero {
     const critDmg = Math.min((this.crit / 100)+critDmgBuff, 3.5)
         +(skill.critDmgBoost ? skill.critDmgBoost(soulburn) : 0)
         +(this.artifact.getCritDmgBoost()||0)
-        +(elements.caster_perception.value() ? 0.15 : 0);
+        +(elements.caster_perception.value() ? 0.15 : 0)
+        +(elements.caster_starshelter.value() ? 0.15 : 0);
     return {
       crit: skill.noCrit ? null : Math.round(hit*critDmg + (skill.fixed !== undefined ? skill.fixed(hitTypes.crit) : 0) + this.getAfterMathDamage(skillId, hitTypes.crit)),
       crush: skill.noCrit || skill.onlyCrit ? null : Math.round(hit*1.3 + (skill.fixed !== undefined ? skill.fixed(hitTypes.crush) : 0) + this.getAfterMathDamage(skillId, hitTypes.crush)),
