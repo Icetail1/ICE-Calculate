@@ -263,9 +263,9 @@ class Hero {
     const rate = (typeof skill.rate === 'function') ? skill.rate(soulburn) : skill.rate;
     const flatMod = skill.flat ? skill.flat(soulburn) : 0;
     const flatMod2 = this.artifact.getFlatMult() + (skill.flat2 !== undefined ? skill.flat2() : 0);
-    const PdcCut = document.getElementById("pdc")
-    flatMod = Number(flatMod) * Number(PdcCut.value) * 0.01.
-    flatMod2 = Number(flatMod2) * Number(PdcCut.value) * 0.01.
+    const PdcCut = document.getElementById("pdc");
+    flatMod = Number(flatMod) * Number(PdcCut.value) * 0.01;
+    flatMod2 = Number(flatMod2) * Number(PdcCut.value) * 0.01;
     const pow = (typeof skill.pow === 'function') ? skill.pow(soulburn) : skill.pow;
     const skillEnhance = this.getSkillEnhanceMult(skillId);
     let elemAdv = 1.0;
