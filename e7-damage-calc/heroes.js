@@ -7112,6 +7112,32 @@ const heroes = {
       },
     }
   },
+  karina: {
+    name: 'ae-KARINA',
+    element: element.ice,
+    classType: classType.knight,
+    form: [elements.caster_defense],
+    skills: {
+      s1: {
+        rate: 0.5,
+        pow: 1,
+        flat: () => elements.caster_defense.value()*1.0,
+        flatTip: () => ({ caster_defense: 100 }),
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        single: true,
+      },
+      s3: {
+        rate: 0.5,
+        pow: 1,
+        flat: () => elements.caster_defense.value()*0.5,
+        flatTip: () => ({ caster_defense: 50 }),
+        fixed: (hitType) => (hitType !== hitTypes.miss) ? elements.caster_defense.value()*1.4: 0,
+        fixedTip: () => ({ caster_defense: 140 }),
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        single: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
