@@ -88,7 +88,6 @@ const displayDmg = (damage, type) => {
 const getModTooltip = (hero, skillId, soulburn = false) => {
   const values = hero.getModifiers(skillId, soulburn);
   let content = `${skillLabel('att_rate')}: <b class="float-right">${values.rate}</b><br/>
-                 ${skillLabel('def_rate')}: <b class="float-right">${values.rate}</b><br/>
                  ${skillLabel('power')}: <b class="float-right">${values.pow}</b><br/>`;
 
   if (values.mult !== null) {
