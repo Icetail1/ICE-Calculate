@@ -3001,7 +3001,7 @@ const heroes = {
       s1: {
         rate: 0.8,
         pow: 1,
-        afterMath: () => elements.caster_has_buff.value() ? ({ atkPercent: 0.25}) : null,
+        afterMath: () => elements.caster_has_buff.value() ? ({ atkPercent: 0.25, penetrate: 0}) : null,
         enhance: [0.05, 0, 0.1, 0, 0.15],
         single: true,
         noCrit: true,
