@@ -330,7 +330,7 @@ class Hero {
         skillDamage = this.getAtk(skillId)*skillMultipliers.atkPercent*dmgConst*this.target.defensivePower({ penetrate: () => skillMultipliers.penetrate }, true);
          }
         else{
-        skillDamage = elements.caster_defence.value()*skillMultipliers.defPercent*dmgConst*this.target.defensivePower({ penetrate: () => skillMultipliers.penetrate }, true); 
+        skillDamage = elements.caster_defense.value()*skillMultipliers.defPercent*dmgConst*this.target.defensivePower({ penetrate: () => skillMultipliers.penetrate }, true); 
          }
     }
 
