@@ -7131,7 +7131,7 @@ const heroes = {
         pow: 1,
         flat: () => elements.caster_defense.value()*0.5,
         flatTip: () => ({ caster_defense: 50 }),
-        extraDmg: () => elements.caster_defense.value()*1.4 : 0,
+        extraDmg: () => elements.caster_defense.value()*1.4,
         extraDmgTip: () => ({ caster_defense: 140}),
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         single: true,
