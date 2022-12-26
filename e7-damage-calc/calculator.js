@@ -327,7 +327,7 @@ class Hero {
     
     if (skillMultipliers !== null) {
         console.log("atkPercent is ", skillMultipliers.atkPercent);
-        if(skillMultipliers.atkPercent!== null){
+        if(skillMultipliers.atkPercent!== undefined){
         skillDamage = this.getAtk(skillId)*skillMultipliers.atkPercent*dmgConst*this.target.defensivePower({ penetrate: () => skillMultipliers.penetrate }, true);
          }
         else{
