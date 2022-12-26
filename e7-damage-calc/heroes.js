@@ -6765,6 +6765,7 @@ const heroes = {
         rate: 2,
         pow: 0.95,
         penetrate: () => document.getElementById(`target-has-silence`).checked ? 0.7 : 0,
+        penetrateTip: () => ({target_has_silence:70}),
         enhance: [0.05, 0.05, 0, 0.05, 0.1, 0.1],
         single: true,
       }
