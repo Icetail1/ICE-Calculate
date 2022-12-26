@@ -440,11 +440,12 @@ class Artifact {
 
   getAfterMathMultipliers(skill, skillId) {
     if(!this.applies(skill, skillId)) return null;
-    if (this.id === undefined || artifacts[this.id].type !== artifactDmgType.aftermath || artifacts[this.id].atkPercent === undefined || artifacts[this.id].penetrate === undefined) {
+    if (this.id === undefined || artifacts[this.id].type !== artifactDmgType.aftermath || artifacts[this.id].penetrate === undefined) {
       return null;
     }
     return {
       atkPercent: artifacts[this.id].atkPercent,
+      defPercent: artifacts[this.id].defPercent,
       penetrate: artifacts[this.id].penetrate,
     }
   }
