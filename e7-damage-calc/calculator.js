@@ -88,6 +88,7 @@ const displayDmg = (damage, type) => {
 const getModTooltip = (hero, skillId, soulburn = false) => {
   const values = hero.getModifiers(skillId, soulburn);
   let content = `${skillLabel('att_rate')}: <b class="float-right">${values.rate}</b><br/>
+                 ${skillLabel('def_rate')}: <b class="float-right">${values.rate}</b><br/>
                  ${skillLabel('power')}: <b class="float-right">${values.pow}</b><br/>`;
 
   if (values.mult !== null) {
@@ -103,7 +104,8 @@ const getModTooltip = (hero, skillId, soulburn = false) => {
   if (values.detonation != null) content += `${skillLabel('detonation')}: <b class="float-right">+${Math.round(values.detonation*100)}%</b><br/>`;
   if (values.exEq != null) content += `${skillLabel('exEq')}: <b class="float-right">+${Math.round(values.exEq*100)}%</b><br/>`;
   if (values.elemAdv !== null) content += `${skillLabel('elemAdv')}: <i class="fas ${values.elemAdv ? 'fa-check-square' : 'fa-times-circle'} float-right"></i><br/>`;
-  if (values.afterMathFormula !== null) content += `${skillLabel('afterMathFormula')}/${skillLabel('att_rate')}: <b class="float-right">${Math.round(values.afterMathFormula.atkPercent*100)}%</b><br/>`;
+  if (values.afterMathFormula !== null && values.afterMathFormula.atkPercent!== undefined) {content += `${skillLabel('afterMathFormula')}/${skillLabel('att_rate')}: <b class="float-right">${Math.round(values.afterMathFormula.atkPercent*100)}%</b><br/>`;}
+  else{content += `${skillLabel('afterMathFormula')}/${skillLabel('def_rate')}: <b class="float-right">${Math.round(values.afterMathFormula.defPercent*100)}%</b><br/>`;}
   if (values.afterMathFormula !== null) content += `${skillLabel('afterMathFormula')}/${skillLabel('pen')}: <b class="float-right">${Math.round(values.afterMathFormula.penetrate*100)}%</b><br/>`;
   if (values.afterMathDmg !== null) content += `${skillLabel('afterMathDmg')}: <b class="float-right">${Math.round(values.afterMathDmg)}</b><br/>`;
   if (values.extraDmg != null) content += `${skillLabel('extraDmg')}: <span class="float-right">${values.extraDmgTip} <b>${Math.round(values.extraDmg)}</b><br/>`;
