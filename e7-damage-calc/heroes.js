@@ -7131,7 +7131,8 @@ const heroes = {
         pow: 1,
         flat: () => elements.caster_defense.value()*0.5,
         flatTip: () => ({ caster_defense: 50 }),
-        afterMath: (hitType) => (hitType !== hitTypes.miss) ? { caster_defense: 1.4 } : null,
+        extraDmg: () => elements.caster_defense.value()*1.4 : 0,
+        extraDmgTip: () => ({ caster_defense: 140}),
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         single: true,
       }
