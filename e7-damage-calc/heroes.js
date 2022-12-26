@@ -1006,7 +1006,7 @@ const heroes = {
       },
       s3: {
         soulburn: true,
-        rate: (soulburn) => soulburn ? 1.2 : 0.95,
+        rate: 0.95,
         pow: 1.1,
         afterMath: (hitType) => (hitType !== hitTypes.miss) ? { atkPercent: 0.3, penetrate: 0.7 } : null,
         enhance: [0.05, 0, 0, 0, 0.15],
@@ -1278,7 +1278,7 @@ const heroes = {
       },
       s3: {
         soulburn: true,
-        rate: (soulburn) => soulburn ? 2.3 : 1.8,
+        rate: (soulburn) => soulburn ? 2.5 : 1.8,
         pow: 1,
         exEq: () => elements.exclusive_equipment_3.value() ? 0.1 : 0,
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
@@ -5673,20 +5673,20 @@ const heroes = {
       s1: {
         rate: 1,
         pow: 0.95,
-        mult: () => 1 + (100-elements.target_hp_pc.value())*0.002,
-        multTip: () => ({ target_lost_hp_pc: 0.2 }),
         enhance: [0.05, 0.05, 0.05, 0.1, 0.1],
         single: true,
       },
-      s2: {
+      s1_extra: {
+        name: infoLabel('s1_extra_attack'),
         rate: 0.5,
         pow: 1,
-        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        mult: () => 1 + (100-elements.target_hp_pc.value())*0.003,
+        multTip: () => ({ target_lost_hp_pc: 0.3 }),
         aoe: true,
       },
       s3: {
         soulburn: true,
-        rate: (soulburn) => soulburn ? 3.2 : 1.8,
+        rate: (soulburn) => soulburn ? 3.2 : 2,
         pow: 0.95,
         mult: (soulburn) => 1 + (100-elements.target_hp_pc.value())*(soulburn ? 0.007 : 0.003),
         multTip: (soulburn) => ({ target_lost_hp_pc: soulburn ? 0.7 : 0.3 }),
