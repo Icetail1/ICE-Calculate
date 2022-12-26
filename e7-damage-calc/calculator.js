@@ -326,10 +326,7 @@ class Hero {
     let skillDamage = 0;
     const skillMultipliers = skill.afterMath ? skill.afterMath(hitType) : null;
     if (skillMultipliers !== null) {
-       if(skillMultipliers.atkPercent!==null){
         skillDamage = this.getAtk(skillId)*skillMultipliers.atkPercent*dmgConst*this.target.defensivePower({ penetrate: () => skillMultipliers.penetrate }, true);
-         }
-
     }
 
     return skillDamage;
