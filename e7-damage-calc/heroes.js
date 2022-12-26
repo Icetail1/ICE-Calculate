@@ -6747,7 +6747,7 @@ const heroes = {
     element: element.earth,
     classType: classType.warrior,
     baseAtk: 1228,
-    form: [elements.target_has_buff, elements.exclusive_equipment_2],
+    form: [elements.target_has_silence, elements.exclusive_equipment_2],
     skills: {
       s1: {
         rate: 1,
@@ -6764,8 +6764,7 @@ const heroes = {
       s3: {
         rate: 2,
         pow: 0.95,
-        mult: () => elements.target_has_buff.value() ? 1.5 : 1.0,
-        multTip: () => ({target_has_buff: 50}),
+        penetrate: () => document.getElementById(`target_has_silence`).checked ? 0.7 : 0,,
         enhance: [0.05, 0.05, 0, 0.05, 0.1, 0.1],
         single: true,
       }
