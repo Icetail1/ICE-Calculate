@@ -6764,7 +6764,7 @@ const heroes = {
       s3: {
         rate: 2,
         pow: 0.95,
-        penetrate: () => document.getElementById(`target_has_silence`).checked ? 0.7 : 0,
+        penetrate: () => document.getElementById(`target-has-silence`).checked ? 0.7 : 0,
         enhance: [0.05, 0.05, 0, 0.05, 0.1, 0.1],
         single: true,
       }
