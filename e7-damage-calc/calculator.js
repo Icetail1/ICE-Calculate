@@ -138,7 +138,6 @@ const getGlobalDamageMult = (hero, skill) => {
     const elem = document.getElementById(checkboxId);
     const num = document.getElementById("jiliu");
     const ans=  (Number(elem.value) - 1)* Number(num.value)
-    console.log("ans tag is ", ans);
     mult += elem.checked ? ans : 0.0;
   }
   
@@ -330,6 +329,8 @@ class Hero {
         skillDamage = this.getAtk(skillId)*skillMultipliers.atkPercent*dmgConst*this.target.defensivePower({ penetrate: () => skillMultipliers.penetrate }, true);
          }
         else{
+        console.log("caster_defense is ", elements.caster_defense.value();
+        console.log("defPercent is ", skillMultipliers.defPercent);
         skillDamage = elements.caster_defense.value()*skillMultipliers.defPercent*dmgConst*this.target.defensivePower({ penetrate: () => skillMultipliers.penetrate }, true); 
          }
     }
