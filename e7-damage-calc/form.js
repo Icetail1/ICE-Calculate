@@ -158,6 +158,13 @@ const elements = {
     type: 'checkbox',
     value: () => document.getElementById('target-has-debuff')?.checked
   },
+  target_has_silence: {
+    ref: 'target_has_silence',
+    id: 'target-has-silence',
+    label: 'Target has Silence',
+    type: 'checkbox',
+    value: () => document.getElementById('target-has-silence')?.checked
+  },
   target_has_bleed: {
     ref: 'target_has_bleed',
     id: 'target-has-bleed',
@@ -166,6 +173,7 @@ const elements = {
     value: () => document.getElementById('target-has-bleed').checked,
     icon: 'https://epic7x.com/wp-content/uploads/2018/12/stic_blood.png'
   },
+  
   target_has_sleep: {
     ref: 'target_has_sleep',
     id: 'target-has-sleep',
