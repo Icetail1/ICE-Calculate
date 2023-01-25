@@ -7243,7 +7243,6 @@ const heroes = {
     form: [elements.caster_defense],
     skills: {
       s1: {
-        soulburn: true,
         rate: 0.5,
         pow: 0.9,
         flat:  () => elements.caster_defense.value()* 0.8,
