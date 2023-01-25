@@ -7277,6 +7277,7 @@ const heroes = {
     classType: classType.ranger,
     dot: [dot.burn],
     dotDamageUp:1.3,
+    form: [elements.target_burn_detonate],
     skills: {
       s1: {
         rate: 1,
