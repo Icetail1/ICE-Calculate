@@ -7275,7 +7275,6 @@ const heroes = {
     name: 'Beehoo',
     element: element.fire,
     classType: classType.ranger,
-    form: [elements.caster_defense],
     dot: [dot.burn],
     dotDamageUp:1.3,
     skills: {
