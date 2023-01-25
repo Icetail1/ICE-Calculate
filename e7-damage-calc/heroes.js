@@ -7137,6 +7137,162 @@ const heroes = {
       }
     }
   },
+  suthan: {
+    name: 'Suthan',
+    element: element.dark,
+    classType: classType.mage,
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0, 0.1, 0, 0.15],
+        single: true,
+      },
+      s3: {
+        rate: 0.8,
+        pow: 1.1,
+        enhance: [0.05, 0, 0, 0, 0.15],
+        aoe: true,
+      }
+    }
+  },
+  juni: {
+    name: 'Suthan',
+    element: element.fire,
+    classType: classType.warrior,
+    form: [elements.caster_perception],
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0, 0.1, 0, 0.15],
+        single: true,
+      },
+      s3: {
+        rate: 1,
+        pow: 1.1,
+        enhance: [0.05, 0, 0.05, 0, 0.1],
+        aoe: true,
+      }
+    }
+  },
+  lilka: {
+    name: 'Lilka',
+    element: element.earth,
+    classType: classType.ranger,
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0, 0.05, 0, 0.05, 0.05, 0.1],
+        single: true,
+      },
+      s3: {
+        rate: 1.9,
+        pow: 0.95,
+        enhance: [0.05, 0.05, 0, 0, 0, 0.1, 0.15],
+        single: true,
+      }
+    }
+  },
+  talia: {
+    name: 'Talia',
+    element: element.light,
+    classType: classType.thief,
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0, 0.05, 0, 0.05, 0.05, 0.1],
+        single: true,
+      },
+      s3: {
+        rate: 1.5,
+        pow: 1,
+        enhance: [0.05, 0, 0, 0, 0, 0.1, 0.15],
+        single: true,
+      }
+    }
+  },
+  talaz: {
+    name: 'Talaz',
+    element: element.light,
+    classType: classType.thief,
+    form: [elements.target_has_provoke],
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0, 0.1, 0,  0.15],
+        single: true,
+      },
+      s3: {
+        rate: (soulburn) => soulburn ? 1.8 : 1.5,
+        pow: 0.9,
+        mult: () => elements.target_has_provoke.value()  ? 1.5 : 1,
+        multTip: () => ({ target_has_provoke: 50 }),
+        enhance: [0.05,0.05, 0.05,0.1, 0.15],
+        single: true,
+      }
+    }
+  },
+  peacemaker_furious: {
+    name: 'Peacemaker Furious',
+    element: element.dark,
+    classType: classType.ranger,
+    form: [elements.caster_defense],
+    skills: {
+      s1: {
+        soulburn: true,
+        rate: 0.5,
+        pow: 0.9,
+        flat: (soulburn) => elements.caster_defense.value()* 0.8,
+        flatTip: (soulburn) => ({ caster_defense: 80}),
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      },
+      s3: {
+        rate: 0.5,
+        pow: 0.9,
+        flat: () => elements.caster_defense.value()*1.3,
+        flatTip: () => ({ caster_defense: 130 }),
+        penetrate: () => {
+          const targetDef = Number(document.getElementById('def').value);
+          const casterDef = Number(elements.caster_defense.value());
+          const per  =0.0001;
+
+          const penDiff = (casterDef - targetDef) * per;
+
+          return Math.min(Math.max(0, penDiff), 0.6);
+        },
+        penetrateTip: () => ({caster_target_atk_diff: 0.0001}),
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.1],
+        aoe: true,
+      }
+    }
+  },
+  beehoo: {
+    name: 'Beehoo',
+    element: element.fire,
+    classType: classType.ranger,
+    form: [elements.caster_defense],
+    dot: [dot.burn],
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 0.9,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      },
+      s1_extra: {
+        name: infoLabel('s1_extra_attack'),
+        rate: 1.2,
+        pow: 0.9,
+        detonate: dot.burn,
+        single: true,
+      },
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
