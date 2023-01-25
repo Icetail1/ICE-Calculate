@@ -378,6 +378,13 @@ const i18n = {
       arunka: '亚露嘉',
       zio: '智武',
       savior_adin: '光艾庭',
+      suthan: '斯坦',
+      juni: '珠妮',
+      lilka: '莉珈',
+      talia: '达黎儿',
+      talaz: '达拉士',
+      peacemaker_furious: '均衡的尤贝乌斯',
+      beehoo: '雨修',
       astromancer_Elena: '星辰的神谕艾蕾娜',
     },
     nicknames: {
