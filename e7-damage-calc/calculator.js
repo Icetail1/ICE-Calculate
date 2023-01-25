@@ -10,6 +10,8 @@ const skillTypes = {
   aoe: 'aoe',
 }
 
+
+
 const getSkillType = (skill) => {
   if (skill.single !== undefined && ((typeof skill.single === 'function') ? skill.single() : skill.single) === true) return skillTypes.single;
   if (skill.aoe !== undefined && ((typeof skill.aoe === 'function') ? skill.aoe() : skill.aoe) === true) return skillTypes.aoe;
@@ -186,6 +188,7 @@ class Hero {
     this.barrierEnhance = heroes[id].barrierEnhance;
     this.artifact = artifact;
     this.target = new Target(artifact);
+    this.dotDamageUp = heroes[id].dotDamageUp;
 
     currentHero = this;
   }
@@ -366,13 +369,14 @@ class Hero {
   }
 
   getDotDamage(type) {
+    const dotDamageRate = this.dotDamageUp? Number(this.dotDamageUp)  : 1 ;
     switch (type) {
       case dot.bleed:
-        return this.getAtk()*0.3*dmgConst*this.target.defensivePower({ penetrate: () => 0.7 }, true);
+        return this.getAtk()*0.3*dmgConst*this.target.defensivePower({ penetrate: () => 0.7 }, true)*dotDamageRate;
       case dot.burn:
-        return this.getAtk()*0.6*dmgConst*this.target.defensivePower({ penetrate: () => 0.7 }, true);
+        return this.getAtk()*0.6*dmgConst*this.target.defensivePower({ penetrate: () => 0.7 }, true)*dotDamageRate;
       case dot.bomb:
-        return this.getAtk()*1.5*dmgConst*this.target.defensivePower({ penetrate: () => 0.7 }, true);
+        return this.getAtk()*1.5*dmgConst*this.target.defensivePower({ penetrate: () => 0.7 }, true)*dotDamageRate;
       default: return 0;
     }
   }
