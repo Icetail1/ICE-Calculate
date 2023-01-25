@@ -7290,6 +7290,7 @@ const heroes = {
         rate: 1.2,
         pow: 0.9,
         detonate: dot.burn,
+        detonation: () => 1,
         single: true,
       },
     }
