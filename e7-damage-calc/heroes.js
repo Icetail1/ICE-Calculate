@@ -7157,7 +7157,7 @@ const heroes = {
     }
   },
   juni: {
-    name: 'Suthan',
+    name: 'Juni',
     element: element.fire,
     classType: classType.warrior,
     form: [elements.caster_perception],
@@ -7216,7 +7216,7 @@ const heroes = {
   },
   talaz: {
     name: 'Talaz',
-    element: element.light,
+    element: element.ice,
     classType: classType.thief,
     form: [elements.target_has_provoke],
     skills: {
@@ -7265,7 +7265,7 @@ const heroes = {
 
           return Math.min(Math.max(0, penDiff), 0.6);
         },
-        penetrateTip: () => ({caster_target_atk_diff: 0.0001}),
+        penetrateTip: () => ({caster_target_def_diff: 0.0001}),
         enhance: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.1],
         aoe: true,
       }
