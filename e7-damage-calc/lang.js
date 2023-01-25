@@ -57,6 +57,7 @@ const i18n = {
       custom: {
         caster_target_atk_diff: '{v}% Attack Difference',
         caster_target_spd_diff: '{v}% Speed Difference',
+        caster_target_def_diff: '{v}% Def Difference',
         all_fire: '{v}% Team Fire',
         allies_buff: '+{v} per Buff',
         caster_defense: '{v}% Defense',
@@ -699,6 +700,7 @@ const i18n = {
       custom: {
         caster_target_atk_diff: '{v}% 攻击力差距',
         caster_target_spd_diff: '{v}% 速度差距',
+        caster_target_def_diff: '{v}% 防御力差距',
         all_fire: '{v}% 全体我军火属性',
         allies_buff: '+{v} 我军每个Buff数量',
         caster_defense: '{v}% 自身防御力',
