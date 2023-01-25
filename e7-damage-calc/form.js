@@ -314,7 +314,9 @@ const elements = {
     min: 200,
     max: 5000,
     default: 750,
-    value: () => 1 },
+    value: () => Number(document.getElementById('caster-defense').value)
+        * (1 + (elements.caster_defense_up.value() ? 0.6 : 0) + (document.getElementById('vigor').checked ? 0.3 : 0)+ (document.getElementById('anger').checked ? 0.3 : 0)), 
+  },
   caster_defense_up: {
     ref: 'caster_defense_up',
     id: 'caster-defense-up',
