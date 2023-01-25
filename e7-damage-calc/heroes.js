@@ -7227,6 +7227,7 @@ const heroes = {
         single: true,
       },
       s3: {
+        soulburn: true,
         rate: (soulburn) => soulburn ? 1.8 : 1.5,
         pow: 0.9,
         mult: () => elements.target_has_provoke.value()  ? 1.5 : 1,
