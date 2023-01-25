@@ -7246,7 +7246,7 @@ const heroes = {
         soulburn: true,
         rate: 0.5,
         pow: 0.9,
-        flat: elements.caster_defense.value()* 0.8,
+        flat:  () => elements.caster_defense.value()* 0.8,
         flatTip: () => ({ caster_defense: 80}),
         enhance: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.1],
         single: true,
