@@ -7259,13 +7259,13 @@ const heroes = {
         penetrate: () => {
           const targetDef = Number(document.getElementById('def').value);
           const casterDef = Number(elements.caster_defense.value());
-          const per  =0.0001;
+          const per  =0.00032;
 
           const penDiff = (casterDef - targetDef) * per;
 
           return Math.min(Math.max(0, penDiff), 0.6);
         },
-        penetrateTip: () => ({caster_target_def_diff: 0.0001}),
+        penetrateTip: () => ({caster_target_def_diff: 0.00032}),
         enhance: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.1],
         aoe: true,
       }
@@ -7290,7 +7290,7 @@ const heroes = {
         rate: 1.2,
         pow: 0.9,
         detonate: dot.burn,
-        detonation: () => 1,
+        detonation: () => 1.3,
         single: true,
       },
     }
