@@ -7284,6 +7284,7 @@ const heroes = {
         pow: 0.9,
         enhance: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.1],
         single: true,
+        noCrit: true,
       },
       s1_extra: {
         name: infoLabel('s1_extra_attack'),
@@ -7292,6 +7293,7 @@ const heroes = {
         detonate: dot.burn,
         detonation: () => 1.3,
         single: true,
+        noCrit: true,
       },
     }
   },
