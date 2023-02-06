@@ -385,6 +385,7 @@ const i18n = {
       talaz: '达拉士',
       peacemaker_furious: '均衡的尤贝乌斯',
       beehoo: '雨修',	
+      lone_crescent_bellona: '一轮孤月维尔萝娜',	
       astromancer_Elena: '星辰的神谕艾蕾娜',
     },
     nicknames: {
