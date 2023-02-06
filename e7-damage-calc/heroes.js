@@ -7301,6 +7301,11 @@ const heroes = {
     name: 'Lone Crescent Bellona',
     element: element.dark,
     classType: classType.ranger,
+    form: [elements.attack_skill_stack_5],
+    atkUp: () => {
+      let boost = 0.1;
+      return 1 + elements.attack_skill_stack_5.value()*boost;
+    },
     skills: {
       s1: {
         rate: 0.9,
