@@ -7297,6 +7297,34 @@ const heroes = {
       },
     }
   },
+  lone_crescent_bellona: {
+    name: 'Lone Crescent Bellona',
+    element: element.dark,
+    classType: classType.ranger,
+    skills: {
+      s1: {
+        rate: 0.9,
+        pow: 0.95,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        onlyCrit: true,
+        single: true,
+      },
+      s2: {
+        rate: 0.6,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        onlyCrit: true,
+        aoe: true,
+      },
+      s3: {
+        rate: 1.5,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        onlyCrit: true,
+        single: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
