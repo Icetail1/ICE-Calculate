@@ -354,7 +354,7 @@ class Hero {
       }
       else
       {
-      return document.getElementById('caster-defense').value()*artiMultipliers.defPercent*dmgConst*this.target.defensivePower({ penetrate: () => artiMultipliers.penetrate }, true);
+      return elements.caster_defense.value()*artiMultipliers.defPercent*dmgConst*this.target.defensivePower({ penetrate: () => artiMultipliers.penetrate }, true);
       }
     }
 
