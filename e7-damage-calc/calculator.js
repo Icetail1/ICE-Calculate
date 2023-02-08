@@ -349,7 +349,13 @@ class Hero {
 
     const artiMultipliers = this.artifact.getAfterMathMultipliers(skill, skillId);
     if (artiMultipliers !== null) {
+      if(artiMultipliers.atkPercent!== undefined){
       return this.getAtk()*artiMultipliers.atkPercent*dmgConst*this.target.defensivePower({ penetrate: () => artiMultipliers.penetrate }, true);
+      }
+      else
+      {
+      return this.elements.caster_defense.value()*artiMultipliers.defPercent*dmgConst*this.target.defensivePower({ penetrate: () => artiMultipliers.penetrate }, true);
+      }
     }
 
     return null;
