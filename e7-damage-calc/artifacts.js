@@ -374,6 +374,15 @@ const artifacts = {
     type: artifactDmgType.damage,
     exclusive: classType.knight,
   },
+  rocket_punch: {
+    id: 'rocket_punch',
+    name: 'Rocket Punch',
+    type: artifactDmgType.aftermath,
+    defPercent: 1,
+    penetrate: 0.7,
+    exclusive: classType.knight,
+    applies: (skill) => getSkillType(skill) === skillTypes.single
+  },
   sword_of_adin: {
     id: 'sword_of_adin',
     name: 'Sword Of Adin',
