@@ -609,6 +609,7 @@ const i18n = {
       violet_talisman: '紫色护身符',
       wind_rider: '乘风者',
       wings_of_light_and_shadow:'明暗双翼',
+      rocket_punch:'火箭拳',
       sword_of_adin:'循环之剑',
     },
     form: {
