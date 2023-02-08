@@ -377,6 +377,7 @@ const artifacts = {
   rocket_punch: {
     id: 'rocket_punch',
     name: 'Rocket Punch',
+    form: [elements.caster_defense],
     type: artifactDmgType.aftermath,
     defPercent: 1,
     penetrate: 0.7,
