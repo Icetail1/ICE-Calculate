@@ -7300,7 +7300,7 @@ const heroes = {
   lone_crescent_bellona: {
     name: 'Lone Crescent Bellona',
     element: element.dark,
-    classType: classType.ranger,
+    classType: classType.warrior,
     form: [elements.attack_skill_stack_5],
     atkUp: () => {
       let boost = 0.1;
