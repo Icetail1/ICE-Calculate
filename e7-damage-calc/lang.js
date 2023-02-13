@@ -651,6 +651,7 @@ const i18n = {
       caster_speed_up: '速度提升',
       caster_nb_buff: '自身Buff数量',
       caster_turn: '自身回合数',
+      caster_has_buff: '自身有buff',
       caster_has_debuff: '自身有Debuff',
       caster_has_flame_alchemist: '自身有焰之炼金术师BUFF',
       caster_full_fighting_spirit: '斗志最大值',
