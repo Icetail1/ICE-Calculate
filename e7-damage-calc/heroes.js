@@ -7301,7 +7301,7 @@ const heroes = {
     name: 'Lone Crescent Bellona',
     element: element.dark,
     classType: classType.warrior,
-    form: [elements.attack_skill_stack_5],
+    form: [elements.attack_skill_stack_5,elements.caster_has_buff],
     atkUp: () => {
       let boost = 0.1;
       return 1 + elements.attack_skill_stack_5.value()*boost;
@@ -7324,6 +7324,8 @@ const heroes = {
       s3: {
         rate: 1.5,
         pow: 1,
+        mult: () => elements.caster_has_buff.value() ? 1.3 : 1,
+        multTip: () => ({ caster_has_buff: 30 }),
         enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
         onlyCrit: true,
         single: true,
