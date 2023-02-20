@@ -3530,7 +3530,7 @@ const heroes = {
         single: true,
       },
       s2: {
-        rate: 0.8,
+        rate: 0.9,
         pow: 1,
         penetrate: () => elements.caster_stealth.value() ? 0.6 : 0.3,
         exEq: () => elements.exclusive_equipment_2.value() ? 0.1 : 0,
@@ -4532,7 +4532,7 @@ const heroes = {
         single: true,
       },
       s2: {
-        rate: 0.9,
+        rate: 0.7,
         pow: 1,
         enhance: [0.05, 0.05, 0.1, 0.1, 0.15],
         aoe: true,
