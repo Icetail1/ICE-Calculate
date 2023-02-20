@@ -4239,6 +4239,8 @@ const heroes = {
         rate: 1.5,
         pow: 0.95,
         enhance: [0.05, 0.05, 0.05, 0.1, 0.1],
+        mult: () => 1 + (100-elements.caster_hp_pc.value())*0.003,
+        multTip: () => ({ caster_lost_hp_pc: 0.3 }),
         exEq: () => elements.exclusive_equipment_2.value() ? 0.1 : 0,
         single: true,
       },
