@@ -343,6 +343,7 @@ const i18n = {
       specimen_sez: '实验体赛兹',
       specter_tenebria: '幻影的泰妮布里雅',
       spirit_eye_celine: '灵眼的瑟琳',
+      sylvan_sage_vivian: '光薇薇安',
       straze: '史瑞杰思',
       summer_break_charlotte: '暑假夏绿蒂',
       summer_disciple_alexa: '夏日学生雅莉莎',
