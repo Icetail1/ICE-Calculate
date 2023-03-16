@@ -612,6 +612,7 @@ const i18n = {
       wings_of_light_and_shadow:'明暗双翼',
       rocket_punch:'火箭拳',
       sword_of_adin:'循环之剑',
+      frame_of_light:'光之框架',
     },
     form: {
       allies_nb_buff: '我军Buff数量',
