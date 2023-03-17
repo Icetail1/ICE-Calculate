@@ -7334,6 +7334,41 @@ const heroes = {
       }
     }
   },
+  Eligos: {
+    name: 'Eligos',
+    element: element.fire,
+    classType: classType.ranger,
+    form: [elements.caster_speed, elements.target_speed],
+    skills: {
+      s1: {
+        rate: 0.95,
+        pow: 0.9,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.1],
+        mult: () => 1 + elements.caster_speed.value()*0.00075,
+        multTip: () => ({ caster_speed: 0.075 }),
+        single: true,
+      },
+      s2: {
+        rate: 0.7,
+        pow: 1.3,
+        flat: () => {
+          const casterSpd = elements.caster_speed.value();
+          const targetSpd = elements.target_speed.value();
+
+          const spdDiff = (casterSpd-targetSpd)*0.025;
+          return Math.min(Math.max(0, spdDiff)+1, 3);
+        },
+        flatTip: () => ({ caster_target_spd_diff: 2.5 }),
+        single: true,
+      },
+      s3: {
+        rate: 1.5,
+        pow: 1,
+        enhance: [0.05, 0.05, 0, 0, 0, 0.1, 0.1],
+        single: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
