@@ -382,7 +382,7 @@ const artifacts = {
     defPercent: 1,
     penetrate: 0.7,
     exclusive: classType.knight,
-    applies: (skill) => getSkillType(skill) === skillTypes.single
+    applies: (skill) => getSkillType(skill) === skillTypes.single,
   },
   frame_of_light: {
     id: 'frame_of_light',
@@ -390,6 +390,14 @@ const artifacts = {
     scale: [0.08, 0.088, 0.096, 0.104, 0.112, 0.12, 0.128, 0.136, 0.144, 0.152, 0.16],
     type: artifactDmgType.damage,
     exclusive: classType.mage,
+    applies: (skill) => getSkillType(skill) === skillTypes.single,
+  },
+  no_reject: {
+    id: 'no_reject',
+    name: 'No Reject',
+    scale: [0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2],
+    type: artifactDmgType.penetrate,
+    exclusive: classType.ranger,
     applies: (skill) => getSkillType(skill) === skillTypes.single,
   },
   sword_of_adin: {
