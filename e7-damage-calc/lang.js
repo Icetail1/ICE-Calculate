@@ -387,6 +387,7 @@ const i18n = {
       peacemaker_furious: '均衡的尤贝乌斯',
       beehoo: '雨修',	
       lone_crescent_bellona: '一轮孤月维尔萝娜',	
+      eligos: '艾利戈斯',	
       astromancer_Elena: '星辰的神谕艾蕾娜',
     },
     nicknames: {
@@ -588,6 +589,7 @@ const i18n = {
         straze: '史哥',
         summer_break_charlotte: '水呆',
         summertime_iseria:'火飞',
+        eligos: 'boss',	
     },
     artifacts: {
       no_proc: '无神器',
@@ -639,6 +641,7 @@ const i18n = {
       rocket_punch:'火箭拳',
       sword_of_adin:'循环之剑',
       frame_of_light:'光之框架',
+      no_reject:'无法拒绝的提议',
     },
     form: {
       allies_nb_buff: '我军Buff数量',
