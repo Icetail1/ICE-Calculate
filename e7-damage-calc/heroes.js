@@ -7351,14 +7351,14 @@ const heroes = {
       s2: {
         rate: 0.7,
         pow: 1.3,
-        flat: () => {
+        mult: () => {
           const casterSpd = elements.caster_speed.value();
           const targetSpd = elements.target_speed.value();
 
           const spdDiff = (casterSpd-targetSpd)*0.025;
           return Math.min(Math.max(0, spdDiff)+1, 3);
         },
-        flatTip: () => ({ caster_target_spd_diff: 2.5 }),
+        multTip: () => ({ caster_target_spd_diff: 2.5 }),
         single: true,
       },
       s3: {
