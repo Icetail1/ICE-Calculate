@@ -7334,7 +7334,7 @@ const heroes = {
       }
     }
   },
-  Eligos: {
+  eligos: {
     name: 'Eligos',
     element: element.fire,
     classType: classType.ranger,
