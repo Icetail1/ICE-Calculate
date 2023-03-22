@@ -434,7 +434,7 @@ const i18n = {
         chaos_sect_axe: '暗斧',
         charles: '木老头 剑圣',
         charlotte: '火呆毛 女王',
-        choux: '苏',
+        choux: '小泡芙',
         chloe: '水锤',
         cidd: '木席德',
         clarissa: '水修女',
