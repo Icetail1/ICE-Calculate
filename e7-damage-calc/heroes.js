@@ -1005,7 +1005,6 @@ const heroes = {
         single: true,
       },
       s3: {
-        soulburn: true,
         rate: 0.95,
         pow: 1.1,
         afterMath: (hitType) => (hitType !== hitTypes.miss) ? { atkPercent: 0.3, penetrate: 0.7 } : null,
