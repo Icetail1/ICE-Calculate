@@ -388,6 +388,7 @@ const i18n = {
       beehoo: '雨修',	
       lone_crescent_bellona: '一轮孤月维尔萝娜',	
       eligos: '艾利戈斯',	
+      architect_laika:'策划者莱伊卡',
       astromancer_Elena: '星辰的神谕艾蕾娜',
     },
     nicknames: {
@@ -589,6 +590,7 @@ const i18n = {
         straze: '史哥',
         summer_break_charlotte: '水呆',
         summertime_iseria:'火飞',
+        architect_laika:'光蜻蜓',
         eligos: 'boss',	
     },
     artifacts: {
