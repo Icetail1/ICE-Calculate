@@ -7368,6 +7368,26 @@ const heroes = {
       }
     }
   },
+  architect_laika: {
+    name: 'Architect Laika',
+    element: element.light,
+    classType: classType.mage,
+    form: [ elements.target_has_target],
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 0.9,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.05, 0.15],
+        single: true,
+      },
+      s3: {
+        rate: 0.9,
+        pow: 0.9,
+        enhance: [0.05, 0.05, 0.05, 0,　0.1, 0.15],
+        aoe: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
