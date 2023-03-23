@@ -7372,7 +7372,7 @@ const heroes = {
     name: 'Architect Laika',
     element: element.light,
     classType: classType.mage,
-    form: [ elements.target_has_target],
+    form: [elements.target_has_target,elements.caster_speed],
     skills: {
       s1: {
         rate: 1,
