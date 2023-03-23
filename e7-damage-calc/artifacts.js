@@ -400,6 +400,13 @@ const artifacts = {
     exclusive: classType.ranger,
     applies: (skill) => getSkillType(skill) === skillTypes.single,
   },
+  recycle_ball: {
+    id: 'recycle_ball',
+    name: 'Recycle Ball',
+    type: artifactDmgType.damage,
+    exclusive: classType.warrior,
+    value: () => 0.1,
+  },
   sword_of_adin: {
     id: 'sword_of_adin',
     name: 'Sword Of Adin',
