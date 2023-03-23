@@ -406,6 +406,7 @@ const artifacts = {
     type: artifactDmgType.damage,
     exclusive: classType.warrior,
     value: () => 0.1,
+    applies: (skill) => getSkillType(skill) === skillTypes.single,
   },
   sword_of_adin: {
     id: 'sword_of_adin',
