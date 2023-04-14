@@ -3678,7 +3678,7 @@ const heroes = {
     }
   },
   last_rider_krau: {
-    name: 'Last Rider Krau',
+    name: 'Last d Krau',
     element: element.light,
     classType: classType.knight,
     baseAtk: 839,
@@ -7381,7 +7381,7 @@ const heroes = {
         single: true,
       },
       s3: {
-        rate: 0.9,
+        rate: 0.95,
         pow: 0.9,
         enhance: [0.05, 0.05, 0.05, 0,　0.1, 0.15],
         penetrate: () => elements.target_has_target.value() ? 0.8 : 0,
