@@ -3054,13 +3054,14 @@ const heroes = {
       s1: {
         rate: 0.7,
         pow: 1,
-        flat: () => elements.caster_max_hp.value()*0.08,
-        flatTip: () => ({ caster_max_hp: 8 }),
+        flat: () => elements.caster_max_hp.value()*0.1,
+        flatTip: () => ({ caster_max_hp: 10 }),
         enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
         single: true,
       },
       s2: {
-        rate: 1,
+        soulburn: true,
+        rate: (soulburn) => soulburn ? 1 : 1.4,
         pow: 1,
         flat: () => elements.caster_max_hp.value()*0.18,
         flatTip: () => ({ caster_max_hp: 18 }),
@@ -3070,8 +3071,8 @@ const heroes = {
       s3: {
         rate: 0.7,
         pow: 1,
-        flat: () => elements.caster_max_hp.value()*0.12,
-        flatTip: () => ({ caster_max_hp: 12 }),
+        flat: () => elements.caster_max_hp.value()*0.15,
+        flatTip: () => ({ caster_max_hp: 15 }),
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         aoe: true,
       }
@@ -3682,7 +3683,7 @@ const heroes = {
     element: element.light,
     classType: classType.knight,
     baseAtk: 839,
-    form: [elements.caster_max_hp, elements.attack_skill_stack_3],
+    form: [elements.caster_max_hp, elements.attack_skill_stack_3,elements.caster_speed],
     barrier: () => elements.caster_max_hp.value()*0.07,
     barrierEnhance: 's2',
     skills: {
@@ -3703,8 +3704,8 @@ const heroes = {
         pow: 1,
         flat: () => 0.06*elements.caster_max_hp.value(),
         flatTip: () => ({ caster_max_hp: 6 }),
-        mult: () => 1 + elements.attack_skill_stack_3.value()*0.2,
-        multTip: () => ({ per_stack: 20 }),
+        mult: () => 1 + elements.attack_skill_stack_3.value()*0.2+ elements.caster_speed.value()*(0.001125),
+        multTip: () => ({ per_stack: 20 },{ caster_speed:0.1125 }),
         penetrate: () => 1.0,
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         aoe: true,
@@ -3803,7 +3804,7 @@ const heroes = {
         single: true,
       },
       s3: {
-        rate: 0.9,
+        rate: 1,
         pow: 1,
         atk: () =>  elements.highest_ally_attack.value(),
         noBuff: true,
