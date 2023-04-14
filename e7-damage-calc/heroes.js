@@ -3063,8 +3063,8 @@ const heroes = {
         soulburn: true,
         rate: (soulburn) => soulburn ? 1 : 1.4,
         pow: 1,
-        flat: (soulburn) => elements.caster_max_hp.value()*(soulburn ? 0.18 : 0.28),
-        flatTip: (soulburn) => ({ caster_max_hp : (soulburn ? 18 : 28) }),
+        flat: (soulburn) => elements.caster_max_hp.value()*(soulburn ? 0.28 : 0.18),
+        flatTip: (soulburn) => ({ caster_max_hp : (soulburn ? 28 : 18) }),
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         single: true,
       },
@@ -3684,7 +3684,7 @@ const heroes = {
     classType: classType.knight,
     baseAtk: 839,
     form: [elements.caster_max_hp, elements.attack_skill_stack_3,elements.caster_speed],
-    barrier: () => elements.caster_max_hp.value()*0.07,
+    barrier: () => elements.caster_max_hp.value()*0.1,
     barrierEnhance: 's2',
     skills: {
       s1: {
