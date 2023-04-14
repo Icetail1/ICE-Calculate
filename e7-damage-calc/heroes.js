@@ -3061,7 +3061,7 @@ const heroes = {
       },
       s2: {
         soulburn: true,
-        rate: (soulburn) => soulburn ? 1 : 1.4,
+        rate: (soulburn) => soulburn ? 1.4 : 1,
         pow: 1,
         flat: (soulburn) => elements.caster_max_hp.value()*(soulburn ? 0.28 : 0.18),
         flatTip: (soulburn) => ({ caster_max_hp : (soulburn ? 28 : 18) }),
