@@ -7394,6 +7394,38 @@ const heroes = {
       }
     }
   },
+  twisted_eldolon_kayron: {
+    name: 'Twisted Eldolon Kayron',
+    element: element.light,
+    classType: classType.thief,
+    form: [elements.target_hp_pc],
+    barrier: () => elements.caster_max_hp.value() * 0.12,
+    skills: {
+      s1: {
+        soulburn: true,
+        rate: (soulburn) => soulburn ? 1.7 : 1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05,  0.1],
+        mult: () => 1 + (100-elements.target_hp_pc.value())*0.003,
+        multTip: () => ({ target_lost_hp_pc: 0.3 }),
+        single: true,
+      },
+      s1_extra: {
+        name: 'S1 Extra Attack',
+        rate: 0.85,
+        pow: 1,
+        enhance_from: 's1',
+        single: true,
+      },
+      s3: {
+        rate: 0.9,
+        pow: 1,
+        enhance: [0.05, 0.05,  0,　0.1, 0.1],
+
+        aoe: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
