@@ -4358,6 +4358,7 @@ const heroes = {
     name: 'Milim',
     element: element.fire,
     classType: classType.mage,
+    form: [elements.exclusive_equipment_2],
     baseAtk: 1359,
     skills: {
       s1: {
@@ -4369,6 +4370,7 @@ const heroes = {
       s2: {
         rate: 1,
         pow: 1,
+        exEq: () => elements.exclusive_equipment_2.value() ? 0.1 : 0,
         aoe: true,
       },
       s3: {
