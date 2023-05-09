@@ -389,6 +389,7 @@ const i18n = {
       lone_crescent_bellona: '一轮孤月维尔萝娜',	
       eligos: '艾利戈斯',	
       architect_laika:'策划者莱伊卡',
+      twisted_eldolon_kayron: '扭曲亡灵凯隆',
       astromancer_Elena: '星辰的神谕艾蕾娜',
     },
     nicknames: {
@@ -592,6 +593,7 @@ const i18n = {
         summertime_iseria:'火飞',
         architect_laika:'光蜻蜓',
         eligos: 'boss',	
+        twisted_eldolon_kayron: '光凯隆',	
     },
     artifacts: {
       no_proc: '无神器',
