@@ -133,12 +133,12 @@ const heroes = {
     skills: {
       s1: {
         rate: 1,
-        pow: 1,
+        pow: 0.9,
         enhance: [0.05, 0, 0.1, 0, 0.15],
         single: true,
       },
       s3: {
-        rate: 0.9,
+        rate: 0.95,
         pow: 1,
         aoe: true,
       }
