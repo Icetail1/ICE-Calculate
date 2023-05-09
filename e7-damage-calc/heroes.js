@@ -7398,7 +7398,7 @@ const heroes = {
     name: 'Twisted Eldolon Kayron',
     element: element.light,
     classType: classType.thief,
-    form: [elements.target_hp_pc,elements.caster_max_hp],
+    form: [elements.target_hp_pc,elements.caster_full_fighting_spirit, elements.caster_max_hp],
     barrier: () => elements.caster_max_hp.value() * 0.12,
     skills: {
       s1: {
@@ -7421,7 +7421,7 @@ const heroes = {
         rate: 0.9,
         pow: 1,
         enhance: [0.05, 0.05,  0,　0.1, 0.1],
-
+        fixed: () => elements.caster_full_fighting_spirit.value()? 10000 : 2000,
         aoe: true,
       }
     }
