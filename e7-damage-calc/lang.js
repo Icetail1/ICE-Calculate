@@ -390,6 +390,7 @@ const i18n = {
       eligos: '艾利戈斯',	
       architect_laika:'策划者莱伊卡',
       twisted_eldolon_kayron: '扭曲亡灵凯隆',
+      benimaru: '红丸',
       astromancer_Elena: '星辰的神谕艾蕾娜',
     },
     nicknames: {
