@@ -453,6 +453,13 @@ const elements = {
     type: 'checkbox',
     value: () => document.getElementById('caster-starshelter') ? document.getElementById('caster-starshelter').checked : false,
   },
+  caster_multilayer_barrier: {
+    ref: 'caster_multilayer_barrier',
+    id: 'caster_multilayer_barrier',
+    label: 'Caster has MultilayerBarrier',
+    type: 'checkbox',
+    value: () => document.getElementById('caster_multilayer_barrier') ? document.getElementById('caster_multilayer_barrier').checked : false,
+  },
   caster_vigor: {
     value: () => document.getElementById('vigor') ? document.getElementById('vigor').checked : false,
   },
