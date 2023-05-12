@@ -698,6 +698,7 @@ const i18n = {
       caster_stealth: '自身隐身',
       caster_perception: '处于识破状态',
       caster_starshelter: '处于星之庇护状态',
+      caster_multilayer_barrier: '处于多重防护状态',
       critical_hit_stack: '暴击叠加数',
       critical_hit_stack_12: '暴击叠加数',
       attack_skill_stack_3: '攻击叠加数',
