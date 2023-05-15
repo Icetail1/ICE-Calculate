@@ -1030,8 +1030,8 @@ $(() => {
     }));
     $(heroSelector).selectpicker('refresh');
    
-    Object.keys(artifacts).map((id => {
-      $(nicknameSelector).append(`<option value="${id}">${artifactName(id)}</option>`)
+    Object.keys(nicknames).map((id => {
+      $(nicknameSelector).append(`<option value="${id}">${nickNamesShow(id)}</option>`)
     }));
     
     $(artiSelector).append(`<option value="">${artifactName('no_proc')}</option>`);
