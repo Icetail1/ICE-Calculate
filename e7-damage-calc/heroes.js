@@ -7116,6 +7116,25 @@ const heroes = {
       },
     }
   },
+  ningning: {
+    name: 'ae-ningning',
+    element: element.fire,
+    classType: classType.soul_weaver,
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      },
+      s3: {
+        rate: 1.5,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      },
+    }
+  },
   karina: {
     name: 'ae-KARINA',
     element: element.ice,
