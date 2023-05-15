@@ -403,7 +403,7 @@ const i18n = {
       karina:'ae-KARINA',      
     },
     nicknames: {
-      achates:	'火奶',   
+      achates:	'小火奶',   
       adin:	'艾庭',
       adlay:	'亚迪赖',
       adventurer_ras:	'男主 转职男主 拉丝',  
@@ -551,7 +551,7 @@ const i18n = {
       lidica:	'火弓 火高潮 高潮脸', 
       lilias:	'llys 火盾',  
       lilibet:	'剪刀 llb',  
-      lionheart_cermia:	'王夏娜',   
+      lionheart_cermia:	'王夏娜 狮心王 光夏娜',   
       little_queen_charlotte:	'光呆毛',   
       lorina:	'木瓜',
       lots:	'木拉兹 木拉',  
