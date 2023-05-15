@@ -1050,6 +1050,8 @@ $(() => {
       build(hero);
       refreshArtifactList(hero);
       buildArtifact(artifact);
+      console.log($(nicknameSelector).value);
+      console.log($(nickNamesShow(hero.id)));
       $(nicknameSelector).value = $(nickNamesShow(hero.id));
       resolve();
       gtag('event', 'pick', {
