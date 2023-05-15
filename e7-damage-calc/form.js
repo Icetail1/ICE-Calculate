@@ -1051,8 +1051,8 @@ $(() => {
       refreshArtifactList(hero);
       buildArtifact(artifact);
       console.log(nicknameSelector.value);
-      console.log(hero);
-      nicknameSelector.value = hero;
+      console.log(heroSelector.value);
+      nicknameSelector.value = heroSelector.value;
       resolve();
       gtag('event', 'pick', {
         event_category: 'Hero',
