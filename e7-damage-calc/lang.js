@@ -495,7 +495,7 @@ const i18n = {
       emilia:	'emt',
       enott:	'艾诺特',
       ervalen:	'木王子',
-      fairytale_tenebria:	'水泰尼 水泰妮',  
+      fairytale_tenebria:	'水泰尼 水泰妮 水泥',  
       faithless_lidica:	'光弓',  
       falconer_kluri:	'鹰盾 鸟盾',  
       fallen_cecilia:	'暗龙 暗塞西',  
