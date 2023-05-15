@@ -1030,7 +1030,7 @@ $(() => {
     }));
     $(heroSelector).selectpicker('refresh');
    
-    Object.keys(hero).map((id => {
+    Object.keys(heroes).map((id => {
       $(nicknameSelector).append(`<option value="${id}">${nickNamesShow(id)}</option>`)
     }));
     
