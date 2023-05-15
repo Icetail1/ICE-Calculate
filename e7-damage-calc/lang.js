@@ -817,6 +817,11 @@ const heroNicknames = (id) => {
   return i18n[lang].nicknames[id] || '';
 };
 
+const nickNamesShow = (id) => {
+  const lang = document.getElementById('root').getAttribute('lang');
+  return i18n[lang].nicknames[id] || nicknames[id].name;
+};
+
 const artifactName = (id) => {
   const lang = document.getElementById('root').getAttribute('lang');
   if (lang === 'en') {
