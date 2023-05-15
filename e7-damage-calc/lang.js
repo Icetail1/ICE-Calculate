@@ -396,7 +396,10 @@ const i18n = {
       death_dealer_ray: '',
       unbound_knight_arowell: '',
       astromancer_Elena: '星辰的神谕艾蕾娜',
-      
+      winter:'ae-WINTER',
+      giselle :'ae-GISELLE',
+      ningning:'ae-NINGNING',
+      karina:'ae-KARINA',      
     },
     nicknames: {
 achates:	'火奶',   
