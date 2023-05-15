@@ -1031,7 +1031,7 @@ $(() => {
     $(heroSelector).selectpicker('refresh');
    
     Object.keys(nicknames).map((id => {
-      $(nicknameSelector).append(`<option value="${id}"${heroes(id)} </option>`)
+      $(nicknameSelector).append(`<option value="${id}"${heroNicknames(id)} </option>`)
     }));
     
     
