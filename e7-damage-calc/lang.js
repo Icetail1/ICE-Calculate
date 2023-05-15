@@ -391,7 +391,12 @@ const i18n = {
       architect_laika:'策划者莱伊卡',
       twisted_eldolon_kayron: '扭曲亡灵凯隆',
       benimaru: '红丸',
+      amid: '雅咪得',
+      lua: '露雅',
+      death_dealer_ray: '',
+      unbound_knight_arowell: '',
       astromancer_Elena: '星辰的神谕艾蕾娜',
+      
     },
     nicknames: {
 achates:	'火奶',   
