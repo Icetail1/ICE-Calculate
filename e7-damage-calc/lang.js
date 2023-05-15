@@ -393,6 +393,7 @@ const i18n = {
       benimaru: '红丸',
       amid: '雅咪德',
       lua: '露雅',
+      serene_purity_adin: '清玄的艾庭',
       death_dealer_ray: '死亡探究者雷伊',
       unbound_knight_arowell: '自由骑士雅洛薇',
       astromancer_Elena: '星辰的神谕艾蕾娜',
@@ -690,7 +691,8 @@ const i18n = {
       winter:'冬冬 徐冬冬',
       giselle :'吉瑟列',
       ningning:'宁宁',
-      karina:'女拳 水拳 女团团长',        
+      karina:'女拳 水拳 女团团长', 
+      serene_purity_adin: '水艾庭',
 
     },
     artifacts: {
