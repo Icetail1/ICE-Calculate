@@ -7455,6 +7455,79 @@ const heroes = {
       }
     }
   },
+  unbound_knight_arowell: {
+    name: 'unbound_knight_arowell',
+    element: element.light,
+    classType: classType.knight,
+    baseAtk: 758,
+    form: [elements.caster_max_hp],
+    barrier: () => elements.caster_max_hp.value() * 0.2,
+    skills: {
+      s1: {
+        rate: 0.7,
+        pow: 0.95,
+        flat: () => elements.caster_max_hp.value() * 0.05,
+        flatTip: () => ({caster_max_hp: 5}),
+        enhance: [0.05, 0.05, 0, 0.1, 0, 0.15],
+        single: true,
+      },
+      s3: {
+        rate: 0.75,
+        pow: 0.95,
+        flat: () => elements.caster_max_hp.value() * 0.15,
+        flatTip: () => ({caster_max_hp: 15}),
+        enhance: [0.05, 0.05, 0, 0.1, 0, 0.15],
+        single: true,
+      }
+    }
+  },
+  lua: {
+    name: 'Lua',
+    element: element.ice,
+    classType: classType.ranger,
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 0.95,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      },
+      s2: {
+        rate: 1.5,
+        pow: 0.9,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      },
+    }
+  },
+  amid: {
+    name: 'Amid',
+    element: element.ice,
+    classType: classType.soul_weaver,
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      },
+    }
+  },
+  death_dealer_ray: {
+    name: 'Death Dealer Ray',
+    element: element.dark,
+    classType: classType.soul_weaver,
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      },
+    }
+  },
+  
+  
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
