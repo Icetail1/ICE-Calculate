@@ -814,7 +814,7 @@ const heroName = (id) => {
 
 const heroNicknames = (id) => {
   const lang = document.getElementById('root').getAttribute('lang');
-  return i18n[lang].nicknames[id] || nicknames[id].name;
+  return i18n[lang].nicknames[id] || '';
 };
 
 const artifactName = (id) => {
