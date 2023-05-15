@@ -131,7 +131,7 @@ const i18n = {
       archdemon_shadow: '魔神的暗影',
       aria: '艾莉雅',
       armin: '亚敏',
-      arowell: '雅洛薇',
+      arowell: '小光盾(未转职)',
       assassin_cartuja: '杀手卡尔图哈',
       assassin_cidd: '杀手席德',
       assassin_coli: '杀手可丽',
