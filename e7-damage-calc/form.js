@@ -1053,6 +1053,7 @@ $(() => {
       console.log(nicknameSelector.value);
       console.log(heroSelector.value);
       nicknameSelector.value = heroSelector.value;
+      $(nicknameSelector).selectpicker('refresh');
       resolve();
       gtag('event', 'pick', {
         event_category: 'Hero',
