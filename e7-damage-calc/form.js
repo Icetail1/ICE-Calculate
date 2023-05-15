@@ -947,6 +947,9 @@ const refreshArtifactList = (hero) => {
   $('#artifact').selectpicker('refresh');
 };
 
+
+
+
 const buildElement = (elem, parent) => {
   if (elem.type === 'slider') {
     $(parent).append(`<div id="${elem.id}-block" class="stat-block">
@@ -1047,6 +1050,7 @@ $(() => {
       build(hero);
       refreshArtifactList(hero);
       buildArtifact(artifact);
+      nicknameSelector.value = nickNamesShow(hero);
       resolve();
       gtag('event', 'pick', {
         event_category: 'Hero',
