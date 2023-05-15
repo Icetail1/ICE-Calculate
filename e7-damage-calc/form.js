@@ -1063,6 +1063,17 @@ $(() => {
     nicknameSelector.onchange = () => {
       heroSelector.value = nicknameSelector.value;
       $(heroSelector).selectpicker('refresh');
+      const hero = heroes[heroSelector.value];
+      const artifact = { ...artifacts[artiSelector.value] };
+      dedupeForm(hero, artifact);
+      build(hero);
+      refreshArtifactList(hero);
+      resolve();
+      gtag('event', 'pick', {
+        event_category: 'Hero',
+        event_label: heroSelector.value,
+      });
+      refreshCompareBadge();
     };  
     
     
