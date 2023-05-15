@@ -1050,8 +1050,6 @@ $(() => {
       build(hero);
       refreshArtifactList(hero);
       buildArtifact(artifact);
-      console.log(nicknameSelector.value);
-      console.log(heroSelector.value);
       nicknameSelector.value = heroSelector.value;
       $(nicknameSelector).selectpicker('refresh');
       resolve();
@@ -1062,6 +1060,14 @@ $(() => {
       refreshCompareBadge();
     };
 
+    nicknameSelector.onchange = () => {
+      heroSelector.value = nicknameSelector.value;
+      $(heroSelector).selectpicker('refresh');
+    };  
+    
+    
+    
+    
     const defPresetSelector = document.getElementById('def-preset');
     defPresetSelector.onchange = () => {
       const selected = defPresetSelector.options[defPresetSelector.selectedIndex];
