@@ -1023,12 +1023,19 @@ const dedupeForm = (hero, artifact) => {
 $(() => {
   try {
     const heroSelector = document.getElementById('hero');
+    const nicknameSelector = document.getElementById('nicknames');
     const artiSelector = document.getElementById('artifact');
     Object.keys(heroes).map((id => {
       $(heroSelector).append(`<option value="${id}" data-tokens="${heroNicknames(id)}" data-content="${elemIcon(heroes[id].element)}${classIcon(heroes[id].classType)}<span>${heroName(id)}</span>">${heroName(id)}</option>`)
     }));
     $(heroSelector).selectpicker('refresh');
-
+   
+    Object.keys(nicknames).map((id => {
+      $(nicknameSelector).append(`<option value="${id}"${heroes(id)} </option>`)
+    }));
+    
+    
+    
     $(artiSelector).append(`<option value="">${artifactName('no_proc')}</option>`);
     $(artiSelector).append(`<option data-divider="true"></option>`);
     Object.keys(artifacts).map((id => {
