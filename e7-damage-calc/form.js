@@ -1050,7 +1050,7 @@ $(() => {
       build(hero);
       refreshArtifactList(hero);
       buildArtifact(artifact);
-      $(nicknameSelector).value = ${nickNamesShow(hero.id)};
+      $(nicknameSelector).value = $(nickNamesShow(hero.id));
       resolve();
       gtag('event', 'pick', {
         event_category: 'Hero',
