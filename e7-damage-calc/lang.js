@@ -451,7 +451,7 @@ const i18n = {
       cecilia:	'火龙骑',   
       celeste:	'小光弓',   
       celestial_mercedes:	'暗女主',   
-      celine:	'卡琳姨妈 木阿姨',   
+      celine:	'卡琳姨妈 木阿姨 木瑟琳',   
       cerise:	'水弓',   
       cermia:	'夏娜 火夏娜',   
       challenger_dominiel:	'暗兔',   
