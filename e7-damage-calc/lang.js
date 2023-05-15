@@ -410,7 +410,7 @@ const i18n = {
       ainos:	'小暗奶',
       ains:	'艾因兹',
       aither:	'小王子',   
-      alencia:	'姨妈龙 龙姨妈',  
+      alencia:	'姨妈龙 龙姨妈 小姨妈',  
       alexa:	'小水刺',   
       all_rounder_wanda:	'转职汪达',   
       ambitious_tywin:	'光泰温 泰上皇',   
