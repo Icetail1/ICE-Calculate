@@ -1052,7 +1052,7 @@ $(() => {
       buildArtifact(artifact);
       nicknameSelector.value = heroSelector.value;
       $(nicknameSelector).selectpicker('refresh');
-      document.getElementById('hero-eng')=hero.name;
+      document.getElementById('hero-eng') = hero.name;
       resolve();
       gtag('event', 'pick', {
         event_category: 'Hero',
