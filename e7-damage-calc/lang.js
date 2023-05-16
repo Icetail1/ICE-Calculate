@@ -589,7 +589,7 @@ const i18n = {
       peira:	'水狼',
       penelope:	'老板娘',
       pirate_captain_flan:	'暗芙兰',   
-      politis:	'机械城主 火法 轮椅妹', 
+      politis:	'火双 火双子', 
       purrgis:	'木狗 反击狗',  
       pyllis:	'小暗盾(未转职)',   
       ram:	'拉姆',
