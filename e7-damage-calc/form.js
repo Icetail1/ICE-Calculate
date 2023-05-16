@@ -1069,6 +1069,7 @@ $(() => {
       dedupeForm(hero, artifact);
       build(hero);
       refreshArtifactList(hero);
+      document.getElementById('hero-eng').innerHTML = hero.name;
       resolve();
       gtag('event', 'pick', {
         event_category: 'Hero',
