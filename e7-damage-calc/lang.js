@@ -794,7 +794,7 @@ const i18n = {
       caster_fighting_spirit: '斗志',
       caster_invincible: '自身无敌',
       caster_vigor: '自身魄力',
-      caster_enrage: '自身激怒',
+      caster_enrage: '自身狂气',
       caster_stealth: '自身隐身',
       caster_perception: '处于识破状态',
       caster_starshelter: '处于星之庇护状态',
