@@ -393,6 +393,13 @@ const elements = {
     type: 'checkbox',
     value: () => document.getElementById('caster-has-flame-alchemist').checked
   },
+  caster_neo_phantom_sword: {
+    ref: 'caster_neo_phantom_sword',
+    id: 'caster-neo-phantom-sword',
+    label: 'Caster has Neo Phantom Sword',
+    type: 'checkbox',
+    value: () => document.getElementById('caster-neo-phantom-sword').checked
+  },
   caster_full_focus: {
     ref: 'caster_full_focus',
     id: 'caster-full-focus',
