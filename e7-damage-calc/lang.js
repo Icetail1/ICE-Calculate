@@ -749,6 +749,7 @@ const i18n = {
       sword_of_adin:'循环之剑',
       no_reject:'无法拒绝的提议',
       recycle_ball:'循环念珠',
+      gold_rose:'金玫瑰',
     },
     form: {
       allies_nb_buff: '我军Buff数量',
