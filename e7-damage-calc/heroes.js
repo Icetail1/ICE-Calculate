@@ -7545,7 +7545,31 @@ const heroes = {
       },
     }
   },
-  
+  last_piece_karin: {
+    name: 'Last Piece Karin',
+    element: element.light,
+    classType: classType.thief,
+    form: [elements.caster_speed],
+    skills: {
+      s1: {
+        soulburn: true,
+        rate: (soulburn) => soulburn ? 1.5 : 0.9,
+        pow: 1,
+        enhance: [0.05, 0, 0.05, 0, 0.1, 0,0.1],
+        mult: () => 1 + elements.caster_speed.value()*(0.00075),
+        multTip: () => ({ caster_speed:0.075 }),
+        single: true,
+      },
+      s2: {
+        rate: 1.5,
+        pow: 0.9,
+        enhance: [0.05, 0.05, 0.05, 0.05,　0.05, 0.05, 0.1],
+        mult: () => 1 + elements.caster_speed.value()*(0.0015),
+        multTip: () => ({ caster_speed:0.15 }),
+        single: true,
+      }
+    }
+  },
   
   astromancer_Elena: {
     name: 'Astromancer Elena',
