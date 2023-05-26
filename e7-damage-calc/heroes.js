@@ -7574,7 +7574,30 @@ const heroes = {
       }
     }
   },
-  
+  abigail: {
+    name: 'Abigail',
+    element: element.fire,
+    classType: classType.warrior,
+    form: [elements.caster_max_hp],
+    skills: {
+      s1: {
+        rate: 0.8,
+        pow: 0.9,
+        flat: () => elements.caster_max_hp.value()*0.12,
+        flatTip: () => ({ caster_max_hp: 12 }),
+        enhance: [0.05, 0.05, 0.05, 0.05,　0.05, 0.05, 0.1],
+        single: true,
+      },
+      s3: {
+        rate: 1.2,
+        pow: 0.95,
+        flat: () => elements.caster_max_hp.value()*0.2,
+        flatTip: () => ({ caster_max_hp: 20 }),
+        enhance: [0.05, 0.05, 0.05,0,　0.05, 0.05, 0.1],
+        single: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
