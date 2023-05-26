@@ -200,6 +200,13 @@ const artifacts = {
     exclusive: classType.warrior,
     applies: (skill) => getSkillType(skill) === skillTypes.single,
   },
+  gold_rose: {
+    id: 'gold_rose',
+    name: 'Gold Rose',
+    scale: [0.08, 0.088, 0.096, 0.104, 0.112, 0.12, 0.128, 0.136, 0.144, 0.152, 0.16],
+    type: artifactDmgType.damage,
+    exclusive: classType.warrior,
+  },
   portrait_of_the_saviors: {
     id: 'portrait_of_the_saviors',
     name: 'Portrait of the Saviors',
