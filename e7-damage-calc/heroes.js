@@ -7549,7 +7549,7 @@ const heroes = {
     name: 'Last Piece Karin',
     element: element.light,
     classType: classType.thief,
-    form: [elements.caster_speed,elements.caster_neo_phantom_sword],
+    form: [elements.caster_speed,elements.caster_neo_phantom_sword, elements.target_max_hp],
     skills: {
       s1: {
         soulburn: true,
