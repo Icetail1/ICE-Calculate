@@ -400,7 +400,10 @@ const i18n = {
       winter:'ae-WINTER',
       giselle :'ae-GISELLE',
       ningning:'ae-NINGNING',
-      karina:'ae-KARINA',      
+      karina:'ae-KARINA',   
+      abigail:'阿比盖尔',   
+      last_piece_karin:'最后的碎片卡琳', 
+      
     },
     nicknames: {
       achates:	'小火奶',   
@@ -693,7 +696,8 @@ const i18n = {
       ningning:'宁宁',
       karina:'女拳 水拳 女团团长', 
       serene_purity_adin: '水艾庭',
-
+      abigail:'阿比 吸血鬼妹妹 雅碧凯',   
+      last_piece_karin:'光卡琳', 
     },
     artifacts: {
       no_proc: '无神器',
@@ -789,6 +793,7 @@ const i18n = {
       caster_has_debuff: '自身有Debuff',
       caster_has_flame_alchemist: '自身有焰之炼金术师BUFF',
       caster_full_fighting_spirit: '斗志最大值',
+      caster_neo_phantom_sword:'自身有真幻影剑BUFF',
       caster_full_focus: '专注力最大值',
       caster_nb_focus: '专注力',
       caster_fighting_spirit: '斗志',
