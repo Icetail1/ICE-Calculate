@@ -2996,6 +2996,14 @@ const heroes = {
     baseAtk: 1510,
     form: [elements.caster_has_buff, elements.caster_max_hp, elements.target_max_hp],
     barrier: (hero) => hero.getAtk()*0.45,
+    innateAtkUp: () => {
+      let boost = 0.2;
+      for (let i = 0; i < Number(document.getElementById(`molagora-s2`).value); i++) {
+        boost += heroes.hwayoung.skills.s2.enhance[i];
+      }
+
+      return boost;
+    },
     skills: {
       s1: {
         rate: 0.8,
@@ -3004,6 +3012,9 @@ const heroes = {
         enhance: [0.05, 0, 0.1, 0, 0.15],
         single: true,
         noCrit: true,
+      },
+      s2: {
+        enhance: [0.01, 0.02, 0.02, 0.02, 0.03],
       },
       s3: {
         rate: 1.25,
@@ -6984,6 +6995,11 @@ const heroes = {
     classType: classType.warrior,
     baseAtk: 1570,
     form: [elements.target_has_barrier],
+    innateAtkUp: () => {
+      let boost = 0.3;
+      return boost;
+    },
+
     skills: {
       s1: {
         rate: 1,
