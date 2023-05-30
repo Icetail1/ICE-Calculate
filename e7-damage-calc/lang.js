@@ -638,7 +638,7 @@ const i18n = {
       specimen_sez:	'光刺 光弟弟 掏男',  
       specter_tenebria:	'暗法 暗泰妮',  
       spirit_eye_celine:	'光瑟琳',   
-      sylvan_sage_vivian:	'光薇薇安',
+      sylvan_sage_vivian:	'光薇薇安 光vva',
       straze:	'史哥',   
       summer_break_charlotte:	'水呆',   
       summer_disciple_alexa:	'小水刺',
