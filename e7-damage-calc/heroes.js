@@ -7317,6 +7317,15 @@ const heroes = {
     dot: [dot.burn],
     dotDamageUp:1.3,
     form: [elements.target_burn_detonate],
+    innateAtkUp: () => {
+      let boost = 0.2;
+      for (let i = 0; i < Number(document.getElementById(`molagora-s2`).value); i++) {
+        boost += heroes.Beehoo.skills.s2.enhance[i];
+      }
+
+      return boost;
+    },
+
     skills: {
       s1: {
         rate: 1,
@@ -7333,6 +7342,9 @@ const heroes = {
         detonation: () => 1.3,
         single: true,
         noCrit: true,
+      },
+      s2: {
+        enhance: [0.01, 0.01, 0.01, 0.01, 0.2, 0.2, 0.2],
       },
     }
   },
