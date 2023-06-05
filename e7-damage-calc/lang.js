@@ -697,7 +697,7 @@ const i18n = {
       karina:'女拳 水拳 女团团长', 
       serene_purity_adin: '水艾庭',
       abigail:'阿比 吸血鬼妹妹 雅碧凯',   
-      last_piece_karin:'光卡琳', 
+      last_piece_karin:'光卡琳　千本樱', 
     },
     artifacts: {
       no_proc: '无神器',
