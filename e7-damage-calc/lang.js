@@ -671,7 +671,7 @@ const i18n = {
       zealot_carmainerose:	'转职火爪',   
       zeno:	'丑法',
       zerato:	'水杰 冰杰 冰法', 
-      arunka:	'压路机',   
+      arunka:	'压路机 木腿',   
       zio:	'小皇帝',   
       savior_adin:	'光艾 光艾庭 歇逼妹',   
       suthan:	'斯坦',
