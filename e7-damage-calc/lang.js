@@ -403,6 +403,7 @@ const i18n = {
       karina:'ae-KARINA',   
       abigail:'阿比盖尔',   
       last_piece_karin:'最后的碎片卡琳', 
+      requiem_roana:'镇魂的罗安纳', 
       
     },
     nicknames: {
@@ -698,6 +699,7 @@ const i18n = {
       serene_purity_adin: '水艾庭',
       abigail:'阿比 吸血鬼妹妹 雅碧凯',   
       last_piece_karin:'光卡琳　千本樱', 
+      requiem_roana:'暗木瓜 暗瓜', 
     },
     artifacts: {
       no_proc: '无神器',
