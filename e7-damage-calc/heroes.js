@@ -7626,6 +7626,35 @@ const heroes = {
       }
     }
   },
+  requiem_roana: {
+    name: 'Requiem Roana',
+    element: element.dark,
+    classType: classType.mage,
+    baseAtk: 839,
+    form: [elements.attack_skill_stack_3],
+    barrier: () => elements.caster_max_hp.value()*0.1,
+    barrierEnhance: 's2',
+    skills: {
+      s1: {
+        noCrit: true,
+        rate: 1,
+        pow: 1,
+        afterMath: () => ({ atkPercent: 0.5, penetrate: 0.7 }),
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        single: true,
+      },
+      s3: {
+        noCrit: true,
+        rate: 0.3,
+        pow: 1,
+        mult: () => 1 + elements.attack_skill_stack_3.value()*0.15,
+        multTip: () => ({ per_stack: 15 }),
+        penetrate: () => 1.0,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        aoe: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
