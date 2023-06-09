@@ -3153,10 +3153,10 @@ const heroes = {
         single: true,
       },
       s3: {
-        rate: 0.95,
+        rate: 1,
         pow: 1,
-        mult: () => elements.target_has_debuff.value() ? 1.3 : 1,
-        multTip: () => ({ target_has_debuff: 30 }),
+        mult: () => elements.target_has_debuff.value() ? 1.5 : 1,
+        multTip: () => ({ target_has_debuff: 50 }),
         penetrate: () => 0.5,
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         single: true,
@@ -3897,8 +3897,8 @@ const heroes = {
       s3: {
         rate: 1.5,
         pow: 1,
-        mult: () => document.getElementById(`elem-adv`).checked ? 1.3 : 1,
-        multTip: () => ({ elemental_advantage: 30 }),
+        mult: () => document.getElementById(`elem-adv`).checked ? 1.5 : 1,
+        multTip: () => ({ elemental_advantage: 50 }),
         penetrate: () => 0.5,
         enhance: [0.05, 0.05, 0, 0.05, 0.15],
         single: true,
@@ -6079,7 +6079,6 @@ const heroes = {
     element: element.ice,
     classType: classType.knight,
     baseAtk: 957,
-    form: [elements.target_hp_pc],
     skills: {
       s1: {
         rate: 0.9,
@@ -6088,11 +6087,10 @@ const heroes = {
         single: true,
       },
       s3: {
-        rate: 1.8,
+        rate: 1.5,
         pow: 1,
-        mult: () => 1 + (100 - elements.target_hp_pc.value()) * 0.0035,
-        multTip: () => ({target_lost_hp_pc: 35}),
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        penetrate: () => 0.5,
         single: true,
       },
     }
@@ -7018,8 +7016,8 @@ const heroes = {
       s3: {
         rate: 0.9,
         pow: 1,
-        mult: () => elements.target_has_barrier.value() ? 2.2 : 1,
-        multTip: () => ({ target_has_barrier: 120 }),
+        mult: () => elements.target_has_barrier.value() ? 3.4 : 1,
+        multTip: () => ({ target_has_barrier: 240 }),
         penetrate: () => 0.7,
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         single: true,
