@@ -809,7 +809,7 @@ const i18n = {
       caster_multilayer_barrier: '处于多重防护状态',
       critical_hit_stack: '暴击叠加数',
       critical_hit_stack_12: '暴击叠加数',
-      attack_skill_stack_3: '攻击叠加数',
+      attack_skill_stack_3: '叠加数',
       attack_skill_stack_5: '攻击叠加数',
       non_attack_skill_stack_3: '非攻击叠加数',
       non_attack_skill_stack_8: '非攻击叠加数',
