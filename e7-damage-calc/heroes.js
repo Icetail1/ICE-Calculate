@@ -7630,8 +7630,6 @@ const heroes = {
     classType: classType.mage,
     baseAtk: 839,
     form: [elements.attack_skill_stack_3],
-    barrier: () => elements.caster_max_hp.value()*0.1,
-    barrierEnhance: 's2',
     skills: {
       s1: {
         noCrit: true,
