@@ -7318,7 +7318,7 @@ const heroes = {
     innateAtkUp: () => {
       let boost = 0.2;
       for (let i = 0; i < Number(document.getElementById(`molagora-s2`).value); i++) {
-        boost += heroes.Beehoo.skills.s2.enhance[i];
+        boost += heroes.beehoo.skills.s2.enhance[i];
       }
 
       return boost;
