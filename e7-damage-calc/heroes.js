@@ -7628,7 +7628,6 @@ const heroes = {
     name: 'Requiem Roana',
     element: element.dark,
     classType: classType.mage,
-    baseAtk: 839,
     form: [elements.attack_skill_stack_3],
     skills: {
       s1: {
@@ -7655,7 +7654,6 @@ const heroes = {
     name: 'Astromancer Elena',
     element: element.light,
     classType: classType.ranger,
-    baseAtk: 1079,
     atkUp: () => elements.caster_starshelter.value() ? 1.15 : 1,
     form: [elements.target_has_debuff, elements.caster_starshelter],
     skills: {
