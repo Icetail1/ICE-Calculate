@@ -65,7 +65,7 @@
                             <select id="artifact" name="artifact" class="form-control custom-select selectpicker" data-live-search="true" data-size="12" data-none-selected-text="Artifact">
                             </select>
                         </div>
-                        <div class="form-group col-md-4 col-sm-12">
+                        <div class="form-group col-md-4 col-sm-12" style="display:none">
                             <select id="atk-preset" name="atk-preset" class="form-control custom-select selectpicker" data-size="12" data-show-subtext="true">
                                 <option value="">手动</option>
                                 <option data-divider="true"></option>
@@ -84,7 +84,7 @@
 
                     <div id="hero-info"></div>
 
-                    <div class="stat-block">
+                    <div class="stat-block" style="display:none">
                         <div class="form-group row col-sm-12">
                             <label for="atk" class="col-md-9 col-form-label form-control-sm"><h5>攻击力</h5></label>
                             <div class="input-group input-group-sm col-md-3">
@@ -102,7 +102,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" style="display:none">
                         <div class="col-sm-6 half-left">
                             <div class="stat-block">
                                 <div class="form-group row col-sm-12">
@@ -147,7 +147,7 @@
                         </div>
                     </div>
 
-                    <div class="stat-block">
+                    <div class="stat-block" style="display:none">
                         <div class="form-group row col-sm-12">
                             <label for="crit" class="col-md-9 col-form-label form-control-sm"><h5>暴击伤害 (%)</h5></label>
                             <div class="input-group input-group-sm col-md-3">
@@ -165,7 +165,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group col-sm-12">
+                    <div class="form-group col-sm-12" style="display:none">
                         <div class="custom-control custom-checkbox custom-control-inline buff-block">
                             <input class="custom-control-input" type="checkbox" id="elem-adv" value="1.1" onchange="resolve()">
                             <label class="custom-control-label" for="elem-adv"><span id="elem-adv-icon"></span> 属性克制</label>
@@ -252,7 +252,7 @@
                     <hr />
                 </div>
 
-                <div id="artifact-block">
+                <div id="artifact-block" style="display:none">
                     <h4>神器</h4>
                     <div id="artifact-info"></div>
                     <div id="artifact-lvl-block" class="stat-block">
@@ -276,7 +276,7 @@
                     <hr />
                 </div>
 
-                <div class="row">
+                <div class="row" style="display:none">
                     <h4 class="col-md-4">目标</h4>
                     <div class="form-group col-md-4 col-sm-12">
                         <select id="def-preset" name="def-preset" class="form-control custom-select selectpicker" data-size="10" data-show-subtext="true" data-live-search="true">
@@ -410,7 +410,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" style="display:none">
                         <div class="col-sm-6 half-left">
                             <div class="stat-block">
                                 <div class="form-group row col-sm-12">
@@ -465,7 +465,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group col-sm-12">
+                    <div class="form-group col-sm-12" style="display:none">
                         <div class="custom-control custom-checkbox custom-control-inline buff-block">
                             <input class="custom-control-input" type="checkbox" id="def-up" value="0.6" onchange="resolve()">
                             <label class="custom-control-label" for="def-up">
@@ -506,7 +506,7 @@
 
                 <hr />
 
-                <div>
+                <div style="display:none">
                     <h4>角色 特性</h4>
                     <div id="custom-block"></div>
                     <hr />
@@ -514,11 +514,11 @@
 
 
                 <h4>强化技能</h4>
-                <div id="molagora-block"></div>
+                <div id="molagora-block" style="display:none"></div>
             </form>
         </div>
 
-        <div id="damage-block">
+        <div id="damage-block" style="display:none">
             <h4>
                 伤害计算
                 <div class="btn-group" role="group" aria-label="Basic example">
@@ -547,7 +547,7 @@
                     <i class="far fa-question-circle fa-xs text-muted" data-toggle="tooltip" title="神器的追加伤害, 已经包含在下方的表格里"></i>
                 </span>
             </h4>
-            <div>
+            <div style="display:none">
                 <table class="table table-bordered table-sm col-sm-12">
                     <thead class="table-secondary">
                         <tr>
@@ -564,7 +564,7 @@
         </div>
 
         <footer class="page-footer pt-3 mt-5">
-            <div class="container-fluid text-center text-md-left">
+            <div class="container-fluid text-center text-md-left" style="display:none">
                 <div class="row">
                     <div class="col-md-6 mt-md-0 mt-3">
                         <h5 class="text-uppercase">制作人员</h5>                           
@@ -595,7 +595,7 @@
             </div>
         </footer>
         
-        <div id="compareAddModal" class="modal fade" tabindex="-1" role="dialog">
+        <div id="compareAddModal" class="modal fade" tabindex="-1" role="dialog" style="display:none">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -625,7 +625,7 @@
             </div>
         </div>
 
-        <div id="compareModal" class="modal fade" tabindex="-1" role="dialog">
+        <div id="compareModal" class="modal fade" tabindex="-1" role="dialog" style="display:none">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
