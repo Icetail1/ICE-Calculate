@@ -1127,7 +1127,7 @@ const i18n = {
       specter_tenebria: '幻影的泰妮布里雅',
       spirit_eye_celine: '灵眼的瑟琳',
       sylvan_sage_vivian: '森之贤者薇薇安',
-      straze: '史瑞杰思',
+      straze: '速度套 什么神器 4000 300 350',
       summer_break_charlotte: '暑假夏绿蒂',
       summer_disciple_alexa: '夏日学生雅莉莎',
       summertime_iseria:'南国的伊赛丽亚',
