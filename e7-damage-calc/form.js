@@ -1060,6 +1060,7 @@ $(() => {
       nicknameSelector.value = heroSelector.value;
       $(nicknameSelector).selectpicker('refresh');
       document.getElementById('hero-eng').innerHTML = hero.name;
+      document.getElementById('rougeP').innerHTML = ${rouge(id)}
       resolve();
       gtag('event', 'pick', {
         event_category: 'Hero',
