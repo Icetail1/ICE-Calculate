@@ -1043,6 +1043,8 @@ $(() => {
     Object.keys(heroes).map((id => {
       $(nicknameSelector).append(`<option value="${id}">${nickNamesShow(id)}</option>`)
     }));
+
+
     
     $(artiSelector).append(`<option value="">${artifactName('no_proc')}</option>`);
     $(artiSelector).append(`<option data-divider="true"></option>`);
@@ -1060,6 +1062,7 @@ $(() => {
       nicknameSelector.value = heroSelector.value;
       $(nicknameSelector).selectpicker('refresh');
       document.getElementById('hero-eng').innerHTML = hero.name;
+      document.getElementById('rougeP').innerHTML = rouge(heroSelector.value);
       resolve();
       gtag('event', 'pick', {
         event_category: 'Hero',
