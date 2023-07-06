@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="zhCN">
+<html id="root" lang="zhCN">
     <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBQ8W4W1QK"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
-          gtag('config', 'G-VBQ8W4W1QK', { 'page_title' : 'effectiveness', 'page_path': '/e7-damage-calc/zh/effectiveness' });
+          
+          gtag('config', 'G-VBQ8W4W1QK', { 'page_title' : 'calculator', 'page_path': '/e7-damage-calc/zh/' });
         </script>
 
         <meta charset="utf-8" />
@@ -23,17 +22,24 @@
         <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
         <!-- other browsers -->
         <link rel="icon" type="image/x-icon" href="../favicon.ico" />
-
-        <title>第七史诗效果肉鸽RTA全角色配置查询</title>
+        
+        <title>第七史诗 伤害计算器ICE修改版</title>
     </head>
     <body class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
-            <a class="navbar-brand">第七史诗效果肉鸽RTA全角色配置查询</a>
+            <a class="navbar-brand">第七史诗 伤害计算器ICE修改版</a>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+            <ul class="list-unstyled">
+                <li>
+                    <a href="https://raw.githubusercontent.com/Icetail1/ICE-Calculate/master/e7-damage-calc/README.md">ICE更新内容</a>
+                </li>
+            </ul>
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html"><i class="fas fa-angle-double-left"></i> 伤害计算器</a>
+                    <a class="nav-link" href="effectiveness.html">效果命中与抵抗计算</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
@@ -61,20 +67,28 @@
                             </select>
                         </div>
                         <div class="form-group col-md-4 col-sm-12">
+                            <select id="artifact" name="artifact" class="form-control custom-select selectpicker" data-live-search="true" data-size="12" data-none-selected-text="Artifact">
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 col-sm-12">
+                            <select id="atk-preset" name="atk-preset" class="form-control custom-select selectpicker" data-size="12" data-show-subtext="true">
+                                <option value="">手动</option>
+                                <option data-divider="true"></option>
+                                <option value="starter" data-atk="2500" data-crit="175" data-subtext="(2500/175%)">基础配置</option>
+                                <option value="attack" data-atk="6500" data-crit="150" data-subtext="(6500/150%)">纯攻击配置</option>
+                                <option value="crit" data-atk="2500" data-crit="350" data-subtext="(2500/350%)">纯暴伤配置</option>
+                                <option value="elite" data-atk="5000" data-crit="300" data-subtext="(5000/300%)">传家宝</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 col-sm-12">
                             <P id="hero-eng">
                                 英文名
                             </P>
                         </div>
-                        <div class="form-group col-md-4 col-sm-12"　hidden="hidden">
-                            <select id="artifact" name="artifact" class="form-control custom-select selectpicker" data-live-search="true" data-size="12" data-none-selected-text="Artifact">
-                            </select>
-                        </div>
                     </div>
 
                     <div id="hero-info"></div>
-            </form>
 
-             <div hidden="hidden">
                     <div class="stat-block">
                         <div class="form-group row col-sm-12">
                             <label for="atk" class="col-md-9 col-form-label form-control-sm"><h5>攻击力</h5></label>
@@ -585,7 +599,68 @@
                 </div>
             </div>
         </footer>
+        
+        <div id="compareAddModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">伤害比较</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="damage-mem-name" class="col-form-label">配装名称</label>
+                                <input type="text" class="form-control" id="damage-mem-name" placeholder="输入配装名称">
+                            </div>
+                        </form>
+                        <span class="text-muted font-italic">为同一个英雄保存配装时会覆盖同名的配装</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
+                            <i class="fas fa-window-close"></i> 取消
+                        </button>
+                        <button type="button" class="btn btn-primary btn-sm" id="compare-add">
+                            <i class="fas fa-save"></i> 添加至对比列表
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div id="compareModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">伤害比较</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="compare-splash" style="display: none">目前这个英雄没有已保存的配装</p>
+                        <div id="damage-comparison-block">
+                            <table class="table table-bordered table-sm col-sm-12">
+                                <thead class="table-secondary">
+                                <tr id="damage-header"></tr>
+                                </thead>
+                                <tbody id="damage-comparison"></tbody>
+                            </table>
+                            <span class="text-muted font-italic">此处默认比较的是暴击伤害，在技能无法触发暴击的情况下会比较普通伤害</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="clear-compare" type="button" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i> 清除全部
+                        </button>
+                        <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">
+                            <i class="fas fa-window-close"></i> 关闭
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
