@@ -5597,6 +5597,7 @@ const heroes = {
     element: element.ice,
     classType: classType.ranger,
     baseAtk: 1182,
+    form: [elements.exclusive_equipment_2],
     skills: {
       s1: {
         rate: 1,
@@ -5607,6 +5608,7 @@ const heroes = {
       s2: {
         rate: 0.7,
         pow: 1,
+        exEq: () => elements.exclusive_equipment_2.value() ? 0.1 : 0,
         enhance: [0.05, 0.1, 0.15],
         aoe: true,
       },
@@ -6359,7 +6361,7 @@ const heroes = {
     element: element.light,
     classType: classType.thief,
     baseAtk: 1010,
-    form: [elements.caster_hp_pc],
+    form: [elements.caster_hp_pc,elements.exclusive_equipment_2],
     dot: [dot.bleed],
     skills: {
       s1: {
@@ -6377,6 +6379,7 @@ const heroes = {
         mult: () => 1 + (100-elements.caster_hp_pc.value())*0.002,
         multTip: () => ({ caster_lost_hp_pc: 20 }),
         enhance: [0.1, 0, 0, 0, 0.15],
+        exEq: () => elements.exclusive_equipment_2.value() ? 0.1 : 0,
         aoe: true,
       }
     }
