@@ -404,6 +404,7 @@ const i18n = {
       abigail:'阿比盖尔',   
       last_piece_karin:'最后的碎片卡琳', 
       requiem_roana:'镇魂的罗安纳', 
+      ocean_breeze_luluca:'海洋香气璐璐卡', 
       
     },
     nicknames: {
