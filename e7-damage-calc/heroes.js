@@ -4139,6 +4139,7 @@ const heroes = {
         single: true,
       },
       s3: {
+        onlyCrit: true,
         soulburn: true,
         rate: (soulburn) => soulburn ? 1.1 : 0.9,
         pow: 1,
