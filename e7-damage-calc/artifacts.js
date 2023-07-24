@@ -420,7 +420,7 @@ const artifacts = {
     name: 'pray',
     scale: scale: [0.05, 0.055, 0.06, 0.065, 0.07, 0.075, 0.08, 0.085, 0.09, 0.095, 0.1],
     type: artifactDmgType.damage,
-    value: (artiScale) => artiScale * (elements.caster_add.value() ? 1 : 2),
+    value: (artiScale) => artiScale*(elements.caster_add.value() ? 1 : 2),
     exclusive: classType.warrior,
   },
   sword_of_adin: {
@@ -428,6 +428,6 @@ const artifacts = {
     name: 'Sword Of Adin',
     type: artifactDmgType.damage,
     exclusive: classType.thief,
-    value: () => (document.getElementById(`elem-adv`).checked ? 0.25 : 0)
+    value: () => (document.getElementById(`elem-adv`).checked ? 0.25 : 0),
   }
 };
