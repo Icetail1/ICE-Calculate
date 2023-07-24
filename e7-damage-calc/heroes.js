@@ -7672,6 +7672,67 @@ const heroes = {
       }
     }
   },
+  lethe: {
+    name: 'Lethe',
+    element: element.ice,
+    classType: classType.warrior,
+    form: [elements.caster_max_hp],
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      },
+      s1_extra: {
+        name: infoLabel('s1_extra_attack'),
+        rate: 0.3,
+        pow: 1.3,
+        flat: () => elements.caster_max_hp.value()*0.22,
+        flatTip: () => ({ caster_max_hp: 22 }),
+        penetrate: () => 1.0,
+        single: true,
+      },
+      s3: {
+        rate: 1,
+        pow: 1.05,
+        aoe: true,
+        enhance: [0, 0.1, 0, 0, 0.15],
+      }
+    }
+  },
+	navy_captain_landy: {
+    name: '	Navy Captain Landy',
+    element: element.light,
+    classType: classType.knight,
+    baseAtk: 1134,
+    form: [elements.attack_skill_stack_3],
+    atkUp: () => {
+      let boost = 0.1;
+      return 1 + elements.attack_skill_stack_3.value()*boost;
+    },
+    skills: {
+      s1: {
+        rate: 1.1,
+        pow: 1,
+        enhance: [0.05, 0, 0.1, 0, 0.15],
+        single: true,
+      },
+      s1_extra: {
+        name: infoLabel('s1_extra_attack'),
+        rate: 0.8,
+        pow: 1.3,
+        aoe: true,
+      },
+      s3: {
+        aoe: true,
+        rate: 1,
+        pow: 1,
+        penetrate: () => 0.6,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
