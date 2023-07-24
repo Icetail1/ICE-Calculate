@@ -405,7 +405,8 @@ const i18n = {
       last_piece_karin:'最后的碎片卡琳', 
       requiem_roana:'镇魂的罗安纳', 
       ocean_breeze_luluca:'海洋香气璐璐卡', 
-      
+      lethe:'丽希', 
+      navy_captain_landy:'海军上校兰蒂', 
     },
     nicknames: {
       achates:	'小火奶',   
@@ -702,6 +703,8 @@ const i18n = {
       last_piece_karin:'光卡琳　千本樱', 
       requiem_roana:'暗木瓜 暗瓜', 
       ocean_breeze_luluca:'木璐璐卡 木露露卡 木llk', 
+      lethe:'丽希 黑皮', 
+      navy_captain_landy:'光兰蒂', 
     },
     artifacts: {
       no_proc: '无神器',
