@@ -787,6 +787,7 @@ const i18n = {
       target_bleed_detonate: '出血Debuff回合数',
       target_burn_detonate: '烧伤Debuff回合数',
       target_bomb_detonate: '目标炸弹Debuff回合数',
+      caster_add: '追加攻击',
       caster_max_hp: '自身最大生命值',
       caster_hp_pc: '自身当前生命值(%)',
       caster_hp: '自身当前生命值',
