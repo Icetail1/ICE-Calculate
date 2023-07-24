@@ -7688,6 +7688,7 @@ const heroes = {
         name: infoLabel('s1_extra_attack'),
         rate: 0.3,
         pow: 1.3,
+	noCrit: true,
         flat: () => elements.caster_max_hp.value()*0.22,
         flatTip: () => ({ caster_max_hp: 22 }),
         penetrate: () => 1.0,
@@ -7701,7 +7702,7 @@ const heroes = {
       }
     }
   },
-	navy_captain_landy: {
+    navy_captain_landy: {
     name: '	Navy Captain Landy',
     element: element.light,
     classType: classType.knight,
