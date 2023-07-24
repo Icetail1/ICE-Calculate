@@ -415,6 +415,14 @@ const artifacts = {
     value: () => 0.1,
     applies: (skill) => getSkillType(skill) === skillTypes.single,
   },
+  pray: {
+    id: 'pray',
+    name: 'pray',
+    scale: scale: [0.05, 0.055, 0.06, 0.065, 0.07, 0.075, 0.08, 0.085, 0.09, 0.095, 0.1],
+    type: artifactDmgType.damage,
+    value: (artiScale) => artiScale * (elements.caster_add.value() ? 1 : 2),
+    exclusive: classType.warrior,
+  },
   sword_of_adin: {
     id: 'sword_of_adin',
     name: 'Sword Of Adin',
