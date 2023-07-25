@@ -702,7 +702,7 @@ const i18n = {
       abigail:'阿比 吸血鬼妹妹 雅碧凯',   
       last_piece_karin:'光卡琳　千本樱', 
       requiem_roana:'暗木瓜 暗瓜', 
-      ocean_breeze_luluca:'木璐璐卡 木露露卡 木llk', 
+      ocean_breeze_luluca:'木璐璐卡 木露露卡 木llk 璐璐卡车', 
       lethe:'丽希 黑皮', 
       navy_captain_landy:'光兰蒂', 
     },
