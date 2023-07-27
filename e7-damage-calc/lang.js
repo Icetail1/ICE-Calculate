@@ -482,7 +482,7 @@ const i18n = {
       crescent_moon_rin:	'暗02 暗灵儿',  
       crimson_armin:	'光亚敏 光猫',  
       crozet:	'团长',   
-      dark_corvus:	'魔神王 暗魔神',  
+      dark_corvus:	'魔神王 暗魔神 暗魔王 按摩王',  
       desert_jewel_basar:	'光埃及',   
       designer_lilibet:	'暗剪刀 llb 暗llb',   
       destina:	'木奶',   
