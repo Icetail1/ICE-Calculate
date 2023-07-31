@@ -427,7 +427,7 @@ const i18n = {
       aramintha:	'火响指 火法',  
       arbiter_vildred:	'暗刺 暗帝 暗25 暗弟',
       archdemon_shadow:	'魔神女主',   
-      aria:	'水奶奶 大水奶',   
+      aria:	'水奶奶 大水奶 水莱莱',   
       armin:	'木敏 阿敏 木亚敏 木猫',  
       arowell:	'小光盾(未转职)',
       assassin_cartuja:	'暗熊',   
