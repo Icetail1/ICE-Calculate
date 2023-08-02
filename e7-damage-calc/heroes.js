@@ -7707,10 +7707,10 @@ const heroes = {
     element: element.light,
     classType: classType.knight,
     baseAtk: 1134,
-    form: [elements.attack_skill_stack_3],
+    form: [elements.attack_skill_stack_5],
     atkUp: () => {
       let boost = 0.1;
-      return 1 + elements.attack_skill_stack_3.value()*boost;
+      return 1 + elements.attack_skill_stack_5.value()*boost;
     },
     skills: {
       s1: {
