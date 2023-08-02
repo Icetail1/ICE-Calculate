@@ -7703,7 +7703,7 @@ const heroes = {
     }
   },
     navy_captain_landy: {
-    name: '	Navy Captain Landy',
+    name: 'Navy Captain Landy',
     element: element.light,
     classType: classType.knight,
     baseAtk: 1134,
