@@ -3872,7 +3872,7 @@ const heroes = {
         single: true,
       },
       s3: {
-        rate: 0.3,
+        rate: 0.5,
         pow: 0.9,
         flat: () => elements.caster_defense.value()*1.35,
         flatTip: () => ({ caster_defense: 135 }),
@@ -6398,14 +6398,14 @@ const heroes = {
         single: true,
       },
       s2: {
-        rate: 0.8,
+        rate: (soulburn) => soulburn ? 1.05 :0.8,
         pow: 1,
         enhance: [0.05, 0, 0.1, 0, 0.15],
         aoe: true,
       },
       s3: {
         soulburn: true,
-        rate: (soulburn) => soulburn ? 1.35 : 1.1,
+        rate:  1.1,
         pow: 1.05,
         enhance: [0.05, 0, 0, 0.1, 0.15],
         aoe: true,
