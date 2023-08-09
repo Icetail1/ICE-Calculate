@@ -5811,7 +5811,7 @@ const heroes = {
     form: [elements.caster_speed, elements.caster_nb_focus],
     skills: {
       s1: {
-        rate: () => elements.caster_nb_focus.value() >= 2 ? 1.25 : 0.9,
+        rate: () => elements.caster_nb_focus.value() >= 2 ? 1.2 : 0.9,
         pow: 0.9,
         mult: () => 1 + elements.caster_speed.value()*0.00075,
         multTip: () => ({ caster_speed: 0.075 }),
