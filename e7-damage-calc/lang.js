@@ -539,7 +539,7 @@ const i18n = {
       judith:	'小火刺',   
       kanna:	'农农',   
       karin:	'卡琳',
-      kawerik:	'威哥',   
+      kawerik:	'卡子 火卡子',   
       kayron:	'隆哥 凯宝 凯皇', 
       ken:	'火拳 火肯',  
       khawana:	'火妹妹',   
