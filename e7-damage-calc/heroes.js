@@ -7683,6 +7683,8 @@ const heroes = {
         enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
         single: true,
       }
+    }
+	    
   },
   lethe: {
     name: 'Lethe',
