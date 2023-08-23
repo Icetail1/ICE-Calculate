@@ -7672,6 +7672,18 @@ const heroes = {
       }
     }
   },
+  infinite_horizon_achates: {
+    name: 'Infinite Horizon Achates',
+    element: element.light,
+    classType: classType.soul_weaver,
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      }
+  },
   lethe: {
     name: 'Lethe',
     element: element.ice,
