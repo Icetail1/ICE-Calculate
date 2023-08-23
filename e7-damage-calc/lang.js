@@ -407,6 +407,7 @@ const i18n = {
       ocean_breeze_luluca:'海洋香气璐璐卡', 
       lethe:'丽希', 
       navy_captain_landy:'海军上校兰蒂', 
+      infinite_horizon_achates:'未知的可能性 雅卡泰丝',
     },
     nicknames: {
       achates:	'小火奶',   
@@ -705,6 +706,7 @@ const i18n = {
       ocean_breeze_luluca:'木璐璐卡 木露露卡 木llk 璐璐卡车', 
       lethe:'丽希 黑皮', 
       navy_captain_landy:'光兰蒂', 
+      infinite_horizon_achates:'光火奶',
     },
     artifacts: {
       no_proc: '无神器',
