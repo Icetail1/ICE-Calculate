@@ -7748,18 +7748,18 @@ const heroes = {
       }
     }
   },
-    Urban_Shadow_Choux	: {
+    urban_shadow_choux	: {
     name: 'Urban Shadow Choux',
     element: element.dark,
     classType: classType.warrior,
     form: [elements.caster_max_hp],
     skills: {
       s1: {
-        rate: 0.5,
+        rate: (soulburn) => soulburn ? 0.8 : 0.5,
         pow: 1,
         enhance: [0.05,0.05, 0.05, 0.05, 0.1],
-	flat: () => elements.caster_max_hp.value()*0.1,
-        flatTip: () => ({ caster_max_hp: 10 }),
+        flat: (soulburn) => elements.caster_max_hp.value() * (soulburn ? 0.1 : 0.16),
+        flatTip: (soulburn) => ({ caster_max_hp: soulburn ? 1 : 16 }),
         single: true,
       },
       s3: {
@@ -7768,6 +7768,53 @@ const heroes = {
         pow: 1,
 	flat: () => elements.caster_max_hp.value()*0.25,
         flatTip: () => ({ caster_max_hp: 25 }),
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+      }
+    }
+  },
+  veronica: {
+    name: 'Veronica',
+    element: element.fire,
+    classType: classType.ranger,
+    form: [elements.target_bomb_detonate],
+    dot: [dot.bomb],
+    skills: {
+      s1: {
+        rate: 0,7,
+        pow: 1,
+        enhance: [0.05, 0, 0.1, 0, 0.15],
+	detonate: dot.bomb,
+        detonation: () => 1,
+        single: true,
+      },
+      s3: {
+        rate: 0.8,
+        pow: 1,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        single: true,
+      },
+    }
+  },					
+    brieg: {
+    name: 'Brieg',
+    element: element.ice,
+    classType: classType.knight,
+    form: [elements.caster_max_hp],
+    skills: {
+      s1: {
+        rate: 0.5,
+        pow: 1,
+        enhance: [0.05,0.05, 0.05, 0.05, 0.1],
+	flat: () => elements.caster_max_hp.value()*0.12,
+        flatTip: () => ({ caster_max_hp: 12 }),
+        single: true,
+      },
+      s3: {
+        single: true,
+        rate: 0.5,
+        pow: 1,
+	flat: () => elements.caster_max_hp.value()*0.22,
+        flatTip: () => ({ caster_max_hp: 22 }),
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
       }
     }
