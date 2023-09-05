@@ -7748,6 +7748,30 @@ const heroes = {
       }
     }
   },
+    Urban_Shadow_Choux	: {
+    name: 'Urban Shadow Choux',
+    element: element.dark,
+    classType: classType.warrior,
+    form: [elements.caster_max_hp],
+    skills: {
+      s1: {
+        rate: 0.5,
+        pow: 1,
+        enhance: [0.05,0.05, 0.05, 0.05, 0.1],
+	flat: () => elements.caster_max_hp.value()*0.1,
+        flatTip: () => ({ caster_max_hp: 10 }),
+        single: true,
+      },
+      s3: {
+        single: true,
+        rate: 0.5,
+        pow: 1,
+	flat: () => elements.caster_max_hp.value()*0.25,
+        flatTip: () => ({ caster_max_hp: 25 }),
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
