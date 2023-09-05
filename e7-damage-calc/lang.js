@@ -408,6 +408,9 @@ const i18n = {
       lethe:'丽希', 
       navy_captain_landy:'海军上校兰蒂', 
       infinite_horizon_achates:'未知的可能性 雅卡泰丝',
+      urban_shadow_choux:'暗泡芙（暂定）',
+      brieg:'布里克',
+      veronica:'贝洛妮卡',
     },
     nicknames: {
       achates:	'小火奶',   
@@ -707,6 +710,9 @@ const i18n = {
       lethe:'丽希 黑皮', 
       navy_captain_landy:'光兰蒂', 
       infinite_horizon_achates:'光火奶',
+      urban_shadow_choux:'暗泡芙（暂定）',
+      brieg:'布里克',
+      veronica:'贝洛妮卡',
     },
     artifacts: {
       no_proc: '无神器',
