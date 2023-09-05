@@ -7780,7 +7780,7 @@ const heroes = {
     dot: [dot.bomb],
     skills: {
       s1: {
-        rate: 0,7,
+        rate: 0.7,
         pow: 1,
         enhance: [0.05, 0, 0.1, 0, 0.15],
 	detonate: dot.bomb,
