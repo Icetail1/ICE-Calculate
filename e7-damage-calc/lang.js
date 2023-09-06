@@ -766,6 +766,7 @@ const i18n = {
       recycle_ball:'循环念珠',
       gold_rose:'金玫瑰',
       pray:'孤独的祈祷',
+      elf:'残破的祭祀长意志',
     },
     form: {
       allies_nb_buff: '我军Buff数量',
