@@ -3804,7 +3804,7 @@ const heroes = {
     element: element.fire,
     classType: classType.knight,
     baseAtk: 821,
-    form: [elements.caster_max_hp, elements.highest_ally_attack],
+    form: [elements.caster_max_hp, elements.highest_ally_attack,elements.exclusive_equipment_3],
     skills: {
       s1: {
         rate: 0.8,
@@ -3820,6 +3820,7 @@ const heroes = {
         atk: () =>  elements.highest_ally_attack.value(),
         noBuff: true,
         enhance: [0.05, 0.05, 0, 0.05, 0.05, 0.1],
+	exEq: () => elements.exclusive_equipment_3.value() ? 0.2 : 0,      
         aoe: true,
       }
     }
