@@ -411,6 +411,7 @@ const i18n = {
       urban_shadow_choux:'都市暗影小泡芙',
       brieg:'布里克',
       veronica:'贝洛妮卡',
+      midnight_gala_lilias:'夜宴莉莉亚斯',
     },
     nicknames: {
       achates:	'小火奶',   
@@ -713,6 +714,7 @@ const i18n = {
       urban_shadow_choux:'暗泡芙',
       brieg:'布里克',
       veronica:'贝洛妮卡 火弓',
+      midnight_gala_lilias:'木莉莉 木ll 草莉莉',
     },
     artifacts: {
       no_proc: '无神器',
