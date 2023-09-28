@@ -1,4 +1,4 @@
-const i18n = {
+  const i18n = {
   en: {
     nicknames: {
       ambitious_tywin: 'aywin ml.tywin mltywin',
@@ -412,6 +412,7 @@ const i18n = {
       brieg:'布里克',
       veronica:'贝洛妮卡',
       midnight_gala_lilias:'夜宴莉莉亚斯',
+      nahkwol:'落月',
     },
     nicknames: {
       achates:	'小火奶',   
@@ -715,6 +716,7 @@ const i18n = {
       brieg:'布里克',
       veronica:'贝洛妮卡 火弓',
       midnight_gala_lilias:'木莉莉 木ll 草莉莉',
+      nahkwol:'国风角色',
     },
     artifacts: {
       no_proc: '无神器',
