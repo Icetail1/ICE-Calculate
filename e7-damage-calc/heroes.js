@@ -3107,7 +3107,7 @@ const heroes = {
         rate: 0.7,
         pow: 1,
         detonate: dot.burn,
-        detonation: () => 1.2,
+        detonation: () => 1.3,
         single: true,
       }
     }
@@ -4119,15 +4119,17 @@ const heroes = {
     form: [elements.caster_hp_pc],
     skills: {
       s1: {
-        rate: 1,
+	soulburn: true,
+        rate: (soulburn) => soulburn ? 1.3 : 1,
         pow: 0.95,
         enhance: [0.05, 0.05, 0, 0.1, 0, 0.15],
         single: true,
       },
       s2: {
         onlyCrit: true,
-        rate: 1.2,
-        pow: 0.95,
+        rate: 0.95,
+        pow: 1,
+	penetrate: () => 0.4,
         mult: () => {
           let extra = 0;
           for (let i = 0; i < Number(document.getElementById(`molagora-s1`).value); i++) {
@@ -4141,8 +4143,7 @@ const heroes = {
       },
       s3: {
         onlyCrit: true,
-        soulburn: true,
-        rate: (soulburn) => soulburn ? 1.1 : 0.9,
+        rate: 1.1,
         pow: 1,
         enhance: [0.05, 0, 0, 0.1, 0, 0.15],
         aoe: true,
@@ -7401,7 +7402,7 @@ const heroes = {
         single: true,
       },
       s2: {
-        rate: 0.7,
+        rate: 0.75,
         pow: 1.3,
         mult: () => {
           const casterSpd = elements.caster_speed.value();
@@ -7468,7 +7469,7 @@ const heroes = {
         single: true,
       },
       s3: {
-        rate: 0.9,
+        rate: 1,
         pow: 1,
         enhance: [0.05, 0.05,  0,　0.1, 0.1],
         fixed: () => elements.caster_enrage.value()? 10000 : 2000,
@@ -7853,6 +7854,31 @@ const heroes = {
       },
     }
   },
+  nahkwol: {
+    name: 'Nahkwol',
+    element: element.fire,
+    classType: classType.ranger,
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0, 0.1, 0, 0.15],
+        single: true,
+      },
+      s2: {
+        rate: 1.5,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      },	    
+      s3: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        aoe: true,
+      },
+    }
+  },	
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
