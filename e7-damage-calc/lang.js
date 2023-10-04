@@ -482,7 +482,7 @@
       coli:	'水可丽',   
       commander_lorina:	'暗枪',   
       commander_model_laika:	'木蜻蜓 蜻蜓队长',   
-      commander_pavel:	'光狼枪',   
+      commander_pavel:	'光狼枪 卧龙',   
       conqueror_lilias:	'llys 光莉莉',   
       corvus:	'火老头',   
       crescent_moon_rin:	'暗02 暗灵儿',  
@@ -715,7 +715,7 @@
       urban_shadow_choux:'暗泡芙',
       brieg:'布里克',
       veronica:'贝洛妮卡 火弓',
-      midnight_gala_lilias:'木莉莉 木ll 草莉莉',
+      midnight_gala_lilias:'木莉莉 木ll 草莉莉 凤雏',
       nahkwol:'国风角色',
     },
     artifacts: {
