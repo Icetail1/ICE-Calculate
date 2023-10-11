@@ -1143,6 +1143,9 @@ $(() => {
         if (selected.dataset.defup !== undefined) {
           document.getElementById('def-pc-up').value = selected.dataset.defup;
           update('def-pc-up');
+        }else{
+          document.getElementById('def-pc-up').value =0;
+          update('def-pc-up');
         }
         gtag('event', 'pick', {
           event_category: 'Damage Reduction',
