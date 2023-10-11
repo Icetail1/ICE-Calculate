@@ -859,7 +859,7 @@ const heroes = {
       s1: {
         rate: 1,
         pow: 0.95,
-        flat: () => elements.target_max_hp.value() * 0.04,
+        flat: () => elements.target_max_hp.value() * 0.04* Number(document.getElementById("pdc").value)*0.01,
         flatTip: () => ({ target_max_hp: 4 }),
         enhance: [0.05, 0.05, 0.05, 0.1, 0.1],
         single: true,
@@ -1762,7 +1762,7 @@ const heroes = {
       s1: {
         rate: 1,
         pow: 0.9,
-        flat: () => elements.target_max_hp.value() * 0.02,
+        flat: () => elements.target_max_hp.value() * 0.02* Number(document.getElementById("pdc").value)*0.01,
         flatTip: () => ({ target_max_hp: 2 }),
         enhance: [0.05, 0.05, 0.1, 0.1, 0.1],
         single: true,
@@ -3932,7 +3932,7 @@ const heroes = {
       s1: {
         rate: 1,
         pow: 0.9,
-        flat: () => elements.target_max_hp.value() * 0.02,
+        flat: () => elements.target_max_hp.value() * 0.02* Number(document.getElementById("pdc").value)*0.01,
         flatTip: () => ({ target_max_hp: 2 }),
         enhance: [0.05, 0.05, 0.1, 0.1, 0.1],
         single: true,
