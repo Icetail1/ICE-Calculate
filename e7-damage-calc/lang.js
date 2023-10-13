@@ -413,6 +413,8 @@
       veronica:'贝洛妮卡',
       midnight_gala_lilias:'夜宴莉莉亚斯',
       nahkwol:'落月',
+      abyssal_Yufine:'深渊优芬妮',
+      kane:'该隐',
     },
     nicknames: {
       achates:	'小火奶',   
@@ -717,6 +719,8 @@
       veronica:'贝洛妮卡 火弓',
       midnight_gala_lilias:'木莉莉 木ll 草莉莉 凤雏',
       nahkwol:'国风角色',
+      abyssal_Yufine:'暗木龙',
+      kane:'该隐',
     },
     artifacts: {
       no_proc: '无神器',
