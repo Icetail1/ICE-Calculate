@@ -1,4 +1,4 @@
-const dot = {
+	const dot = {
   bleed: 'bleed',
   burn: 'burn',
   bomb: 'bomb',
@@ -7878,7 +7878,65 @@ const heroes = {
         aoe: true,
       },
     }
-  },	
+  },
+  abyssal_Yufine: {
+    name: 'Abyssal Yufine',
+    element: element.dark,
+    classType: classType.knight,
+    form: [elements.caster_defense],
+    skills: {
+      s1: {
+        soulburn: true,
+        rate: (soulburn) => soulburn ? 0.9 : 0.7,
+        pow: 1,
+	flat: (soulburn) => elements.caster_defense.value()*(soulburn ? 1.1 : 0.9),
+        flatTip: (soulburn) => ({ caster_defense: soulburn ? 110 : 90 }),
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        aoe: true,
+      },
+      s1_extra: {
+        name: infoLabel('s1_extra_attack'),
+        rate:(soulburn) => soulburn ? 1.25 : 0.8,
+        pow: 1,
+        penetrate: () => 0.7,
+        single: true,
+      },
+      s3: {
+        rate: 1.1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        aoe: true,
+      }
+    }
+  },
+  kane: {
+    name: 'Kane',
+    element: element.fire,
+    classType: classType.warrior,
+    form: [elements.target_nb_debuff],
+    skills: {
+      s1: {
+        rate: 0.9,
+        pow: 1,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        single: true,
+      },
+      s1_extra: {
+        name: infoLabel('s1_extra_attack'),
+        rate: 0.5,
+        pow: 1.3,
+        aoe: true,
+      },
+      s3: {
+        rate: 1.6,
+        pow: 1,
+        mult: () => 1 + elements.target_nb_debuff.value()*0.2,
+        multTip: () => ({ per_target_debuff: 20 }),
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        single: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
