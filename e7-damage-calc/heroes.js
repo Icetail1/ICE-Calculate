@@ -7895,7 +7895,7 @@ const heroes = {
         aoe: true,
       },
       s1_bis: {
-        name: infoLabel('暴走'),
+	name: infoLabel('run'),      
 	soulburn: true,
         rate:(soulburn) => soulburn ? 1.25 : 0.8,
         pow: 1,
