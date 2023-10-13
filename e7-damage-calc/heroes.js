@@ -7896,6 +7896,7 @@ const heroes = {
       },
       s1_extra: {
         name: infoLabel('s1_extra_attack'),
+	soulburn: true,
         rate:(soulburn) => soulburn ? 1.25 : 0.8,
         pow: 1,
         penetrate: () => 0.7,
