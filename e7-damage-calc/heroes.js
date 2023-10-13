@@ -7894,11 +7894,12 @@ const heroes = {
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         aoe: true,
       },
-      s1_extra: {
-        name: infoLabel('s1_extra_attack'),
+      s1_bis: {
+        name: infoLabel('暴走'),
 	soulburn: true,
         rate:(soulburn) => soulburn ? 1.25 : 0.8,
         pow: 1,
+        enhance_from: 's1',
         penetrate: () => 0.7,
         single: true,
       },
