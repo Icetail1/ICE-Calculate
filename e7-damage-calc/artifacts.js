@@ -100,10 +100,10 @@ const artifacts = {
     id: 'dux_noctis',
     name: 'Dux Noctis',
     type: artifactDmgType.attack,
-    scale: [0.02, 0.022, 0.024, 0.026, 0.028, 0.03, 0.032, 0.034, 0.036, 0.038, 0.04],
-    form: [elements.critical_hit_stack_8],
+    scale: [0.06, 0.07, 0.075, 0.08, 0.085, 0.09, 0.095, 0.1, 0.105, 0.11, 0.12],
+    form: [elements.critical_hit_stack_6],
     exclusive: classType.ranger,
-    value: (artiScale) => elements.critical_hit_stack_8.value()*artiScale
+    value: (artiScale) => artiScale + elements.critical_hit_stack_6.value()*artiScale/3
   },
   els_fist: {
     id: 'els_fist',
