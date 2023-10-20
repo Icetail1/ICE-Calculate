@@ -695,7 +695,7 @@
       peacemaker_furious:	'暗开水',
       beehoo:	'雨修',
       lone_crescent_bellona:	'暗扇',
-      eligos:	'boss',
+      eligos:	'boss 老大 牢大',
       architect_laika:	'光蜻蜓 Ice的本体',
       twisted_eldolon_kayron:	'光凯隆 光凯宝 亡灵凯',   
       benimaru:	'红丸',
