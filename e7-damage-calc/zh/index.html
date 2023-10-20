@@ -169,6 +169,23 @@
                             <input type="range" class="custom-range" id="crit-slide" min="150" max="350" value="250" oninput="slide('crit')">
                         </div>
                     </div>
+                    <div class="stat-block">
+                        <div class="form-group row col-sm-12">
+                            <label for="dmg" class="col-md-9 col-form-label form-control-sm"><h5>伤害加成 (%)</h5></label>
+                            <div class="input-group input-group-sm col-md-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button" id="dmg-minus" onclick="minus('dmg')">&minus;</button>
+                                </div>
+                                <input type="number" class="form-control text-center" id="dmg" value="250" onkeyup="update('dmg')">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="dmg-plus" onclick="plus('dmg')">&plus;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row col-sm-12">
+                            <input type="range" class="custom-range" id="crit-slide" min="150" max="350" value="250" oninput="slide('dmg')">
+                        </div>
+                    </div>
 
                     <div class="form-group col-sm-12">
                         <div class="custom-control custom-checkbox custom-control-inline buff-block">
