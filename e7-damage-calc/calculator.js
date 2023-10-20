@@ -131,7 +131,8 @@ const getGlobalAtkMult = () => {
 
 const getGlobalDamageMult = (hero, skill) => {
   let mult = 0.0;
-
+  const dmgUpBox = document.getElementById('dmg');
+  mult += dmgUpBox;
   for (let checkboxId of ['rage-set']) {
     const elem = document.getElementById(checkboxId);
     mult += elem.checked ? Number(elem.value)-1 : 0.0;
@@ -143,6 +144,8 @@ const getGlobalDamageMult = (hero, skill) => {
     const ans=  (Number(elem.value) - 1)* Number(num.value)
     mult += elem.checked ? ans : 0.0;
   }
+
+    
   
   const defPresetSelector = document.getElementById('def-preset');
   const selected = defPresetSelector.options[defPresetSelector.selectedIndex];
