@@ -132,7 +132,7 @@ const getGlobalAtkMult = () => {
 const getGlobalDamageMult = (hero, skill) => {
   let mult = 0.0;
   const dmgUpBox = document.getElementById('dmg').value;
-  mult += Number(dmgUpBox) * 0.1;
+  mult += Number(dmgUpBox) * 0.01;
   for (let checkboxId of ['rage-set']) {
     const elem = document.getElementById(checkboxId);
     mult += elem.checked ? Number(elem.value)-1 : 0.0;
