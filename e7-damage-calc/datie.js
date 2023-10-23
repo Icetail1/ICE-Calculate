@@ -90,7 +90,12 @@ function addThree(){
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          let spd_after = Number(document.getElementById('spd_after').innerText);
-         spd_after =  spd_after + 2 + Math.floor(Math.random()*3);
+         const spdFive=Math.floor(Math.random()*1000)
+            if(spdFive > 3){
+                spd_after = spd_after + 2 + Math.floor(Math.random()*3);
+            }else{
+                spd_after = spd_after + 5;  
+            }
          document.getElementById('spd_after').innerText = spd_after.toString();
          break;
        
