@@ -14,5 +14,12 @@ const resolve = () => {
   document.getElementById('critchance_after').innerText = critchance_before.toString();
   document.getElementById('critdmg_after').innerText = critdmg_before.toString();
   document.getElementById('spd_after').innerText = spd_before.toString();
+
+const random(){ 
+   document.getElementById('atk_before').value = 5;
   
 }
+  
+}
+
+
