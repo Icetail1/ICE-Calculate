@@ -214,7 +214,7 @@ function restore(){
          document.getElementById('add_critchance_after').innerText = add_critchance_before.toString();
   
          let critdmg_after = Number(document.getElementById('critdmg_after').innerText);
-         let add_critdmg_after= Number(document.getElementById('add_critdmg_after').innerText);
+         let add_critdmg_before= Number(document.getElementById('add_critdmg_after').innerText);
          let add_critdmg = 0;
          switch(c){
            case 0:
@@ -248,7 +248,7 @@ function restore(){
          document.getElementById('add_critdmg_after').innerText = add_critdmg_before.toString();
   
          let spd_after = Number(document.getElementById('spd_after').innerText);
-         let add_spd_after= Number(document.getElementById('add_spd_after').innerText);
+         let add_spd_before= Number(document.getElementById('add_spd_after').innerText);
          let add_spd = 0;
          switch(d){
            case 0:
