@@ -100,7 +100,7 @@ function addThree(){
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          let critdmg_after = Number(document.getElementById('critdmg_after').innerText);
-         let add_critdmg_before= Number(document.getElementById('add_critdmg_before').innerText);
+         let add_critdmg_before= Number(document.getElementById('add_critdmg_after').innerText);
          let add_critdmg_after = 4 + Math.floor(Math.random()*4);
        
          critdmg_after =  critdmg_after + add_critdmg_after;
@@ -113,7 +113,7 @@ function addThree(){
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          let spd_after = Number(document.getElementById('spd_after').innerText);
-         let add_spd_before= Number(document.getElementById('add_spd_before').innerText);
+         let add_spd_before= Number(document.getElementById('add_spd_after').innerText);
          let add_spd_after = 0;
          const spdFive=Math.floor(Math.random()*1000)
             if(spdFive > 3){
