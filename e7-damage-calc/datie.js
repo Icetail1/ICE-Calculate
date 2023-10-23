@@ -3,9 +3,9 @@ a=0;
 b=0;
 c=0;
 d=0;
-const addThree = document.getElementById('addThree');
-const addFifteen = document.getElementById('addFifteen');
-const restore = document.getElementById('restore');
+const addThreeBtn = document.getElementById('addThreeBtn');
+const addFifteenBtn = document.getElementById('addFifteenBtn');
+const restoreBtn = document.getElementById('restoreBtn');
 
 const resolve = () => {
   const atk_before = Number(document.getElementById('atk_before').value);
@@ -21,7 +21,7 @@ const resolve = () => {
   document.getElementById('critchance_after').innerText = critchance_before.toString();
   document.getElementById('critdmg_after').innerText = critdmg_before.toString();
   document.getElementById('spd_after').innerText = spd_before.toString();
-  restore.disabled = true;
+  restoreBtn.disabled = true;
  
   
 }
@@ -47,9 +47,9 @@ function random(){
   b=0;
   c=0;
   d=0;
-  addThree.disabled = false;
-  addFifteen.disabled = false;
-  restore.disabled = true;
+  addThreeBtn.disabled = false;
+  addFifteenBtn.disabled = false;
+  restoreBtn.disabled = true;
 }
 
 function addThree(){ 
@@ -92,9 +92,9 @@ function addThree(){
        
    }
      if(num=15){
-       addThree.disabled = true;
-       addFifteen.disabled = true;
-       restore.disabled = false;
+       addThreeBtn.disabled = true;
+       addFifteenBtn.disabled = true;
+       restoreBtn.disabled = false;
      }
   }
 function addFifteen(){ 
@@ -104,9 +104,9 @@ function addFifteen(){
      {
        addThree();
      }
-   addThree.disabled = true;
-   addFifteen.disabled = true;
-   restore.disabled = false;
+   addThreeBtn.disabled = true;
+   addFifteenBtn.disabled = true;
+   restoreBtn.disabled = false;
   }
 function restore(){ 
          let atk_after = Number(document.getElementById('atk_after').innerText);
@@ -228,6 +228,6 @@ function restore(){
          }
          spd_after =  spd_after + add_spd;
          document.getElementById('spd_after').innerText = spd_after.toString();
-         restore.disabled = true;
+         restoreBtn.disabled = true;
 
   }
