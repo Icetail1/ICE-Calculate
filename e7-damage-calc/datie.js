@@ -66,8 +66,9 @@ function addThree(){
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          let atk_after = Number(document.getElementById('atk_after').innerText);
-         atk_after =  atk_after + 4 + Math.floor(Math.random()*5);
-         document.getElementById('atk_after').innerText = atk_after.toString();
+         add_atk_after = 4 + Math.floor(Math.random()*5)
+         atk_after =  atk_after + add_atk_after;
+         document.getElementById('atk_after').innerText = atk_after.toString() +"("+add_atk_after.toString()+")" ;
          break;
      case 1:
          b=b+1;
