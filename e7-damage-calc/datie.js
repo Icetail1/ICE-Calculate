@@ -19,7 +19,7 @@ const resolve = () => {
   
 }
 
-const random(){ 
+function random(){ 
    document.getElementById('atk_before').value = 5;
   
 }
