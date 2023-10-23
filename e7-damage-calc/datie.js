@@ -3,6 +3,10 @@ a=0;
 b=0;
 c=0;
 d=0;
+const addThree = document.getElementById('addThree');
+const addFifteen = document.getElementById('addFifteen');
+const restore = document.getElementById('restore');
+
 const resolve = () => {
   const atk_before = Number(document.getElementById('atk_before').value);
   const critchance_before = Number(document.getElementById('critchance_before').value);
@@ -43,7 +47,9 @@ function random(){
   b=0;
   c=0;
   d=0;
-  
+  addThree.disabled = false;
+  addFifteen.disabled = false;
+  restore.disabled = false;
 }
 
 function addThree(){ 
@@ -85,14 +91,20 @@ function addThree(){
          break;
        
    }
+     if(num=15){
+       addThree.disabled = true;
+       addFifteen.disabled = true;
+     }
   }
 function addFifteen(){ 
-   let num =  Number(document.getElementById('num').innerText);
+   let num =  Number(document.getElementById('num').innerText);  
    num = num / 3;
    for (i=0;i<5-num;i++)
      {
        addThree();
      }
+   addThree.disabled = true;
+   addFifteen.disabled = true;
   }
 function restore(){ 
          let atk_after = Number(document.getElementById('atk_after').innerText);
@@ -214,6 +226,6 @@ function restore(){
          }
          spd_after =  spd_after + add_spd;
          document.getElementById('spd_after').innerText = spd_after.toString();
-
+    restore.disabled = true;
 
   }
