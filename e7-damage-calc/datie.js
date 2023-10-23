@@ -1,8 +1,8 @@
 
-let a=0;
-let b=0;
-let c=0;
-let d=0;
+a=0;
+b=0;
+c=0;
+d=0;
 const resolve = () => {
   const atk_before = Number(document.getElementById('atk_before').value);
   const critchance_before = Number(document.getElementById('critchance_before').value);
