@@ -12,7 +12,7 @@ const resolve = () => {
   const critchance_before = Number(document.getElementById('critchance_before').value);
   const critdmg_before = Number(document.getElementById('critdmg_before').value);
   const spd_before = Number(document.getElementById('spd_before').value);
-
+  const score = Math.floor(atk_before * 1 + critchance_before * 1.5 + critdmg_before * 1.1 + spd_before * 2);
 
   const num = 0;
 
@@ -25,6 +25,7 @@ const resolve = () => {
   document.getElementById('add_critchance_after').innerText ="0";
   document.getElementById('add_critdmg_after').innerText ="0";
   document.getElementById('add_spd_after').innerText  ="0";
+  document.getElementById('score').innerText =score.toString();
   restoreBtn.disabled = true;
  
   
@@ -47,6 +48,7 @@ function random(){
   const critchance_before = Number(document.getElementById('critchance_before').value);
   const critdmg_before = Number(document.getElementById('critdmg_before').value);
   const spd_before = Number(document.getElementById('spd_before').value);
+  const score = Math.floor(atk_before * 1 + critchance_before * 1.5 + critdmg_before * 1.1 + spd_before * 2);
   document.getElementById('num').innerText = num.toString();
   document.getElementById('atk_after').innerText = atk_before.toString();
   document.getElementById('critchance_after').innerText = critchance_before.toString();
@@ -56,6 +58,7 @@ function random(){
   document.getElementById('add_critchance_after').innerText="0";
   document.getElementById('add_critdmg_after').innerText="0";
   document.getElementById('add_spd_after').innerText ="0";
+  document.getElementById('score').innerText =score.toString();
   a=0;
   b=0;
   c=0;
@@ -128,7 +131,12 @@ function addThree(){
          break;
        
    }
-     console.log(num);
+       const atk_after = Number(document.getElementById('atk_after').innerText);
+       const critchance_after = Number(document.getElementById('critchance_after').innerText);
+       const critdmg_after = Number(document.getElementById('critdmg_after').innerText);
+       const spd_after = Number(document.getElementById('spd_after').innerText);
+       const score = Math.floor(atk_after * 1 + critchance_after * 1.5 + critdmg_after * 1.1 + spd_after * 2);
+       document.getElementById('score').innerText =score.toString();
      if(num==15){
        addThreeBtn.disabled = true;
        addFifteenBtn.disabled = true;
@@ -279,6 +287,9 @@ function restore(){
          add_spd_before = add_spd_before+add_spd;
          document.getElementById('spd_after').innerText = spd_after.toString();
          document.getElementById('add_spd_after').innerText = add_spd_before.toString();
+
+         const score = Math.floor(atk_after * 1 + critchance_after * 1.5 + critdmg_after * 1.1 + spd_after * 2);
+         document.getElementById('score').innerText =score.toString();
          restoreBtn.disabled = true;
 
   }
