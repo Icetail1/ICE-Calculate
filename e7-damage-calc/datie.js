@@ -75,10 +75,10 @@ function addThree(){
          break;
        
    }
+  }
 function addFifteen(){ 
    for (i=0;i<5;i++)
      {
        addThree();
      }
   }
-}
