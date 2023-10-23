@@ -20,7 +20,19 @@ const resolve = () => {
 }
 
 function random(){ 
-   document.getElementById('atk_before').value = 5;
+  
+   document.getElementById('atk_before').value = 4 + Math.floor(Math.random()*4);
+   document.getElementById('critchance_before').value = 3 + Math.floor(Math.random()*2);
+   document.getElementById('critdmg_before').value = 4 + Math.floor(Math.random()*3);
+   document.getElementById('spd_before').value = 2 + Math.floor(Math.random()*2);
+  
+  const num = 0;
+  document.getElementById('num').innerText = num.toString();
+  document.getElementById('atk_after').innerText = atk_before.toString();
+  document.getElementById('critchance_after').innerText = critchance_before.toString();
+  document.getElementById('critdmg_after').innerText = critdmg_before.toString();
+  document.getElementById('spd_after').innerText = spd_before.toString();
+
   
 }
 
