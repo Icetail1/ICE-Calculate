@@ -59,7 +59,6 @@ function addThree(){
      case 0:
          a=a+1;
          num = num + 3;
-         console.log(num);
          document.getElementById('num').innerText = num.toString();
          let atk_after = Number(document.getElementById('atk_after').innerText);
          atk_after =  atk_after + 4 + Math.floor(Math.random()*5);
@@ -91,7 +90,8 @@ function addThree(){
          break;
        
    }
-     if(num=15){
+     console.log(num);
+     if(num==15){
        addThreeBtn.disabled = true;
        addFifteenBtn.disabled = true;
        restoreBtn.disabled = false;
