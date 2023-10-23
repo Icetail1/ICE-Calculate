@@ -42,7 +42,7 @@ function random(){
 
 function addThree(){ 
    const choice=Math.floor(Math.random()*4);
-   const num =  Number(document.getElementById('num').value);
+   let num =  Number(document.getElementById('num').value);
    switch(choice){
      case 0:
          num = num + 3;
