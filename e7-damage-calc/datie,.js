@@ -1,17 +1,18 @@
 
 
 const resolve = () => {
-  const hitChance = Number(document.getElementById('hit-chance').value)/100;
-  const procChance = Number(document.getElementById('effect-chance').value)/100;
-  const eff = Number(document.getElementById('effectiveness').value)/100;
-  const effRes = Number(document.getElementById('effect-resistance').value)/100;
+  const atk_before = Number(document.getElementById('atk_before').value);
+  const critchance_before = Number(document.getElementById('critchance_before').value);
+  const critdmg_before = Number(document.getElementById('critdmg_before').value);
+  const spd_before = Number(document.getElementById('spd_before').value);
 
-  const landChance = Math.max(Math.min(1 + eff - effRes, 0.85), 0);
-  const resistChance = 1 - landChance;
 
-  const inflictChance = hitChance * procChance * landChance;
+  const num = 0;
 
-  document.getElementById('passing-res').innerText = Math.round(landChance*100).toString();
-  document.getElementById('resist').innerText = Math.round(resistChance*100).toString();
-  document.getElementById('landing').innerText = Math.round(inflictChance*100).toString();
+  document.getElementById('num').innerText = num.toString();
+  document.getElementById('atk_after').innerText = atk_before.toString();
+  document.getElementById('critchance_after').innerText = critchance_before.toString();
+  document.getElementById('critdmg_after').innerText = critdmg_before.toString();
+  document.getElementById('spd_after').innerText = spd_before.toString();
+  
 }
