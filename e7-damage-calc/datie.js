@@ -48,6 +48,10 @@ function random(){
   document.getElementById('critchance_after').innerText = critchance_before.toString();
   document.getElementById('critdmg_after').innerText = critdmg_before.toString();
   document.getElementById('spd_after').innerText = spd_before.toString();
+  document.getElementById('add_atk_after').innerText = atk_before.toString();
+  document.getElementById('add_critchance_after').innerText = critchance_before.toString();
+  document.getElementById('add_critdmg_after').innerText = critdmg_before.toString();
+  document.getElementById('add_spd_after').innerText = spd_before.toString();
   a=0;
   b=0;
   c=0;
@@ -66,9 +70,13 @@ function addThree(){
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          let atk_after = Number(document.getElementById('atk_after').innerText);
-         add_atk_after = 4 + Math.floor(Math.random()*5)
+         let add_atk_before= Number(document.getElementById('add_atk_after').innerText);
+         let add_atk_after = 4 + Math.floor(Math.random()*5)
+          
          atk_after =  atk_after + add_atk_after;
-         document.getElementById('atk_after').innerText = atk_after.toString() +"("+add_atk_after.toString()+")" ;
+         let add_atk = add_atk_before+add_atk_after;
+         document.getElementById('atk_after').innerText = atk_after.toString() ;
+         document.getElementById('add_atk_after').innerText = add_atk.toString() ;
          break;
      case 1:
          b=b+1;
