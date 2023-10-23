@@ -48,28 +48,28 @@ function addThree(){
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          let atk_after = Number(document.getElementById('atk_after').value);
-         atk_after =  atk_before + 4 + Math.floor(Math.random()*5);
+         atk_after =  atk_after + 4 + Math.floor(Math.random()*5);
          document.getElementById('atk_after').innerText = atk_after.toString();
          break;
      case 1:
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          let critchance_after = Number(document.getElementById('critchance_after').value);
-         critchance_after =  critchance_before + 3 + Math.floor(Math.random()*3);
+         critchance_after =  critchance_after + 3 + Math.floor(Math.random()*3);
          document.getElementById('critchance_after').innerText = critchance_after.toString();
          break;
      case 2:
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          let critdmg_after = Number(document.getElementById('critdmg_after').value);
-         critdmg_after =  critdmg_before + 4 + Math.floor(Math.random()*4);
+         critdmg_after =  critdmg_after + 4 + Math.floor(Math.random()*4);
          document.getElementById('critdmg_after').innerText = critdmg_after.toString();
          break;
      case 3:
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          let spd_after = Number(document.getElementById('spd_after').value);
-         spd_after =  spd_before + 2 + Math.floor(Math.random()*3);
+         spd_after =  spd_after + 2 + Math.floor(Math.random()*3);
          document.getElementById('spd_after').innerText = spd_after.toString();
          break;
        
