@@ -45,7 +45,7 @@ function addThree(){
    let num =  Number(document.getElementById('num').value);
    switch(choice){
      case 0:
-         num = num + 3;
+         num = Number(num) + 3;
          document.getElementById('num').innerText = num.toString();
          let atk_after = Number(document.getElementById('atk_after').value);
          atk_after =  atk_after + 4 + Math.floor(Math.random()*5);
