@@ -21,6 +21,10 @@ const resolve = () => {
   document.getElementById('critchance_after').innerText = critchance_before.toString();
   document.getElementById('critdmg_after').innerText = critdmg_before.toString();
   document.getElementById('spd_after').innerText = spd_before.toString();
+  document.getElementById('add_atk_after').innerText = "0";
+  document.getElementById('add_critchance_after').innerText ="0";
+  document.getElementById('add_critdmg_after').innerText ="0";
+  document.getElementById('add_spd_after').innerText  ="0";
   restoreBtn.disabled = true;
  
   
@@ -48,10 +52,10 @@ function random(){
   document.getElementById('critchance_after').innerText = critchance_before.toString();
   document.getElementById('critdmg_after').innerText = critdmg_before.toString();
   document.getElementById('spd_after').innerText = spd_before.toString();
-  document.getElementById('add_atk_after').innerText = atk_before.toString();
-  document.getElementById('add_critchance_after').innerText = critchance_before.toString();
-  document.getElementById('add_critdmg_after').innerText = critdmg_before.toString();
-  document.getElementById('add_spd_after').innerText = spd_before.toString();
+  document.getElementById('add_atk_after').innerText ="0";
+  document.getElementById('add_critchance_after').innerText="0";
+  document.getElementById('add_critdmg_after').innerText="0";
+  document.getElementById('add_spd_after').innerText ="0";
   a=0;
   b=0;
   c=0;
@@ -74,38 +78,53 @@ function addThree(){
          let add_atk_after = 4 + Math.floor(Math.random()*5)
           
          atk_after =  atk_after + add_atk_after;
-         let add_atk = add_atk_before+add_atk_after;
+         add_atk_before = add_atk_before+add_atk_after;
          document.getElementById('atk_after').innerText = atk_after.toString() ;
-         document.getElementById('add_atk_after').innerText = add_atk.toString() ;
+         document.getElementById('add_atk_after').innerText = add_atk_before.toString() ;
          break;
      case 1:
          b=b+1;
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          let critchance_after = Number(document.getElementById('critchance_after').innerText);
-         critchance_after =  critchance_after + 3 + Math.floor(Math.random()*3);
+         let add_critchance_before= Number(document.getElementById('add_critchance_after').innerText);
+         let add_critchance_after = 3 + Math.floor(Math.random()*3);
+       
+         critchance_after =  critchance_after + add_critchance_after;
+         add_critchance_before = add_critchance_before+add_critchance_after;
          document.getElementById('critchance_after').innerText = critchance_after.toString();
+         document.getElementById('add_critchance_after').innerText = add_critchance_before.toString() ;
          break;
      case 2:
          c=c+1;
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          let critdmg_after = Number(document.getElementById('critdmg_after').innerText);
-         critdmg_after =  critdmg_after + 4 + Math.floor(Math.random()*4);
+         let add_critdmg_before= Number(document.getElementById('add_critdmg_before').innerText);
+         let add_critdmg_after = 4 + Math.floor(Math.random()*4);
+       
+         critdmg_after =  critdmg_after + add_critdmg_after;
+         add_critdmg_before = add_critdmg_before+add_critdmg_after;
          document.getElementById('critdmg_after').innerText = critdmg_after.toString();
+         document.getElementById('add_critdmg_after').innerText = add_critdmg_before.toString() ;
          break;
      case 3:
          d=d+1;
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          let spd_after = Number(document.getElementById('spd_after').innerText);
+         let add_spd_before= Number(document.getElementById('add_spd_before').innerText);
+         let add_spd_after = 0;
          const spdFive=Math.floor(Math.random()*1000)
             if(spdFive > 3){
-                spd_after = spd_after + 2 + Math.floor(Math.random()*3);
+                add_spd_after = 2 + Math.floor(Math.random()*3);
             }else{
-                spd_after = spd_after + 5;  
+                add_spd_after = 5;
             }
+         spd_after = spd_after + add_spd_after;
+         add_spd_before = add_spd_before+add_spd_after;
          document.getElementById('spd_after').innerText = spd_after.toString();
+         document.getElementById('add_spd_after').innerText = add_spd_before.toString();
          break;
        
    }
@@ -129,6 +148,7 @@ function addFifteen(){
   }
 function restore(){ 
          let atk_after = Number(document.getElementById('atk_after').innerText);
+         let add_atk_before= Number(document.getElementById('add_atk_after').innerText);
          let add_atk = 0;
          switch(a){
            case 0:
@@ -156,9 +176,12 @@ function restore(){
            break;
          }
          atk_after =  atk_after + add_atk;
+         add_atk_before = add_atk_before + add_atk;
          document.getElementById('atk_after').innerText = atk_after.toString();
+         document.getElementById('add_atk_after').innerText = add_atk_before.toString();
   
          let critchance_after = Number(document.getElementById('critchance_after').innerText);
+         let add_critchance_before= Number(document.getElementById('add_critchance_after').innerText);
          let add_critchance = 0;
          switch(b){
            case 0:
@@ -186,9 +209,12 @@ function restore(){
            break;
          }
          critchance_after =  critchance_after + add_critchance;
+         add_critchance_before = add_critchance_before+add_critchance;
          document.getElementById('critchance_after').innerText = critchance_after.toString();
+         document.getElementById('add_critchance_after').innerText = add_critchance_before.toString();
   
          let critdmg_after = Number(document.getElementById('critdmg_after').innerText);
+         let add_critdmg_after= Number(document.getElementById('add_critdmg_after').innerText);
          let add_critdmg = 0;
          switch(c){
            case 0:
@@ -216,9 +242,13 @@ function restore(){
            break;
          }
          critdmg_after =  critdmg_after + add_critdmg;
+         add_critdmg_before = add_critdmg_before+add_critdmg;
+  
          document.getElementById('critdmg_after').innerText = critdmg_after.toString();
+         document.getElementById('add_critdmg_after').innerText = add_critdmg_before.toString();
   
          let spd_after = Number(document.getElementById('spd_after').innerText);
+         let add_spd_after= Number(document.getElementById('add_spd_after').innerText);
          let add_spd = 0;
          switch(d){
            case 0:
@@ -246,7 +276,9 @@ function restore(){
            break;
          }
          spd_after =  spd_after + add_spd;
+         add_spd_before = add_spd_before+add_spd;
          document.getElementById('spd_after').innerText = spd_after.toString();
+         document.getElementById('add_spd_after').innerText = add_spd_before.toString();
          restoreBtn.disabled = true;
 
   }
