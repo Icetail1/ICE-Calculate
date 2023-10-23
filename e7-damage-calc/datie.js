@@ -31,8 +31,13 @@ function random(){
    document.getElementById('atk_before').value = 4 + Math.floor(Math.random()*5);
    document.getElementById('critchance_before').value = 3 + Math.floor(Math.random()*3);
    document.getElementById('critdmg_before').value = 4 + Math.floor(Math.random()*4);
+   const spdFive=Math.floor(Math.random()*1000)
+   if(spdFive > 3){
    document.getElementById('spd_before').value = 2 + Math.floor(Math.random()*3);
-  
+   }else{
+   document.getElementById('spd_before').value = 5;  
+   }
+   
   const num = 0;
   const atk_before = Number(document.getElementById('atk_before').value);
   const critchance_before = Number(document.getElementById('critchance_before').value);
