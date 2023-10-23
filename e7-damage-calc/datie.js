@@ -87,7 +87,9 @@ function addThree(){
    }
   }
 function addFifteen(){ 
-   for (i=0;i<5;i++)
+   let num =  Number(document.getElementById('num').innerText);
+   num = num / 3;
+   for (i=0;i<5-num;i++)
      {
        addThree();
      }
@@ -127,27 +129,27 @@ function restore(){
          let add_critchance = 0;
          switch(b){
            case 0:
-           add_atk = 1;
+           add_critchance = 1;
            break;
              
            case 1:
-           add_atk = 2;
+           add_critchance = 2;
            break;
 
            case 2:
-           add_atk = 3;
+           add_critchance = 3;
            break;
 
            case 3:
-           add_atk = 4;
+           add_critchance = 4;
            break;
 
            case 4:
-           add_atk = 5;
+           add_critchance = 5;
            break;
 
            case 5:
-           add_atk = 6;
+           add_critchance = 6;
            break;
          }
          critchance_after =  critchance_after + add_critchance;
@@ -157,27 +159,27 @@ function restore(){
          let add_critdmg = 0;
          switch(c){
            case 0:
-           add_atk = 1;
+           add_critdmg = 1;
            break;
              
            case 1:
-           add_atk = 2;
+           add_critdmg = 2;
            break;
 
            case 2:
-           add_atk = 3;
+           add_critdmg = 3;
            break;
 
            case 3:
-           add_atk = 4;
+           add_critdmg = 4;
            break;
 
            case 4:
-           add_atk = 5;
+           add_critdmg = 5;
            break;
 
            case 5:
-           add_atk = 6;
+           add_critdmg = 6;
            break;
          }
          critdmg_after =  critdmg_after + add_critdmg;
@@ -187,27 +189,27 @@ function restore(){
          let add_spd = 0;
          switch(d){
            case 0:
-           add_atk = 0;
+           add_spd = 0;
            break;
              
            case 1:
-           add_atk = 1;
+           add_spd = 1;
            break;
 
            case 2:
-           add_atk = 2;
+           add_spd = 2;
            break;
 
            case 3:
-           add_atk = 3;
+           add_spd = 3;
            break;
 
            case 4:
-           add_atk = 4;
+           add_spd = 4;
            break;
 
            case 5:
-           add_atk = 4;
+           add_spd = 4;
            break;
          }
          spd_after =  spd_after + add_spd;
