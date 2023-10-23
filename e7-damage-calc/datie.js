@@ -1,5 +1,8 @@
 
-
+let a=0;
+let b=0;
+let c=0;
+let d=0;
 const resolve = () => {
   const atk_before = Number(document.getElementById('atk_before').value);
   const critchance_before = Number(document.getElementById('critchance_before').value);
@@ -36,7 +39,10 @@ function random(){
   document.getElementById('critchance_after').innerText = critchance_before.toString();
   document.getElementById('critdmg_after').innerText = critdmg_before.toString();
   document.getElementById('spd_after').innerText = spd_before.toString();
-
+  a=0;
+  b=0;
+  c=0;
+  d=0;
   
 }
 
@@ -45,6 +51,7 @@ function addThree(){
    let num =  Number(document.getElementById('num').innerText);
    switch(choice){
      case 0:
+         a=a+1;
          num = num + 3;
          console.log(num);
          document.getElementById('num').innerText = num.toString();
@@ -53,6 +60,7 @@ function addThree(){
          document.getElementById('atk_after').innerText = atk_after.toString();
          break;
      case 1:
+         b=b+1;
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          let critchance_after = Number(document.getElementById('critchance_after').innerText);
@@ -60,6 +68,7 @@ function addThree(){
          document.getElementById('critchance_after').innerText = critchance_after.toString();
          break;
      case 2:
+         c=c+1;
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          let critdmg_after = Number(document.getElementById('critdmg_after').innerText);
@@ -67,6 +76,7 @@ function addThree(){
          document.getElementById('critdmg_after').innerText = critdmg_after.toString();
          break;
      case 3:
+         d=d+1;
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          let spd_after = Number(document.getElementById('spd_after').innerText);
@@ -81,4 +91,127 @@ function addFifteen(){
      {
        addThree();
      }
+  }
+function restore(){ 
+         let atk_after = Number(document.getElementById('atk_after').innerText);
+         let add_atk = 0;
+         switch(a){
+           case 0:
+           add_atk = 1;
+           break;
+             
+           case 1:
+           add_atk = 3;
+           break;
+
+           case 2:
+           add_atk = 4;
+           break;
+
+           case 3:
+           add_atk = 5;
+           break;
+
+           case 4:
+           add_atk = 7;
+           break;
+
+           case 5:
+           add_atk = 8;
+           break;
+         }
+         atk_after =  atk_after + add_atk;
+         document.getElementById('atk_after').innerText = atk_after.toString();
+  
+         let critchance_after = Number(document.getElementById('critchance_after').innerText);
+         let add_critchance = 0;
+         switch(b){
+           case 0:
+           add_atk = 1;
+           break;
+             
+           case 1:
+           add_atk = 2;
+           break;
+
+           case 2:
+           add_atk = 3;
+           break;
+
+           case 3:
+           add_atk = 4;
+           break;
+
+           case 4:
+           add_atk = 5;
+           break;
+
+           case 5:
+           add_atk = 6;
+           break;
+         }
+         critchance_after =  critchance_after + add_critchance;
+         document.getElementById('critchance_after').innerText = critchance_after.toString();
+  
+         let critdmg_after = Number(document.getElementById('critdmg_after').innerText);
+         let add_critdmg = 0;
+         switch(c){
+           case 0:
+           add_atk = 1;
+           break;
+             
+           case 1:
+           add_atk = 2;
+           break;
+
+           case 2:
+           add_atk = 3;
+           break;
+
+           case 3:
+           add_atk = 4;
+           break;
+
+           case 4:
+           add_atk = 5;
+           break;
+
+           case 5:
+           add_atk = 6;
+           break;
+         }
+         critdmg_after =  critdmg_after + add_critdmg;
+         document.getElementById('critdmg_after').innerText = critdmg_after.toString();
+  
+         let spd_after = Number(document.getElementById('spd_after').innerText);
+         let add_spd = 0;
+         switch(d){
+           case 0:
+           add_atk = 0;
+           break;
+             
+           case 1:
+           add_atk = 1;
+           break;
+
+           case 2:
+           add_atk = 2;
+           break;
+
+           case 3:
+           add_atk = 3;
+           break;
+
+           case 4:
+           add_atk = 4;
+           break;
+
+           case 5:
+           add_atk = 4;
+           break;
+         }
+         spd_after =  spd_after + add_spd;
+         document.getElementById('spd_after').innerText = spd_after.toString();
+
+
   }
