@@ -91,14 +91,14 @@
                             <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" id="effectiveness-minus" onclick="minus('effectiveness')">&minus;</button>
                             </div>
-                            <input type="number" class="form-control text-center" id="effectiveness" value="0" onkeyup="update('effectiveness')">
+                            <input type="number" class="form-control text-center" id="effectiveness" value="7" onkeyup="update('effectiveness')">
                             <div class="input-group-append">
                                 <button class="btn btn-outline-secondary" type="button" id="effectiveness-plus" onclick="plus('effectiveness')">&plus;</button>
                             </div>
                         </div>
                     </div>
                     <div class="form-group row col-sm-12">
-                        <input type="range" class="custom-range" id="effectiveness-slide" min="4" max="7" value="7" oninput="slide('effectiveness')">
+                        <input type="range" class="custom-range" id="effectiveness-slide" min="4" max="7" value="7"  step="1" oninput="slide('effectiveness')">
                     </div>
                 </div>
                 <div class="stat-block">
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                     <div class="form-group row col-sm-12">
-                        <input type="range" class="custom-range" id="effect-resistance-slide" min=2" max="4" value="4" oninput="slide('effect-resistance')">
+                        <input type="range" class="custom-range" id="effect-resistance-slide" min="2" max="4" value="4" oninput="slide('effect-resistance')">
                     </div>
                 </div>
             </form>
