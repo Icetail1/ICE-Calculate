@@ -21,8 +21,8 @@ const resolve = () => {
   document.getElementById('critchance_after').innerText = critchance_before.toString();
   document.getElementById('critdmg_after').innerText = critdmg_before.toString();
   document.getElementById('spd_after').innerText = spd_before.toString();
-
-
+  restore.disabled = true;
+ 
   
 }
 
@@ -49,7 +49,7 @@ function random(){
   d=0;
   addThree.disabled = false;
   addFifteen.disabled = false;
-  restore.disabled = false;
+  restore.disabled = true;
 }
 
 function addThree(){ 
@@ -94,6 +94,7 @@ function addThree(){
      if(num=15){
        addThree.disabled = true;
        addFifteen.disabled = true;
+       restore.disabled = false;
      }
   }
 function addFifteen(){ 
@@ -105,6 +106,7 @@ function addFifteen(){
      }
    addThree.disabled = true;
    addFifteen.disabled = true;
+   restore.disabled = false;
   }
 function restore(){ 
          let atk_after = Number(document.getElementById('atk_after').innerText);
