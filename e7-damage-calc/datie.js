@@ -42,30 +42,27 @@ function random(){
 
 function addThree(){ 
    const choice=Math.floor(Math.random()*4);
+   const num =  Number(document.getElementById('num').value);
    switch(choice){
      case 0:
-         const num =  Number(document.getElementById('num').value);
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          const atk_before = Number(document.getElementById('atk_before').value);
          const atk_after =  atk_before + 4 + Math.floor(Math.random()*5);
          document.getElementById('atk_after').innerText = atk_after.toString();
      case 1:
-         const num =  Number(document.getElementById('num').value);
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          const critchance_before = Number(document.getElementById('critchance_before').value);
          const critchance_after =  critchance_before + 3 + Math.floor(Math.random()*3);
          document.getElementById('critchance_after').innerText = critchance_after.toString();
      case 2:
-         const num =  Number(document.getElementById('num').value);
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          const critdmg_before = Number(document.getElementById('critdmg_before').value);
          const critdmg_after =  critdmg_before + 4 + Math.floor(Math.random()*4);
          document.getElementById('critdmg_after').innerText = critdmg_after.toString();
      case 3:
-         const num =  Number(document.getElementById('num').value);
          num = num + 3;
          document.getElementById('num').innerText = num.toString();
          const spd_before = Number(document.getElementById('spd_before').value);
