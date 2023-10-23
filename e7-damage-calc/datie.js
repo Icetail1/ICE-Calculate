@@ -226,6 +226,6 @@ function restore(){
          }
          spd_after =  spd_after + add_spd;
          document.getElementById('spd_after').innerText = spd_after.toString();
-    restore.disabled = true;
+         restore.disabled = true;
 
   }
