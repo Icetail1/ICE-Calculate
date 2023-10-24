@@ -124,32 +124,10 @@
                     <input type="button" value="随机初始值"  id="randomBtn" onclick="random();">
                     <input type="button" value="+3" id="addThreeBtn"  onclick="addThree();">
                     <input type="button" value="+15" id="addFifteenBtn" onclick="addFifteen();"> 
-                    <input type="button" value="重铸" id="restoreBtn" onclick="restore();">     
-                </div>  
-                <div class="col-sm-3">
-                        <div class="card border-success mb-3">
-                            <div class="card-header">
-                                已跳次数
-                            </div>
-                            <div class="card-body text-success">
-                                <p class="card-text">
-                                    <h2>+<span id="num"></span></h2>
-                                </p>
-                            </div>
-                        </div>
-                       <div class="card border-success mb-3">
-                            <div class="card-header">
-                                装备分数
-                            </div>
-                            <div class="card-body text-success">
-                                <p class="card-text">
-                                    <h2><span id="score"></span></h2>
-                                </p>
-                            </div>
-                        </div>
-                </div>
-            </div>  
-            <div style="float: right;">
+                    <input type="button" value="重铸" id="restoreBtn" onclick="restore();"> 
+                    
+                </div> 
+                <div style="float: right;">
                         <div class="card-group">
                             <div class="card border-info">
                                 <div class="card-header">
@@ -213,6 +191,30 @@
                             </div>
                         </div>
             </div>
+                <div class="col-sm-3">
+                        <div class="card border-success mb-3">
+                            <div class="card-header">
+                                已跳次数
+                            </div>
+                            <div class="card-body text-success">
+                                <p class="card-text">
+                                    <h2>+<span id="num"></span></h2>
+                                </p>
+                            </div>
+                        </div>
+                       <div class="card border-success mb-3">
+                            <div class="card-header">
+                                装备分数
+                            </div>
+                            <div class="card-body text-success">
+                                <p class="card-text">
+                                    <h2><span id="score"></span></h2>
+                                </p>
+                            </div>
+                        </div>
+                </div>
+            </div>  
+
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
