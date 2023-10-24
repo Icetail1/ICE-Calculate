@@ -293,11 +293,3 @@ function restore(){
          restoreBtn.disabled = true;
 
   }
-$(document).ready(function() {
-    $('#addThreeBtn').on('click', function() {
-        alert('由快捷键A触发')
-    })
-    $(window).on('keypress', function(e) {
-        if (e.keyCode === 97) $('#button').trigger('click')
-    })
-})
