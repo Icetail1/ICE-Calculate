@@ -293,3 +293,15 @@ function restore(){
          restoreBtn.disabled = true;
 
   }
+function hotkey()  
+{  
+var a=window.event.keyCode;  
+ 
+if((a==65)&&(event.ctrlKey))  
+ 
+{  
+alert("你按了ctrl+a键吧");  
+}  
+}// end hotkey  
+ 
+document.onkeydown = hotkey;
