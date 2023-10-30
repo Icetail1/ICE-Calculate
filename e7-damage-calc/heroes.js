@@ -7961,6 +7961,48 @@ const heroes = {
       }
     }
   },
+  amiki: {
+    name: 'Amiki',
+    element: element.ice,
+    classType: classType.warrior,
+    form: [elements.caster_hp_pc],
+    skills: {
+      s1: {
+        rate: 0.6,
+        pow: 1,
+	penetrate: () => 0.3,
+	NoCrit: true,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        single: true,
+      },
+      s3: {
+	soulburn: true,
+        rate: (soulburn) => soulburn ? 1.5 : 1.1,
+　　　　 penetrate: () => elements.caster_hp_pc.value() < 30 ? 0.7 : 0.3,
+        pow: 0.95,
+	NoCrit: true,
+        enhance: [0.05, 0.05, 0.05, 0.1, 0.1],
+        single: true,
+      }
+    }
+  },
+claudia: {
+    name: 'Claudia',
+    element: element.fire,
+    classType: classType.knight,
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        single: true,
+      },
+      s2: {
+        rate: 1,
+        pow: 1.3,
+        single: true,
+      }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
