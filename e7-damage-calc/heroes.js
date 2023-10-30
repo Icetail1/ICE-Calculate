@@ -7939,6 +7939,28 @@ const heroes = {
       }
     }
   },
+   ezra: {
+    name: 'Ezra',
+    element: element.earth,
+    classType: classType.thief,
+    form: [elements.target_nb_debuff],
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+	fixed: elements.target_nb_debuff.value() ? 1000*elements.target_nb_debuff.value() : 0,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        single: true,
+      },
+      s3: {
+        rate: 1,
+        pow: 1,
+        fixed: elements.target_nb_debuff.value() ? 1500*elements.target_nb_debuff.value() : 0,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        aoe: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
