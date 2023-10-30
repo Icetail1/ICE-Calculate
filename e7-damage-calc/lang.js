@@ -417,6 +417,9 @@
       nahkwol:'落月',
       abyssal_Yufine:'深渊优芬妮',
       kane:'该隐',
+      ezra:'艾自拉',
+      amiki:'雅米琪',
+      claudia:'克劳蒂亚',
     },
     nicknames: {
       achates:	'小火奶',   
@@ -723,6 +726,9 @@
       nahkwol:'国风角色',
       abyssal_Yufine:'暗木龙',
       kane:'该隐',
+      ezra:'爱自拉',
+      amiki:'雅米琪',
+      claudia:'克劳蒂亚',
     },
     artifacts: {
       no_proc: '无神器',
