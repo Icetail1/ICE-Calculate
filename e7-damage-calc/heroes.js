@@ -7971,7 +7971,7 @@ const heroes = {
         rate: 0.6,
         pow: 1,
 	penetrate: () => 0.3,
-	NoCrit: true,
+	noCrit: true,
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         single: true,
       },
@@ -7980,7 +7980,7 @@ const heroes = {
         rate: (soulburn) => soulburn ? 1.5 : 1.1,
 　　　　 penetrate: () => elements.caster_hp_pc.value() < 30 ? 0.7 : 0.3,
         pow: 0.95,
-	NoCrit: true,
+	noCrit: true,
         enhance: [0.05, 0.05, 0.05, 0.1, 0.1],
         single: true,
       }
