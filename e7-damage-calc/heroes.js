@@ -7948,14 +7948,14 @@ const heroes = {
       s1: {
         rate: 1,
         pow: 1,
-	fixed: 1000*elements.target_nb_debuff.value(),
+	fixed: () =>elements.target_nb_debuff.value() ? 1000*elements.target_nb_debuff.value() : 0,
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         single: true,
       },
       s3: {
         rate: 1,
         pow: 1,
-        fixed: 1500*elements.target_nb_debuff.value(),
+        fixed: () =>elements.target_nb_debuff.value() ? 1500*elements.target_nb_debuff.value() : 0,
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         aoe: true,
       }
