@@ -8002,6 +8002,7 @@ claudia: {
         pow: 1.3,
         single: true,
       }
+　　}
   },
   astromancer_Elena: {
     name: 'Astromancer Elena',
