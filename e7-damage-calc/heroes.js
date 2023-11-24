@@ -8004,6 +8004,34 @@ claudia: {
       }
 　　}
   },
+  eternal_wanderer_ludwig: {
+    name: 'Eternal_Wanderer_Ludwig',
+    element: element.dark,
+    classType: classType.mage,
+    baseAtk: 1412,
+    form: [elements.caster_attacked_stack_2],
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0, 0.1, 0, 0.15],
+        single: true,
+      },
+      s2: {
+        rate: 1.6,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      },
+      s3: {
+        rate: 1,
+        pow: 1,
+        penetrate: () => elements.caster_attacked_stack_5.value()*0.3,
+        enhance: [0.05, 0.05, 0, 0.05, 0.15],
+        aoe: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
