@@ -729,6 +729,7 @@
       ezra:'爱自拉',
       amiki:'雅米琪',
       claudia:'克劳蒂亚',
+      eternal_wanderer_ludwig:'暗正太',
     },
     artifacts: {
       no_proc: '无神器',
