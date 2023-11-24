@@ -8026,7 +8026,7 @@ claudia: {
       s3: {
         rate: 1,
         pow: 1,
-        penetrate: () => elements.caster_attacked_stack_5.value()*0.3,
+        penetrate: () => elements.caster_attacked_stack_2.value()*0.3,
         enhance: [0.05, 0.05, 0, 0.05, 0.15],
         aoe: true,
       }
