@@ -655,6 +655,17 @@ const elements = {
     readonly: true,
     value: () => Number(document.getElementById('aoe-stack-5').value)
   },
+  caster_attacked_stack_2: {
+    ref: 'caster_attacked_stack_2',
+    id: 'caster-attacked-stack-2',
+    label: 'Caster Attacked Stack',
+    type: 'slider',
+    min: 0,
+    max: 2,
+    default: 0,
+    readonly: true,
+    value: () => Number(document.getElementById('caster-attacked-stack-2').value)
+  },
   caster_attacked_stack_3: {
     ref: 'caster_attacked_stack_3',
     id: 'caster-attacked-stack-3',
