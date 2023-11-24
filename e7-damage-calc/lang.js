@@ -420,6 +420,7 @@
       ezra:'艾自拉',
       amiki:'雅米琪',
       claudia:'克劳蒂亚',
+      eternal_wanderer_ludwig:'永劫漂流者鲁特比',
     },
     nicknames: {
       achates:	'小火奶',   
