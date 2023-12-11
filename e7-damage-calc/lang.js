@@ -421,6 +421,7 @@
       amiki:'雅米琪',
       claudia:'克劳蒂亚',
       eternal_wanderer_ludwig:'永劫漂流者鲁特比',
+      byblis:'维波丽斯',
     },
     nicknames: {
       achates:	'小火奶',   
@@ -731,6 +732,7 @@
       amiki:'雅米琪',
       claudia:'克劳蒂亚',
       eternal_wanderer_ludwig:'暗正太',
+      byblis:'维波丽斯',
     },
     artifacts: {
       no_proc: '无神器',
