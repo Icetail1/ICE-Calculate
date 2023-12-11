@@ -732,7 +732,7 @@
       amiki:'雅米琪',
       claudia:'克劳蒂亚',
       eternal_wanderer_ludwig:'暗正太',
-      byblis:'维波丽斯',
+      byblis:'花园妹',
     },
     artifacts: {
       no_proc: '无神器',
