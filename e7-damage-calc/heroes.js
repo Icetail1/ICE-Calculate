@@ -8031,6 +8031,30 @@ claudia: {
       }
     }
   },
+  byblis: {
+    name: 'Byblis',
+    element: element.ice,
+    classType: classType.ranger,
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0, 0.1, 0, 0.15],
+        single: true,
+      },
+      s2: {
+        rate: 0.8,
+        pow: 1.3,
+        aoe: true,
+      },	    
+      s3: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        aoe: true,
+      },
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
