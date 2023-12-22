@@ -351,7 +351,7 @@ const elements = {
     min: 0,
     max: 10,
     default: 0,
-    value:  () => Number(document.getElementById('caster_speed_debuff_up').value),
+    value:  () => Number(document.getElementById('caster-speed-debuff-up').value),
   },
   caster_nb_buff: {
     ref: 'caster_nb_buff',
