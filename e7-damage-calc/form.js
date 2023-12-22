@@ -346,7 +346,7 @@ const elements = {
   caster_speed_debuff_up: {
     ref: 'caster_speed_debuff_up',
     id: 'caster-speed-debuff-up',
-    label: 'Debuff Increased Speed',
+    label: '敌方debuff数量',
     type: 'slider',
     min: 0,
     max: 10,
