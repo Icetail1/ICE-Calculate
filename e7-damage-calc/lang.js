@@ -422,6 +422,7 @@
       claudia:'克劳蒂亚',
       eternal_wanderer_ludwig:'永劫漂流者鲁特比',
       byblis:'维波丽斯',
+      blooming_lidica:'花园丽迪卡',
     },
     nicknames: {
       achates:	'小火奶',   
@@ -732,7 +733,8 @@
       amiki:'雅米琪',
       claudia:'克劳蒂亚',
       eternal_wanderer_ludwig:'暗正太',
-      byblis:'花园妹',
+      byblis:'花园弓 大葱',
+      blooming_lidica:'木高潮 花刺',
     },
     artifacts: {
       no_proc: '无神器',
@@ -826,6 +828,7 @@
       caster_defense_up: '防御力增加',
       caster_speed: '自身速度',
       caster_speed_up: '速度提升',
+      caster_debuff_speed_up: '敌方db数量',
       caster_nb_buff: '自身Buff数量',
       caster_turn: '自身回合数',
       caster_has_buff: '自身有buff',
