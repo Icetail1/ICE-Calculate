@@ -8070,7 +8070,6 @@ claudia: {
         single: true,
       },
       s2: {
-        name: infoLabel('alencia_trample'),
         rate: 0.5,
         pow: 1,
         flat: () => elements.caster_max_hp.value()*0.07,
