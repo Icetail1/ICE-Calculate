@@ -8059,7 +8059,7 @@ claudia: {
     name: 'Blooming Lidica',
     element: element.earth,
     classType: classType.thief,
-    form: [elements.caster_max_hp,elements.caster_speed, elements.target_speed],
+    form: [elements.caster_max_hp,elements.caster_speed, elements.target_speed,elements.caster_speed_debuff_up],
     skills: {
       s1: {
         rate: 0.5,
