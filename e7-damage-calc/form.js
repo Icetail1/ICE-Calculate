@@ -343,6 +343,16 @@ const elements = {
     value: () => document.getElementById('caster-speed-up').checked,
     icon: 'https://epic7x.com/wp-content/uploads/2018/12/stic_speed_up.png'
   },
+  caster_speed_debuff_up: {
+    ref: 'caster_speed_debuff_up',
+    id: 'caster-speed-debuff-up',
+    label: 'Debuff Increased Speed',
+    type: 'slider',
+    min: 0,
+    max: 10,
+    default: 0,
+    value:  () => Number(document.getElementById('caster_speed_debuff_up').value),
+  },
   caster_nb_buff: {
     ref: 'caster_nb_buff',
     id: 'caster-nb-buff',
