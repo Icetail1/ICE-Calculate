@@ -8055,6 +8055,47 @@ claudia: {
       },
     }
   },
+  blooming_lidica: {
+    name: 'Blooming Lidica',
+    element: element.earth,
+    classType: classType.thief,
+    form: [elements.caster_max_hp,elements.caster_speed, elements.target_speed],
+    skills: {
+      s1: {
+        rate: 0.5,
+        pow: 1,
+        flat: () => elements.caster_max_hp.value()*0.12,
+        flatTip: () => ({ caster_max_hp: 12 }),
+        enhance: [0.05, 0, 0.1, 0, 0.15],
+        single: true,
+      },
+      s2: {
+        name: infoLabel('alencia_trample'),
+        rate: 0.5,
+        pow: 1,
+        flat: () => elements.caster_max_hp.value()*0.07,
+        flatTip: () => ({ caster_max_hp: 7 }),
+        enhance: [0.05, 0, 0.1, 0, 0.15],
+        aoe: true,
+      },
+      s3: {
+        rate: 0.5,
+        pow: 1,
+	noCrit: true,
+        flat: () => elements.caster_max_hp.value()*0.3,
+        flatTip: () => ({ caster_max_hp: 30 }),
+        penetrate: () => {
+          const targetSpd = elements.target_speed.value();
+          const casterSpd = elements.caster_speed.value();
+
+          const spdDiff = (casterSpd-targetSpd)*0.0059;
+          return Math.min(spdDiff, 1);
+        },
+        enhance: [0.05, 0.05, 0, 0.05, 0.15],
+        single: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
