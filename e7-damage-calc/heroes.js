@@ -8085,8 +8085,7 @@ claudia: {
         flatTip: () => ({ caster_max_hp: 30 }),
         penetrate: () => {
           const targetSpd = elements.target_speed.value();
-          const casterSpd = elements.caster_speed.value();
-
+          const casterSpd = elements.caster_speed.value() * (Number(1+elements.caster_speed_debuff_up.value()*0.07));
           const spdDiff = (casterSpd-targetSpd)*0.0059;
           return Math.min(spdDiff, 1);
         },
