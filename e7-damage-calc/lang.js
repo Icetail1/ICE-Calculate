@@ -423,6 +423,9 @@
       eternal_wanderer_ludwig:'永劫漂流者鲁特比',
       byblis:'维波丽斯',
       blooming_lidica:'花园丽迪卡',
+      dragon_king_sharun:'龙王莎伦',
+      elvira:'艾碧拉',
+      Leah:'蕾雅',
     },
     nicknames: {
       achates:	'小火奶',   
@@ -735,6 +738,9 @@
       eternal_wanderer_ludwig:'暗正太',
       byblis:'花园弓 大葱',
       blooming_lidica:'木高潮 花刺',
+      dragon_king_sharun:'龙王莎伦',
+      elvira:'艾碧拉',
+      Leah:'蕾雅',
     },
     artifacts: {
       no_proc: '无神器',
