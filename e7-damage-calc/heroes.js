@@ -8094,6 +8094,79 @@ claudia: {
       }
     }
   },
+  dragon_king_sharun: {
+    name: 'Dragon King Sharun',
+    element: element.light,
+    classType: classType.soul_weaver,
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        single: true,
+      },
+      s3: {
+        rate: 1.1,
+        pow: 0.5,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        aoe: true,
+      },
+    }
+  },
+  elvira: {
+    name: 'Elvira',
+    element: element.ice,
+    classType: classType.thief,
+    form: [elements.target_hp],
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+	noCrit: true,
+      },
+      s2: {
+        rate: 0.5,
+        pow: 1.3,
+        penetrate: () => 0.5,
+        aoe: true,
+	noCrit: true,      
+      },
+      s3: {
+        rate: 0.2,
+        pow: 1,
+        flat: () => elements.target_hp.value()*0.16,
+        flatTip: () => ({ target_hp:16}),
+        penetrate: () => 1,
+        single: true,
+        noCrit: true,
+      }
+    }
+  },
+  leah: {
+    name: 'Leah',
+    element: element.earth,
+    classType: classType.ranger,
+    form: [elements.caster_speed],
+    skills: {
+      s1: {
+        rate: 0.9,
+        pow: 0.95,
+        enhance: [0.05, 0.05, 0.05, 0.05,0.05, 0.1],
+        single: true,
+      },
+      s1_extra: {
+        name: infoLabel('s1_extra_attack'),
+        rate: 1.2,
+        pow: 0.95,
+	enhance_from: 's1',      
+	mult: () => 1 + elements.caster_speed.value()*0.001,
+        multTip: () => ({ caster_speed: 0.1 }),      
+        single: true,
+      },
+    }
+  },	
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
