@@ -425,7 +425,7 @@
       blooming_lidica:'花园丽迪卡',
       dragon_king_sharun:'龙王莎伦',
       elvira:'艾碧拉',
-      Leah:'蕾雅',
+      leah:'蕾雅',
     },
     nicknames: {
       achates:	'小火奶',   
@@ -740,7 +740,7 @@
       blooming_lidica:'木高潮 花刺',
       dragon_king_sharun:'龙王莎伦',
       elvira:'艾碧拉',
-      Leah:'蕾雅',
+      leah:'蕾雅',
     },
     artifacts: {
       no_proc: '无神器',
