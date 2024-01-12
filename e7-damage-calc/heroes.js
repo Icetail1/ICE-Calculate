@@ -8108,7 +8108,7 @@ claudia: {
       s3: {
         rate: 1.1,
         pow: 0.5,
-        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        enhance: [0.1, 0, 0, 0, 0.15],
         aoe: true,
       },
     }
