@@ -2994,21 +2994,14 @@ const heroes = {
     element: element.fire,
     classType: classType.warrior,
     baseAtk: 1510,
-    form: [elements.caster_has_buff, elements.caster_max_hp, elements.target_max_hp],
+    form: [elements.target_attack],
     barrier: (hero) => hero.getAtk()*0.45,
-    innateAtkUp: () => {
-      let boost = 0.2;
-      for (let i = 0; i < Number(document.getElementById(`molagora-s2`).value); i++) {
-        boost += heroes.hwayoung.skills.s2.enhance[i];
-      }
-
-      return boost;
-    },
     skills: {
       s1: {
-        rate: 0.8,
+	soulburn: true,
+        rate: (soulburn) => soulburn ? 1.2 : 0.8,
         pow: 1,
-        afterMath: () => elements.caster_has_buff.value() ? ({ atkPercent: 0.25, penetrate: 0}) : null,
+        afterMath: () =>  (soulburn) => soulburn ?  ({ atkPercent: 0.7, penetrate: 0}) : ({ atkPercent: 0.35, penetrate: 0}),
         enhance: [0.05, 0, 0.1, 0, 0.15],
         single: true,
         noCrit: true,
@@ -3017,13 +3010,13 @@ const heroes = {
         enhance: [0.01, 0.02, 0.02, 0.02, 0.03],
       },
       s3: {
-        rate: 1.25,
+        rate: 1.1,
         pow: 1,
         penetrate: () => {
-          const targetHp = elements.target_max_hp.value();
-          const casterHp = elements.caster_max_hp.value();
+          const targetAtk = elements.target_attack.value();
+          const casterAtk = currentHero.getAtk('s3');
 
-          const penDiff = ( targetHp - casterHp  ) * 0.000091;
+          const penDiff = (casterAtk - targetAtk) * 0.000196;
 
           return Math.min(Math.max(0, penDiff), 1);
         },
@@ -3241,6 +3234,7 @@ const heroes = {
         rate: 1,
         pow: 1,
         enhance: [0.15, 0, 0, 0.15],
+	penetrate: () => 0.2,
         single: true,
       },
       s2: {
@@ -3250,8 +3244,8 @@ const heroes = {
         aoe: true,
       },
       s3: {
-        rate: 1,
-        pow: 1,
+        rate: 1.1,
+        pow: 0.95,
         mult: () => 1 + (elements.nb_targets.value()-1)*0.1,
         multTip: () => ({ per_target: 10 }),
         enhance: [0.05, 0, 0.05, 0, 0, 0.1, 0.1],
@@ -6024,9 +6018,9 @@ const heroes = {
       },
       s1_bis: {
         name: infoLabel('ml_celine_nimble_sword'),
-        rate: 1.3,
+        rate: 1,
         pow: 0.9,
-        penetrate: () => 0.35,
+        penetrate: () => 0.5,
         enhance_from: 's1',
         single: true,
       },
