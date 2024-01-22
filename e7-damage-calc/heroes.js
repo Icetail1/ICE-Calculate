@@ -3001,7 +3001,7 @@ const heroes = {
 	soulburn: true,
         rate: (soulburn) => soulburn ? 1.2 : 0.8,
         pow: 1,
-        afterMath: (soulburn) => soulburn ?  ({ atkPercent: 0.7, penetrate: 0.7}) : ({ atkPercent: 0.35, penetrate: 0.7}),
+        afterMath: () => soulburn ?  ({ atkPercent: 0.7, penetrate: 0.7}) : ({ atkPercent: 0.35, penetrate: 0.7}),
         enhance: [0.05, 0, 0.1, 0, 0.15],
         single: true,
         noCrit: true,
