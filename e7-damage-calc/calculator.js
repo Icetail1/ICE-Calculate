@@ -213,7 +213,7 @@ class Hero {
       exEq: skill.exEq !== undefined ? skill.exEq() : null,
       elemAdv: (typeof skill.elemAdv === 'function') ? skill.elemAdv() : null,
       afterMathFormula: skill.afterMath !== undefined ? skill.afterMath(soulburn) : null,
-      afterMathDmg: skill.afterMath !== undefined ? this.getAfterMathSkillDamage(skillId, hitTypes.crit,soulburn) : null,
+      afterMathDmg: skill.afterMath !== undefined ? this.getAfterMathSkillDamage(skillId, hitTypes.crit) : null,
       extraDmg: skill.extraDmg !== undefined ? skill.extraDmg() : null,
       extraDmgTip: skill.extraDmgTip !== undefined ? getSkillModTip(skill.extraDmgTip(soulburn)) : '',
       fixed: skill.fixed !== undefined ? skill.fixed(hitTypes.crit) : null,
@@ -320,17 +320,17 @@ class Hero {
     let artiDamage = this.getAfterMathArtifactDamage(skillId);
     if (artiDamage === null) artiDamage = 0;
 
-    const skillDamage = this.getAfterMathSkillDamage(skillId, hitType,soulburn);
+    const skillDamage = this.getAfterMathSkillDamage(skillId, hitType);
     const skillExtraDmg = skill.extraDmg !== undefined ? Math.round(skill.extraDmg(hitType)) : 0;
 
     return detonation + artiDamage + skillDamage + skillExtraDmg;
   }
 
-  getAfterMathSkillDamage(skillId, hitType,soulburn) {
+  getAfterMathSkillDamage(skillId, hitType) {
     const skill = this.skills[skillId];
 
     let skillDamage = 0;
-    const skillMultipliers = skill.afterMath ? skill.afterMath(hitType,soulburn) : null;
+    const skillMultipliers = skill.afterMath ? skill.afterMath(hitType) : null;
     
     if (skillMultipliers !== null) {
         console.log("atkPercent is ", skillMultipliers.atkPercent);
