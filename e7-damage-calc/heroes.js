@@ -1000,14 +1000,14 @@ const heroes = {
       s1: {
         rate: 0.85,
         pow: 1,
-        afterMath: (hitType) => (hitType !== hitTypes.miss) ? { atkPercent: 0.3, penetrate: 0.7 } : null,
+        afterMath: (hitType,soulburn) => (hitType !== hitTypes.miss) ? { atkPercent: 0.3, penetrate: 0.7 } : null,
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         single: true,
       },
       s3: {
         rate: 0.95,
         pow: 1.1,
-        afterMath: (hitType) => (hitType !== hitTypes.miss) ? { atkPercent: 0.3, penetrate: 0.7 } : null,
+        afterMath: (hitType,soulburn) => (hitType !== hitTypes.miss) ? { atkPercent: 0.3, penetrate: 0.7 } : null,
         enhance: [0.05, 0, 0, 0, 0.15],
         aoe: true,
       }
@@ -7168,7 +7168,7 @@ const heroes = {
         pow: 1,
         flat: () => elements.caster_defense.value()*0.5,
         flatTip: () => ({ caster_defense: 50 }),
-        afterMath: (hitType) => (hitType !== hitTypes.miss) ? { defPercent: 1.4, penetrate: 0.7 } : null,
+        afterMath: (hitType,soulburn) => (hitType !== hitTypes.miss) ? { defPercent: 1.4, penetrate: 0.7 } : null,
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         single: true,
       }
