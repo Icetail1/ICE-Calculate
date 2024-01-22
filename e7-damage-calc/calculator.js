@@ -326,7 +326,7 @@ class Hero {
     return detonation + artiDamage + skillDamage + skillExtraDmg;
   }
 
-  getAfterMathSkillDamage(skillId, hitType) {
+  getAfterMathSkillDamage(skillId, hitType,soulburn=false) {
     const skill = this.skills[skillId];
 
     let skillDamage = 0;
@@ -347,7 +347,7 @@ class Hero {
     return skillDamage;
   }
 
-  getAfterMathArtifactDamage(skillId,soulburn=false) {
+  getAfterMathArtifactDamage(skillId) {
     const skill = this.skills[skillId];
 
     const artiMultipliers = this.artifact.getAfterMathMultipliers(skill, skillId);
