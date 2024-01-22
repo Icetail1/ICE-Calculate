@@ -330,7 +330,7 @@ class Hero {
     const skill = this.skills[skillId];
 
     let skillDamage = 0;
-    if(hitType) {
+    if(soulburn == false) {
     const skillMultipliers = skill.afterMath ? skill.afterMath(hitType) : null;
       }else
     {
