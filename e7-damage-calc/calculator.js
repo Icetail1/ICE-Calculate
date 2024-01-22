@@ -330,7 +330,7 @@ class Hero {
     const skill = this.skills[skillId];
 
     let skillDamage = 0;
-    const skillMultipliers = skill.afterMath ? skill.afterMath() : null;
+    const skillMultipliers = skill.afterMath ? skill.afterMath(hitType,soulburn) : null;
     if (skillMultipliers !== null) {
         console.log("atkPercent is ", skillMultipliers.atkPercent);
         if(skillMultipliers.atkPercent!== undefined){
