@@ -426,6 +426,7 @@
       dragon_king_sharun:'龙王莎伦',
       elvira:'艾碧拉',
       leah:'蕾雅',
+      laia:'莱娅',
     },
     nicknames: {
       achates:	'小火奶',   
@@ -741,6 +742,7 @@
       dragon_king_sharun:'龙王莎伦',
       elvira:'艾碧拉',
       leah:'蕾雅',
+      laia:'莱娅',
     },
     artifacts: {
       no_proc: '无神器',
