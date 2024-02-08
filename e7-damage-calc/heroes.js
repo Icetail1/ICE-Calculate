@@ -8161,6 +8161,32 @@ claudia: {
       },
     }
   },	
+laia: {
+    name: 'Leah',
+    element: element.earth,
+    classType: classType.warrior,
+    form: [elements.caster_max_hp],
+    skills: {
+      s1: {
+        rate: 0.7,
+        pow: 1,
+        enhance: [0.05, 0, 0.1, 0, 0.15],
+	flat: () => elements.caster_max_hp.value()*0.1,
+        flatTip: () => ({ caster_max_hp: 10 }),      
+        single: true,
+      },
+      s3: {
+	soulburn: true,
+        rate: 0.3,
+        pow: 1,
+	noCrit: true,
+	flat: (soulburn) => elements.caster_max_hp.value() * (soulburn ? 0.32 : 0.2),
+        flatTip: (soulburn) => ({ caster_max_hp: soulburn ? 32 : 20}),
+	penetrate: () => 1.0,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+      }
+    }
+  },	
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
