@@ -122,7 +122,7 @@ const store = {
 	state: {
 		// 将在init()中取消挂起
 		paused: true,
-		soundEnabled: true,
+		soundEnabled: false,
 		menuOpen: false,
 		openHelpTopic: null,
 		fullscreen: isFullscreen(),
