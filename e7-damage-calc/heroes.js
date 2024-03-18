@@ -6448,7 +6448,7 @@ const heroes = {
       },
       s3: {
 	soulburn: true,
-        rate: (soulburn) => soulburn ? 2.0 : 1.6,,
+        rate: (soulburn) => soulburn ? 2.0 : 1.6,
         pow: 1,
         mult: () => 1 + elements.caster_speed.value()*0.0015,
         multTip: () => ({ caster_speed: 0.15 }),
