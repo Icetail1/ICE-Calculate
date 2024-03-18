@@ -108,7 +108,11 @@ const getModTooltip = (hero, skillId, soulburn = false) => {
   if (values.afterMathFormula !== null && values.afterMathFormula.atkPercent!== undefined) {content += `${skillLabel('afterMathFormula')}/${skillLabel('att_rate')}: <b class="float-right">${Math.round(values.afterMathFormula.atkPercent*100)}%</b><br/>`;}
   if (values.afterMathFormula !== null && values.afterMathFormula.defPercent!== undefined) {content += `${skillLabel('afterMathFormula')}/${skillLabel('def_rate')}: <b class="float-right">${Math.round(values.afterMathFormula.defPercent*100)}%</b><br/>`;}
   if (values.afterMathFormula !== null) content += `${skillLabel('afterMathFormula')}/${skillLabel('pen')}: <b class="float-right">${Math.round(values.afterMathFormula.penetrate*100)}%</b><br/>`;
+  if (values.afterMathFormulaNoAdd !== null && values.afterMathFormulaNoAdd.atkPercent!== undefined) {content += `${skillLabel('afterMathFormulaNoAdd')}/${skillLabel('att_rate')}: <b class="float-right">${Math.round(values.afterMathFormulaNoAdd.atkPercent*100)}%</b><br/>`;}
+  if (values.afterMathFormulaNoAdd !== null && values.afterMathFormulaNoAdd.defPercent!== undefined) {content += `${skillLabel('afterMathFormulaNoAdd')}/${skillLabel('def_rate')}: <b class="float-right">${Math.round(values.afterMathFormulaNoAdd.defPercent*100)}%</b><br/>`;}
+  if (values.afterMathFormulaNoAdd !== null) content += `${skillLabel('afterMathFormulaNoAdd')}/${skillLabel('pen')}: <b class="float-right">${Math.round(values.afterMathFormulaNoAdd.penetrate*100)}%</b><br/>`;
   if (values.afterMathDmg !== null) content += `${skillLabel('afterMathDmg')}: <b class="float-right">${Math.round(values.afterMathDmg)}</b><br/>`;
+  if (values.afterMathDmg !== null) content += `${skillLabel('afterMathDmg')}: <b class="float-right">${Math.round(values.afterMathDmgNoAdd)}</b><br/>`;
   if (values.extraDmg != null) content += `${skillLabel('extraDmg')}: <span class="float-right">${values.extraDmgTip} <b>${Math.round(values.extraDmg)}</b><br/>`;
   if (values.fixed != null) content += `${skillLabel('fixed')}: <span class="float-right">${values.fixedTip ?? ''} <b>${Math.round(values.fixed)}</b><br/>`;
   return content;
@@ -214,6 +218,7 @@ class Hero {
       elemAdv: (typeof skill.elemAdv === 'function') ? skill.elemAdv() : null,
       afterMathFormula: skill.afterMath !== undefined ? skill.afterMath(soulburn) : null,
       afterMathDmg: skill.afterMath !== undefined ? this.getAfterMathSkillDamage(skillId, hitTypes.crit,soulburn) : null,
+      afterMathDmgNoAdd: skill.afterMathNoAdd !== undefined ? this.getAfterMathSkillDamageNoAdd(skillId, hitTypes.crit,soulburn) : null,
       extraDmg: skill.extraDmg !== undefined ? skill.extraDmg() : null,
       extraDmgTip: skill.extraDmgTip !== undefined ? getSkillModTip(skill.extraDmgTip(soulburn)) : '',
       fixed: skill.fixed !== undefined ? skill.fixed(hitTypes.crit) : null,
@@ -331,6 +336,25 @@ class Hero {
 
     let skillDamage = 0;
     const skillMultipliers = skill.afterMath ? skill.afterMath(hitType,soulburn) : null;
+    if (skillMultipliers !== null) {
+        console.log("atkPercent is ", skillMultipliers.atkPercent);
+        if(skillMultipliers.atkPercent!== undefined){
+        skillDamage = this.getAtk(skillId)*skillMultipliers.atkPercent*dmgConst*this.target.defensivePower({ penetrate: () => skillMultipliers.penetrate }, true);
+         }
+        else{
+        console.log("caster_defense is ", elements.caster_defense.value());
+        console.log("defPercent is ", skillMultipliers.defPercent);
+        skillDamage = elements.caster_defense.value()*skillMultipliers.defPercent*dmgConst*this.target.defensivePower({ penetrate: () => skillMultipliers.penetrate }, true); 
+         }
+    }
+
+    return skillDamage;
+  }
+  getAfterMathSkillDamageNoAdd(skillId, hitType,soulburn) {
+    const skill = this.skills[skillId];
+
+    let skillDamage = 0;
+    const skillMultipliers = skill.afterMathNoAdd ? skill.afterMathNoAdd(hitType,soulburn) : null;
     if (skillMultipliers !== null) {
         console.log("atkPercent is ", skillMultipliers.atkPercent);
         if(skillMultipliers.atkPercent!== undefined){
