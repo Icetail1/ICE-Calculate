@@ -1673,7 +1673,7 @@ const heroes = {
       },
       s3: {
         soulburn: true,
-        rate: (soulburn) => soulburn ? 1.05 : 0.8,
+        rate: (soulburn) => soulburn ? 1.1 : 0.85,
         pow: 1,
         mult: () => elements.caster_enrage.value() ? 1.3 : 1,
         multTip: () => ({ caster_rage: 30 }),
@@ -6447,7 +6447,8 @@ const heroes = {
         single: true,
       },
       s3: {
-        rate: 1.6,
+	soulburn: true,
+        rate: (soulburn) => soulburn ? 2.0 : 1.6,,
         pow: 1,
         mult: () => 1 + elements.caster_speed.value()*0.0015,
         multTip: () => ({ caster_speed: 0.15 }),
@@ -7627,7 +7628,6 @@ const heroes = {
     name: 'Requiem Roana',
     element: element.dark,
     classType: classType.mage,
-    form: [elements.attack_skill_stack_3],
     skills: {
       s1: {
         noCrit: true,
@@ -7639,10 +7639,8 @@ const heroes = {
       },
       s3: {
         noCrit: true,
-        rate: 0.3,
+        rate: 0.35,
         pow: 1,
-        mult: () => 1 + elements.attack_skill_stack_3.value()*0.15,
-        multTip: () => ({ per_stack: 15 }),
         penetrate: () => 1.0,
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         aoe: true,
@@ -8186,7 +8184,29 @@ laia: {
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
       }
     }
-  },	
+  },
+　jenua: {
+    name: 'Jenua',
+    element: element.fire,
+    classType: classType.thief,
+    form: [elements.caster_enrage],
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 0.9,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.05,0.05,0.1],
+        single: true,
+      },
+      s3: {
+        rate: 0.32,
+        pow: 0.95,
+	penetrate: 1,
+        afterMath: (hitType,soulburn) => (hitType !== hitTypes.miss) ? { atkPercent: 0.6, penetrate: 0.7 } : null,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.05,0.1],
+        single: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
