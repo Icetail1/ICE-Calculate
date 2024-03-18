@@ -8200,7 +8200,7 @@ laia: {
       s3: {
         rate: 0.32,
         pow: 0.95,
-	penetrate: 1,
+	penetrate: () => 1.0,
         afterMath: (hitType,soulburn) => (hitType !== hitTypes.miss) ? { atkPercent: 0.6, penetrate: 0.7 } : null,
         enhance: [0.05, 0.05, 0.05, 0.05, 0.05,0.1],
         single: true,
