@@ -427,6 +427,7 @@
       elvira:'艾碧拉',
       leah:'蕾雅',
       laia:'莱娅',
+      jenua:'济纽亚',
     },
     nicknames: {
       achates:	'小火奶',   
@@ -743,6 +744,7 @@
       elvira:'艾碧拉',
       leah:'蕾雅',
       laia:'莱娅',
+      jenua:'团长',
     },
     artifacts: {
       no_proc: '无神器',
