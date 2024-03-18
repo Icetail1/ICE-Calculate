@@ -217,6 +217,7 @@ class Hero {
       exEq: skill.exEq !== undefined ? skill.exEq() : null,
       elemAdv: (typeof skill.elemAdv === 'function') ? skill.elemAdv() : null,
       afterMathFormula: skill.afterMath !== undefined ? skill.afterMath(soulburn) : null,
+      afterMathFormulaNoAdd: skill.afterMathNoAdd !== undefined ? skill.afterMathNoAdd(soulburn) : null,
       afterMathDmg: skill.afterMath !== undefined ? this.getAfterMathSkillDamage(skillId, hitTypes.crit,soulburn) : null,
       afterMathDmgNoAdd: skill.afterMathNoAdd !== undefined ? this.getAfterMathSkillDamageNoAdd(skillId, hitTypes.crit,soulburn) : null,
       extraDmg: skill.extraDmg !== undefined ? skill.extraDmg() : null,
