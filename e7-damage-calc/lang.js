@@ -896,6 +896,8 @@
       elemAdv: '属性克制',
       afterMathFormula: '行动后',
       afterMathDmg: '行动后追加伤害',
+      afterMathFormulaNoAdd: '行动后(非当前目标)',
+      afterMathDmgNoAdd: '行动后追加伤害(非当前目标)',
       extraDmg: '额外伤害',
       fixed: '固定伤害',
       custom: {
