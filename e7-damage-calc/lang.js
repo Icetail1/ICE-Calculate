@@ -744,7 +744,7 @@
       elvira:'艾碧拉',
       leah:'蕾雅',
       laia:'莱娅',
-      jenua:'团长',
+      jenua:'团长 鸡牛鸭',
     },
     artifacts: {
       no_proc: '无神器',
