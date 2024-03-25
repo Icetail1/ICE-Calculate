@@ -55,7 +55,7 @@ const resolve = () => {
             <td>
               ${skill.name ? skill.name : skillLabel(skillId)}
               <a tabindex="0" class="btn btn-xs btn-light p-1 float-right" data-toggle="popover" title="${skillLabel('mods')}" data-content='${getModTooltip(hero, skillId)}' data-html="true" data-placement="top">
-                <i class="fas fa-square-root-alt fa-sm"></i>
+                <p>倍率</p>
               </a>
             </td>
             <td>${displayDmg(damage, 'crit')}</td>
