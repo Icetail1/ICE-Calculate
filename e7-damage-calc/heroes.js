@@ -8207,6 +8207,63 @@ laia: {
       }
     }
   },
+　sea_phantom_politis: {
+    name: 'Sea Phantom Politis',
+    element: element.dark,
+    classType: classType.ranger,
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 0.9,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.05,0.05,0.1],
+        single: true,
+      },
+    }
+  },
+　ainz_ooal_gown: {
+    name: 'Ainz Ooal Gown',
+    element: element.dark,
+    classType: classType.mage,
+    skills: {
+      s1: {
+        rate: 0.7,
+        pow: 0.95,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.05,0.1],
+        aoe: true,
+      },
+    }
+  },
+albedo: {
+    name: 'Albedo',
+    element: element.earth,
+    classType: classType.knight,
+    form: [elements.caster_max_hp],
+    skills: {
+      s1: {
+        rate: 0.75,
+        pow: 1,
+        flat: () => elements.caster_max_hp.value()*0.09,
+        flatTip: () => ({ caster_max_hp: 9 }),
+        enhance: [0.05, 0, 0.1, 0, 0.15],
+        single: true,
+      },
+      s2: {
+        rate: 0.3,
+        pow: 1.3,
+        flat: () => elements.caster_max_hp.value()*0.07,
+        flatTip: () => ({ caster_max_hp: 7 }),
+        aoe: true,
+      },
+      s3: {
+        rate: 0.7,
+        pow: 1.05,
+        flat: () => elements.caster_max_hp.value()*0.25,
+        flatTip: () => ({ caster_max_hp: 25 }),
+        enhance: [0, 0.1, 0, 0, 0.15],
+        single: true,
+      }
+    }
+  },	
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
