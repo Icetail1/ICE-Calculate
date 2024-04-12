@@ -238,6 +238,15 @@ const artifacts = {
     exclusive: classType.ranger,
     applies: (skill) => getSkillType(skill) === skillTypes.aoe
   },
+  3F: {
+    id: '3F',
+    name: '3F',
+    type: artifactDmgType.aftermath,
+    hpPercent: 0.09,
+    penetrate: 0.7,
+    exclusive: classType.knight,
+    applies: (skill) => getSkillType(skill) === skillTypes.aoe
+  },
   severed_horn_wand: {
     id: 'severed_horn_wand',
     name: 'Severed Horn Wand',
