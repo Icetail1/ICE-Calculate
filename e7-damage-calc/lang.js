@@ -428,6 +428,10 @@
       leah:'蕾雅',
       laia:'莱娅',
       jenua:'济纽亚',
+      sea_phantom_politis:'海上幽灵佛里蒂斯',
+      ainz_ooal_gown:'安兹 乌尔恭',
+      albedo:'雅儿贝德',
+      
     },
     nicknames: {
       achates:	'小火奶',   
@@ -745,6 +749,9 @@
       leah:'蕾雅',
       laia:'莱娅',
       jenua:'团长 鸡牛鸭',
+      sea_phantom_politis:'暗双子 暗火双',
+      ainz_ooal_gown:'骨王',
+      albedo:'雅儿贝德',
     },
     artifacts: {
       no_proc: '无神器',
