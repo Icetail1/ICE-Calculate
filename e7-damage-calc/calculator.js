@@ -379,9 +379,11 @@ class Hero {
       if(artiMultipliers.atkPercent!== undefined){
       return this.getAtk()*artiMultipliers.atkPercent*dmgConst*this.target.defensivePower({ penetrate: () => artiMultipliers.penetrate }, true);
       }
-      else
-      {
+      else if(artiMultipliers.defPercent!== undefined){
       return elements.caster_defense.value()*artiMultipliers.defPercent*dmgConst*this.target.defensivePower({ penetrate: () => artiMultipliers.penetrate }, true);
+      }else{
+      return elements.caster_hp.value()*artiMultipliers.hpPercent*dmgConst*this.target.defensivePower({ penetrate: () => artiMultipliers.penetrate }, true);
+        
       }
     }
 
@@ -487,6 +489,7 @@ class Artifact {
     return {
       atkPercent: artifacts[this.id].atkPercent,
       defPercent: artifacts[this.id].defPercent,
+      hpPercent: artifacts[this.id].hpPercent,
       penetrate: artifacts[this.id].penetrate,
     }
   }
