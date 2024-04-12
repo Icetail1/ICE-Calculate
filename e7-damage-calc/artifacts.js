@@ -238,7 +238,7 @@ const artifacts = {
     exclusive: classType.ranger,
     applies: (skill) => getSkillType(skill) === skillTypes.aoe
   },
-  3F: {
+  threeF: {
     id: '3F',
     name: '3F',
     type: artifactDmgType.aftermath,
