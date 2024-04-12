@@ -245,7 +245,6 @@ const artifacts = {
     hpPercent: 0.09,
     penetrate: 0.7,
     exclusive: classType.knight,
-    applies: (skill) => getSkillType(skill) === skillTypes.aoe
   },
   severed_horn_wand: {
     id: 'severed_horn_wand',
