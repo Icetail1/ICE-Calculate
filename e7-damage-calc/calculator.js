@@ -382,7 +382,7 @@ class Hero {
       else if(artiMultipliers.defPercent!== undefined){
       return elements.caster_defense.value()*artiMultipliers.defPercent*dmgConst*this.target.defensivePower({ penetrate: () => artiMultipliers.penetrate }, true);
       }else{
-      return elements.caster_hp.value()*artiMultipliers.hpPercent*dmgConst*this.target.defensivePower({ penetrate: () => artiMultipliers.penetrate }, true);
+      return elements.caster_max_hp.value()*artiMultipliers.hpPercent*dmgConst*this.target.defensivePower({ penetrate: () => artiMultipliers.penetrate }, true);
         
       }
     }
