@@ -8296,19 +8296,12 @@ albedo: {
         pow: 1,
         enhance: [0.05, 0, 0.1, 0, 0.15],
         single: true,
-        noCrit: true,
       },
       s2: {
-        enhance: [0.02, 0.02, 0.03, 0.03, 0.05],
-      },
-      s3: {
-        rate: 1.2,
-        pow: 1,
-        detonate: dot.bomb,
-        detonation: () => 1.1,
-        enhance: [0.05, 0.05, 0, 0.1, 0.1],
-        aoe: true,
-        noCrit: true,
+     　 rate: 0.6,
+        pow: 0.9,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.05,0.05,0.1],
+        single: true,
       },
     }
   },
