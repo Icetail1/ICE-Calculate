@@ -8303,6 +8303,14 @@ albedo: {
         enhance: [0.05, 0.05, 0.05, 0.05, 0.05,0.05,0.1],
         single: true,
       },
+      s3: {
+	rate: 0,
+        pow: 0,
+        detonate: dot.bomb,
+        detonation: () => 1.1,
+        single: true,
+        noCrit: true,
+      },
     }
   },
   astromancer_Elena: {
