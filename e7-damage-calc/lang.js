@@ -431,7 +431,8 @@
       sea_phantom_politis:'海上幽灵佛里蒂斯',
       ainz_ooal_gown:'安兹 乌尔恭',
       albedo:'雅儿贝德',
-      
+      shalltear:'夏提雅',
+      wandering_prince_cidd:'流浪王子席德',
     },
     nicknames: {
       achates:	'小火奶',   
@@ -752,6 +753,8 @@
       sea_phantom_politis:'暗双子 暗火双',
       ainz_ooal_gown:'骨王',
       albedo:'雅儿贝德',
+      shalltear:'夏提雅',
+      wandering_prince_cidd:'光猴子',
     },
     artifacts: {
       no_proc: '无神器',
@@ -806,6 +809,7 @@
       gold_rose:'金玫瑰',
       pray:'孤独的祈祷',
       elf:'残破的祭祀长意志',
+      diguanchangqiang:'滴管长枪',
     },
     form: {
       allies_nb_buff: '我军Buff数量',
