@@ -713,7 +713,7 @@
       lone_crescent_bellona:	'暗扇',
       eligos:	'boss 老大 牢大',
       architect_laika:	'光蜻蜓 Ice的本体',
-      twisted_eldolon_kayron:	'光凯隆 光凯宝 亡灵凯',   
+      twisted_eldolon_kayron:	'光凯隆 光凯宝 亡灵凯 叶天帝',   
       benimaru:	'红丸',
       astromancer_Elena:	'光水琴',   
       amid: 'amd ymd 雅米德',
