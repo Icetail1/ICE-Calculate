@@ -1656,7 +1656,7 @@ const heroes = {
     element: element.ice,
     classType: classType.warrior,
     baseAtk: 1252,
-    form: [elements.caster_enrage, elements.exclusive_equipment_3],
+    form: [elements.exclusive_equipment_3],
     dot: [dot.bleed],
     skills: {
       s1: {
@@ -1675,7 +1675,7 @@ const heroes = {
         soulburn: true,
         rate: (soulburn) => soulburn ? 1.1 : 0.85,
         pow: 1,
-        mult: () => elements.caster_enrage.value() ? 1.3 : 1,
+        mult: () => document.getElementById('enrage').checked ? 1.3 : 1,
         multTip: () => ({ caster_rage: 30 }),
         exEq: () => elements.exclusive_equipment_3.value() ? 0.1 : 0,
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
@@ -1856,13 +1856,13 @@ const heroes = {
     element: element.fire,
     classType: classType.warrior,
     baseAtk: 903,
-    form: [elements.caster_defense, elements.caster_enrage],
+    form: [elements.caster_defense],
     skills: {
       s1: {
-        rate: () => elements.caster_enrage.value() ? 0.9 : 0.7,
+        rate: () => document.getElementById('enrage').checked ? 0.9 : 0.7,
         pow: 1,
-        flat: () => (elements.caster_enrage.value() ? 1.2 : 0.9)*elements.caster_defense.value(),
-        flatTip: () => ({ caster_defense: elements.caster_enrage.value() ? 120 : 90 }),
+        flat: () => (document.getElementById('enrage').checked ? 1.2 : 0.9)*elements.caster_defense.value(),
+        flatTip: () => ({ caster_defense: document.getElementById('enrage').checked ? 120 : 90 }),
         enhance: [0.05, 0.05, 0, 0, 0.1, 0.1],
         single: true,
       },
@@ -3160,13 +3160,12 @@ const heroes = {
     name: 'Januta',
     element: element.fire,
     classType: classType.warrior,
-    form: [elements.caster_enrage],
     baseAtk: 1144,
     skills: {
       s1: {
         rate: 1,
         pow: 1,
-        mult: () => elements.caster_enrage.value() ? 1.3 : 1,
+        mult: () => document.getElementById('enrage').checked ? 1.3 : 1,
         multTip: () => ({ caster_rage: 30 }),
         enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
         single: true,
@@ -4482,7 +4481,7 @@ const heroes = {
     element: element.earth,
     classType: classType.knight,
     baseAtk: 957,
-    form: [elements.caster_max_hp, elements.caster_enrage, elements.exclusive_equipment_3],
+    form: [elements.caster_max_hp, elements.exclusive_equipment_3],
     skills: {
       s1: {
         rate: 0.7,
@@ -6267,7 +6266,7 @@ const heroes = {
     element: element.ice,
     classType: classType.warrior,
     baseAtk: 1039,
-    form: [elements.caster_speed, elements.caster_enrage],
+    form: [elements.caster_speed],
     skills: {
       s1: {
         soulburn: true,
@@ -7443,7 +7442,7 @@ const heroes = {
     name: 'Twisted Eldolon Kayron',
     element: element.light,
     classType: classType.thief,
-    form: [elements.target_hp_pc,elements.caster_enrage, elements.caster_max_hp],
+    form: [elements.target_hp_pc, elements.caster_max_hp],
     barrier: () => elements.caster_max_hp.value() * 0.12,
     skills: {
       s1: {
@@ -7466,7 +7465,7 @@ const heroes = {
         rate: 1,
         pow: 1,
         enhance: [0.05, 0.05,  0,　0.1, 0.1],
-        fixed: () => elements.caster_enrage.value()? 10000 : 2000,
+        fixed: () => document.getElementById('enrage').checked? 10000 : 2000,
         aoe: true,
       }
     }
@@ -8189,7 +8188,6 @@ laia: {
     name: 'Jenua',
     element: element.fire,
     classType: classType.thief,
-    form: [elements.caster_enrage],
     skills: {
       s1: {
         rate: 1,
