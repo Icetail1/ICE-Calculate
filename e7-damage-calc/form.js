@@ -333,7 +333,7 @@ const elements = {
     min: 70,
     max: 9999,
     default: 150,
-    value: () => Number(document.getElementById('caster-speed').value)*(elements.caster_speed_up.value() ? 1.3 : 1),
+    value: () => Number(document.getElementById('caster-speed').value)*(elements.caster_speed_up.value() ? 1.3 : 1)*(document.getElementById('enrage').checked? 1.2 : 1),
   },
   caster_speed_up: {
     ref: 'caster_speed_up',
