@@ -5022,7 +5022,12 @@ const heroes = {
     element: element.fire,
     classType: classType.warrior,
     baseAtk: 966,
-    form: [elements.attack_skill_stack_5],
+    form: [elements.caster_max_hp,elements.attack_skill_stack_5],
+    innateAtkUp: () => {
+      let boost = 1;
+      boost = elements.caster_max_hp.value()*0.08 / baseAtk;
+      return boost;
+    },
     atkUp: () => 1 + elements.attack_skill_stack_5.value()*0.15,
     skills: {
       s1: {
