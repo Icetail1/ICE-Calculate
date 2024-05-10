@@ -5023,8 +5023,7 @@ const heroes = {
     classType: classType.warrior,
     baseAtk: 966,
     form: [elements.caster_max_hp,elements.attack_skill_stack_5],
-    innateAtkUp: () => elements.caster_max_hp.value()*0.08,
-    atkUp: () => 1 + elements.attack_skill_stack_5.value()*0.15,
+    atkUp: () => 1 + elements.attack_skill_stack_5.value()*0.15+elements.caster_max_hp.value()*0.08/heroes.ravi.baseAtk,
     skills: {
       s1: {
         soulburn: true,
