@@ -185,6 +185,7 @@ class Hero {
     this.dot = [...(heroes[id].dot || []), ...(artifact?.getDoT() || [])];
     this.atkUp = heroes[id].atkUp;
     this.innateAtkUp = heroes[id].innateAtkUp;
+    this.hpTransAtk = heroes[id].hpTransAtk;
     this.element = heroes[id].element;
     this.barrier = heroes[id].barrier;
     this.barrierEnhance = heroes[id].barrierEnhance;
@@ -261,7 +262,7 @@ class Hero {
           + this.artifact.getAttackBoost();
     }
 
-    return (atk+atkImprint)*atkMod;
+    return (atk+atkImprint)*atkMod+ (this.hpTransAtk !== undefined ? this.hpTransAtk() : 0);
   }
 
   offensivePower(skillId, soulburn) {
