@@ -5025,7 +5025,7 @@ const heroes = {
     form: [elements.caster_max_hp,elements.attack_skill_stack_5],
     innateAtkUp: () => {
       let boost = 1;
-      boost = elements.caster_max_hp.value()*0.08 / baseAtk;
+      boost = elements.caster_max_hp.value()*0.08 / heroes.ravi.baseAtk;
       return boost;
     },
     atkUp: () => 1 + elements.attack_skill_stack_5.value()*0.15,
