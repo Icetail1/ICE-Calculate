@@ -8367,7 +8367,7 @@ albedo: {
     }
   },
  hanayome_senya: {
-    name: '我也不知道英文名是啥先放这儿',
+    name: '我也不知道英文名是啥先放这',
     element: element.light,
     classType: classType.knight, 
     baseAtk: 894,
