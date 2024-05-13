@@ -7657,6 +7657,7 @@ const heroes = {
     name: 'Requiem Roana',
     element: element.dark,
     classType: classType.mage,
+    baseAtk: 1316,
     skills: {
       s1: {
         noCrit: true,
@@ -7680,6 +7681,7 @@ const heroes = {
     name: 'Ocean Breeze Luluca',
     element: element.earth,
     classType: classType.soul_weaver,
+    baseAtk: 649,
     skills: {
       s1: {
         rate: 1,
@@ -7698,6 +7700,7 @@ const heroes = {
     name: 'Infinite Horizon Achates',
     element: element.light,
     classType: classType.soul_weaver,
+    baseAtk: 576,
     skills: {
       s1: {
         rate: 1,
@@ -7712,6 +7715,7 @@ const heroes = {
     name: 'Lethe',
     element: element.ice,
     classType: classType.warrior,
+    baseAtk: 885,
     form: [elements.caster_max_hp],
     skills: {
       s1: {
@@ -7774,6 +7778,7 @@ const heroes = {
     name: 'Urban Shadow Choux',
     element: element.dark,
     classType: classType.warrior,
+    baseAtk: 984,
     form: [elements.caster_max_hp],
     skills: {
       s1: {
@@ -7799,6 +7804,7 @@ const heroes = {
     name: 'Veronica',
     element: element.fire,
     classType: classType.ranger,
+    baseAtk: 1188,
     form: [elements.target_bomb_detonate],
     dot: [dot.bomb],
     skills: {
@@ -7822,6 +7828,7 @@ const heroes = {
     name: 'Brieg',
     element: element.ice,
     classType: classType.knight,
+    baseAtk: 821,
     form: [elements.caster_max_hp],
     skills: {
       s1: {
@@ -7878,6 +7885,7 @@ const heroes = {
     name: 'Nahkwol',
     element: element.fire,
     classType: classType.ranger,
+　　baseAtk: 1003,
     skills: {
       s1: {
         rate: 1,
@@ -7903,6 +7911,7 @@ const heroes = {
     name: 'Abyssal Yufine',
     element: element.dark,
     classType: classType.knight,
+    baseAtk: 830,
     form: [elements.caster_defense],
     skills: {
       s1: {
@@ -7935,6 +7944,7 @@ const heroes = {
     name: 'Kane',
     element: element.fire,
     classType: classType.warrior,
+    baseAtk: 1359,	  
     form: [elements.target_nb_debuff],
     skills: {
       s1: {
@@ -7963,6 +7973,7 @@ const heroes = {
     name: 'Ezra',
     element: element.earth,
     classType: classType.thief,
+    baseAtk: 921,
     form: [elements.target_nb_debuff],
     skills: {
       s1: {
@@ -7985,6 +7996,7 @@ const heroes = {
     name: 'Amiki',
     element: element.ice,
     classType: classType.warrior,
+    baseAtk: 1019,
     form: [elements.caster_hp_pc],
     skills: {
       s1: {
@@ -8009,7 +8021,8 @@ const heroes = {
 claudia: {
     name: 'Claudia',
     element: element.fire,
-    classType: classType.knight,
+    classType: classType.knight,  
+    baseAtk: 703,
     skills: {
       s1: {
         rate: 1,
@@ -8056,6 +8069,7 @@ claudia: {
     name: 'Byblis',
     element: element.ice,
     classType: classType.ranger,
+    baseAtk: 993,
     skills: {
       s1: {
         rate: 1,
@@ -8080,6 +8094,7 @@ claudia: {
     name: 'Blooming Lidica',
     element: element.earth,
     classType: classType.thief,
+    baseAtk: 1057,
     form: [elements.caster_max_hp,elements.caster_speed, elements.target_speed,elements.caster_speed_debuff_up],
     skills: {
       s1: {
@@ -8119,6 +8134,7 @@ claudia: {
     name: 'Dragon King Sharun',
     element: element.light,
     classType: classType.soul_weaver,
+    baseAtk: 640,
     skills: {
       s1: {
         rate: 1,
@@ -8138,6 +8154,7 @@ claudia: {
     name: 'Elvira',
     element: element.ice,
     classType: classType.thief,
+    baseAtk: 1057,
     form: [elements.target_hp],
     skills: {
       s1: {
@@ -8169,6 +8186,7 @@ claudia: {
     name: 'Leah',
     element: element.earth,
     classType: classType.ranger,
+    baseAtk: 1081,
     form: [elements.caster_speed],
     skills: {
       s1: {
@@ -8191,7 +8209,8 @@ claudia: {
 laia: {
     name: 'Leah',
     element: element.earth,
-    classType: classType.warrior,
+    classType: classType.warrior, 
+    baseAtk: 984,
     form: [elements.caster_max_hp],
     skills: {
       s1: {
@@ -8218,6 +8237,7 @@ laia: {
     name: 'Jenua',
     element: element.fire,
     classType: classType.thief,
+    baseAtk: 1228,
     skills: {
       s1: {
         rate: 1,
@@ -8239,6 +8259,7 @@ laia: {
     name: 'Sea Phantom Politis',
     element: element.dark,
     classType: classType.ranger,
+    baseAtk: 993,
     skills: {
       s1: {
         rate: 1,
@@ -8252,6 +8273,7 @@ laia: {
     name: 'Ainz Ooal Gown',
     element: element.dark,
     classType: classType.mage,
+    baseAtk: 1039,
     skills: {
       s1: {
         rate: 0.7,
@@ -8265,6 +8287,7 @@ albedo: {
     name: 'Albedo',
     element: element.earth,
     classType: classType.knight,
+    baseAtk: 894,
     form: [elements.caster_max_hp],
     skills: {
       s1: {
@@ -8296,6 +8319,7 @@ albedo: {
     name: 'Shalltear',
     element: element.fire,
     classType: classType.warrior,
+    baseAtk: 1177,
     skills: {
       s1: {
         soulburn: true,
@@ -8316,6 +8340,7 @@ albedo: {
     name: 'Wandering Prince Cidd',
     element: element.light,
     classType: classType.mage,
+    baseAtk: 1021,
     form: [elements.target_bomb_detonate],
     dot: [dot.bomb],
     skills: {
@@ -8345,6 +8370,7 @@ albedo: {
     name: 'Astromancer Elena',
     element: element.light,
     classType: classType.ranger,
+　　baseAtk: 1079,
     atkUp: () => elements.caster_starshelter.value() ? 1.15 : 1,
     form: [elements.target_has_debuff, elements.caster_starshelter],
     skills: {
