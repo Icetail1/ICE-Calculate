@@ -7145,6 +7145,7 @@ const heroes = {
     name: 'ae-ningning',
     element: element.fire,
     classType: classType.soul_weaver,
+    baseAtk: 785,
     skills: {
       s1: {
         rate: 1,
@@ -7164,6 +7165,7 @@ const heroes = {
     name: 'ae-KARINA',
     element: element.ice,
     classType: classType.knight,
+    baseAtk: 821,
     form: [elements.caster_defense],
     skills: {
       s1: {
@@ -7189,6 +7191,7 @@ const heroes = {
     name: 'Suthan',
     element: element.dark,
     classType: classType.mage,
+    baseAtk: 1119,
     skills: {
       s1: {
         rate: 1,
@@ -7208,6 +7211,7 @@ const heroes = {
     name: 'Juni',
     element: element.fire,
     classType: classType.warrior,
+    baseAtk: 1000,
     form: [elements.caster_perception],
     skills: {
       s1: {
@@ -7228,6 +7232,7 @@ const heroes = {
     name: 'Lilka',
     element: element.earth,
     classType: classType.ranger,
+    baseAtk: 1005,
     skills: {
       s1: {
         rate: 1,
@@ -7247,6 +7252,7 @@ const heroes = {
     name: 'Talia',
     element: element.light,
     classType: classType.thief,
+    baseAtk: 903,
     skills: {
       s1: {
         rate: 1,
@@ -7266,6 +7272,7 @@ const heroes = {
     name: 'Talaz',
     element: element.ice,
     classType: classType.thief,
+    baseAtk: 1144,
     form: [elements.target_has_provoke],
     skills: {
       s1: {
@@ -7289,6 +7296,7 @@ const heroes = {
     name: 'Peacemaker Furious',
     element: element.dark,
     classType: classType.ranger,
+    baseAtk: 970,
     form: [elements.caster_defense],
     skills: {
       s1: {
@@ -7323,6 +7331,7 @@ const heroes = {
     name: 'Beehoo',
     element: element.fire,
     classType: classType.ranger,
+    baseAtk: 1203,
     dot: [dot.burn],
     dotDamageUp:1.3,
     form: [elements.target_burn_detonate],
@@ -7361,6 +7370,7 @@ const heroes = {
     name: 'Lone Crescent Bellona',
     element: element.dark,
     classType: classType.warrior,
+    baseAtk: 1208,
     form: [elements.attack_skill_stack_5],
     atkUp: () => {
       let boost = 0.1;
@@ -7395,6 +7405,7 @@ const heroes = {
     name: 'Eligos',
     element: element.fire,
     classType: classType.ranger,
+    baseAtk: 1283,
     form: [elements.caster_speed, elements.target_speed],
     skills: {
       s1: {
@@ -7430,6 +7441,7 @@ const heroes = {
     name: 'Architect Laika',
     element: element.light,
     classType: classType.mage,
+    baseAtk: 1306,
     form: [elements.target_has_target,elements.caster_speed],
     skills: {
       s1: {
@@ -7453,6 +7465,7 @@ const heroes = {
     name: 'Twisted Eldolon Kayron',
     element: element.light,
     classType: classType.thief,
+    baseAtk: 1228,
     form: [elements.target_hp_pc, elements.caster_max_hp],
     barrier: () => elements.caster_max_hp.value() * 0.12,
     skills: {
@@ -7485,6 +7498,7 @@ const heroes = {
     name: 'Benimaru',
     element: element.fire,
     classType: classType.warrior,
+    baseAtk: 1177,
     form: [elements.caster_multilayer_barrier],
     skills: {
       s1: {
@@ -7540,6 +7554,7 @@ const heroes = {
     name: 'Lua',
     element: element.ice,
     classType: classType.ranger,
+    baseAtk: 993,
     skills: {
       s1: {
         rate: 1,
@@ -7559,6 +7574,7 @@ const heroes = {
     name: 'Amid',
     element: element.ice,
     classType: classType.soul_weaver,
+    baseAtk: 694,
     skills: {
       s1: {
         rate: 1,
@@ -7572,6 +7588,7 @@ const heroes = {
     name: 'Death Dealer Ray',
     element: element.dark,
     classType: classType.soul_weaver,
+    baseAtk: 1182,
     skills: {
       s1: {
         rate: 1,
@@ -7585,6 +7602,7 @@ const heroes = {
     name: 'Last Piece Karin',
     element: element.light,
     classType: classType.thief,
+    baseAtk: 1029,
     form: [elements.caster_speed,elements.caster_neo_phantom_sword, elements.target_max_hp],
     skills: {
       s1: {
@@ -7614,6 +7632,7 @@ const heroes = {
     name: 'Abigail',
     element: element.fire,
     classType: classType.warrior,
+    baseAtk: 984,
     form: [elements.caster_max_hp],
     skills: {
       s1: {
