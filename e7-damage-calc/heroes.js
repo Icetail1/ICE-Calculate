@@ -8406,7 +8406,8 @@ albedo: {
         enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
         single: true,
       },
-  },
+   }
+ },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
