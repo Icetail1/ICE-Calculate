@@ -434,6 +434,7 @@
       shalltear:'夏提雅',
       wandering_prince_cidd:'流浪王子席德',
       hanayome_senya:'龙之伴侣赛纳',
+      birgitta:'碧尔姬达',
     },
     nicknames: {
       achates:	'小火奶',   
@@ -757,6 +758,7 @@
       shalltear:'夏提雅',
       wandering_prince_cidd:'光猴子',
       hanayome_senya:'光塞纳',
+      birgitta:'碧尔姬达',
     },
     artifacts: {
       no_proc: '无神器',
