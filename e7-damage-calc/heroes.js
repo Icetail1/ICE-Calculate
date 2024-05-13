@@ -8394,6 +8394,19 @@ albedo: {
       }
     }
   },
+  birgitta: {
+    name: 'Birgitta',
+    element: element.ice,
+    classType: classType.soul_weaver,
+    baseAtk: 785,
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      },
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
