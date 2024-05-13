@@ -8366,6 +8366,34 @@ albedo: {
       },
     }
   },
+ hanayome_senya: {
+    name: '我也不知道英文名是啥先放这儿',
+    element: element.light,
+    classType: classType.knight, 
+    baseAtk: 894,
+    form: [elements.caster_max_hp],
+    barrier: () => elements.caster_max_hp.value()*0.3,	
+    skills: {
+      s1: {
+        rate: 0.7,
+        pow: 0.9,
+        enhance: [0.05, 0.05, 0.05, 0.05,0.05,0.05, 0.1],
+	flat: () => elements.caster_max_hp.value()*0.1,
+        flatTip: () => ({ caster_max_hp: 10 }),      
+        single: true,
+      },
+      s3: {
+	soulburn: true,
+        rate: 0.3,
+        pow: 0.9,
+	noCrit: true,
+	flat: (soulburn) => elements.caster_max_hp.value() * (soulburn ? 0.11 : 0.09),
+        flatTip: (soulburn) => ({ caster_max_hp: soulburn ? 11 : 9}),
+	penetrate: () => 1.0,
+        enhance: [0.05, 0.05, 0.05,0, 0.05, 0.05,0.15],
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
