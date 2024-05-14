@@ -871,7 +871,7 @@ const heroes = {
         aoe: true,
       },
       s3: {
-	name: '这里烧魂是由S1触发（懒得改代码了）',
+	name: 'S3(这里第二个是由s1触发）',
         soulburn: true,
         rate: (soulburn) => soulburn ? 1.25 : 1.05,
         pow: 1,
