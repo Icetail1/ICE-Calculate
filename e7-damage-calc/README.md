@@ -1,4 +1,4 @@
-dIce修改版伤害计算器(原作者(Discord): Maphe#1384)
+Ice修改版伤害计算器(原作者(Discord): Maphe#1384)https://docs.qq.com/sheet/DVEFWVVhoZnRRU1p1?tab=BB08J2
 
 更新日志：
 
