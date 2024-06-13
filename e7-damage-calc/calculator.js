@@ -431,7 +431,7 @@ class Target {
         ? Number(document.getElementById('pen-set').value)
         : 0;
     const pendef = document.getElementById('target-pendef');
-    return pendef.checked?Math.min(1, (1-base*document.getElementById('target-pendef').value/100) * (1-set*document.getElementById('target-pendef').value/100) * (1-artifact*document.getElementById('target-pendef').value/100)):Math.min(1, (1-base) * (1-set) * (1-artifact));
+    return Math.min(1, (1-base*document.getElementById('target-pendef').value/100) * (1-set*document.getElementById('target-pendef').value/100) * (1-artifact*document.getElementById('target-pendef').value/100));
   }
 
   defensivePower(skill, noReduc = false) {
