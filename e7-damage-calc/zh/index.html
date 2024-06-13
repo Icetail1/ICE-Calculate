@@ -504,6 +504,20 @@
                                 </div>
                                 <input type="range" class="custom-range" id="pdc-slide" min="0" max="100" value="100" oninput="slide('pdc')">
                         </div>
+                        <div id="pdc-div" class="col-sm-6 half-right">
+                            <div class="form-group row col-sm-12">
+                                <label for="pdc" class="col-md-6 col-form-label form-control-sm"><h5>穿透抗性</h5></label>
+                                <div class="input-group input-group-sm col-md-6">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary" type="button" id="target-pendef-minus" onclick="minus('target-pendef')">&minus;</button>
+                                    </div>
+                                        <input type="number" class="form-control text-center" id="target-pendef" value="0" onkeyup="update('target-pendef)">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="target-pendef-plus" onclick="plus('target-pendef')">&plus;</button>
+                                    </div>
+                                </div>
+                                <input type="range" class="custom-range" id="target-pendef-slide" min="0" max="100" value="100" oninput="slide('target-pendef')">
+                        </div>
                     </div>
 
                     <div class="form-group col-sm-12">
@@ -527,13 +541,7 @@
                             <label class="custom-control-label" for="target-anger">
                                 激怒
                             </label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline buff-block">
-                            <input class="custom-control-input" type="checkbox" id="target-pendef" value="0.5" onchange="resolve()">
-                            <label class="custom-control-label" for="target-pendef">
-                                穿透抗性(*测试中*)
-                            </label>
-                        </div>                        
+                        </div>                  
                         <div class="custom-control custom-checkbox custom-control-inline buff-block">
                             <input class="custom-control-input" type="checkbox" id="def-down" value="-0.7" onchange="resolve()">
                             <label class="custom-control-label" for="def-down">
