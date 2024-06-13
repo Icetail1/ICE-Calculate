@@ -477,6 +477,13 @@ const elements = {
     type: 'checkbox',
     value: () => document.getElementById('caster-starshelter') ? document.getElementById('caster-starshelter').checked : false,
   },
+  caster_justice: {
+    ref: 'caster_justice',
+    id: 'caster-justice',
+    label: 'Caster has Justice',
+    type: 'checkbox',
+    value: () => document.getElementById('caster-justice') ? document.getElementById('caster-justice').checked : false,
+  },
   caster_multilayer_barrier: {
     ref: 'caster_multilayer_barrier',
     id: 'caster_multilayer_barrier',
