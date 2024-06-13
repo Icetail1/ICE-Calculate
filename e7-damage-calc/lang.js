@@ -751,7 +751,7 @@
       elvira:'艾碧拉',
       leah:'蕾雅',
       laia:'莱娅',
-      jenua:'团长 鸡牛鸭',
+      jenua:'团长 鸡牛鸭 狗团',
       sea_phantom_politis:'暗双子 暗火双',
       ainz_ooal_gown:'骨王',
       albedo:'雅儿贝德',
