@@ -430,8 +430,8 @@ class Target {
     const set = (getSkillType(skill) === skillTypes.single) && document.getElementById('pen-set') && document.getElementById('pen-set').checked
         ? Number(document.getElementById('pen-set').value)
         : 0;
-    const pendef = document.getElementById('target-pendef');
-    return Math.min(1, (1-base*document.getElementById('target-pendef').value/100) * (1-set*document.getElementById('target-pendef').value/100) * (1-artifact*document.getElementById('target-pendef').value/100));
+    const pendef = Number(document.getElementById('def-pc-up').value)/100;
+    return Math.min(1, (1-base*pendef) * (1-set*pendef) * (1-artifact*pendef));
   }
 
   defensivePower(skill, noReduc = false) {
