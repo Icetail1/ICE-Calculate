@@ -430,7 +430,8 @@ class Target {
     const set = (getSkillType(skill) === skillTypes.single) && document.getElementById('pen-set') && document.getElementById('pen-set').checked
         ? Number(document.getElementById('pen-set').value)
         : 0;
-    const pendef = Number(document.getElementById('def-pc-up').value)/100;
+    const pendef = Number(document.getElementById('target-pendef').value)/100;
+    console.log("pendef is ", pendef);
     return Math.min(1, (1-base*pendef) * (1-set*pendef) * (1-artifact*pendef));
   }
 
