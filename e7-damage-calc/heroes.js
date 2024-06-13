@@ -8371,7 +8371,7 @@ albedo: {
     element: element.light,
     classType: classType.knight, 
     baseAtk: 894,
-    form: [elements.caster_max_hp],
+    form: [elements.caster_max_hp,elements.caster_justice],
     barrier: () => elements.caster_max_hp.value()*0.3,	
     skills: {
       s1: {
@@ -8380,6 +8380,7 @@ albedo: {
         enhance: [0.05, 0.05, 0.05, 0.05,0.05,0.05, 0.1],
 	flat: () => elements.caster_max_hp.value()*0.1,
         flatTip: () => ({ caster_max_hp: 10 }),      
+	fixed: () => elements.caster_justice.value()? 2500 : 0,
         single: true,
       },
       s3: {
@@ -8389,6 +8390,7 @@ albedo: {
 	noCrit: true,
 	flat: (soulburn) => elements.caster_max_hp.value() * (soulburn ? 0.11 : 0.09),
         flatTip: (soulburn) => ({ caster_max_hp: soulburn ? 11 : 9}),
+	fixed: () => elements.caster_justice.value()? 2500 : 0,
 	penetrate: () => 1.0,
         enhance: [0.05, 0.05, 0.05,0, 0.05, 0.05,0.15],
       }
