@@ -431,7 +431,7 @@ class Target {
         ? Number(document.getElementById('pen-set').value)
         : 0;
     const pendef = (100-Number(document.getElementById('target-pendef').value))/100;
-    return Math.min(1, (1-base*pendef) * (1-set*pendef) * (1-artifact*pendef));
+    return Math.min(1, (1-base*pendef) * (1-set) * (1-artifact*pendef));
   }
 
   defensivePower(skill, noReduc = false) {
