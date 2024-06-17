@@ -336,12 +336,12 @@ class Hero {
     if (skillMultipliers !== null) {
         console.log("atkPercent is ", skillMultipliers.atkPercent);
         if(skillMultipliers.atkPercent!== undefined){
-        skillDamage = this.getAtk(skillId)*skillMultipliers.atkPercent*dmgConst*this.target.defensivePower({ penetrate: () => skillMultipliers.penetrate }, true);
+        skillDamage = this.getAtk(skillId)*skillMultipliers.atkPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true);
          }
         else{
         console.log("caster_defense is ", elements.caster_defense.value());
         console.log("defPercent is ", skillMultipliers.defPercent);
-        skillDamage = elements.caster_defense.value()*skillMultipliers.defPercent*dmgConst*this.target.defensivePower({ penetrate: () => skillMultipliers.penetrate }, true); 
+        skillDamage = elements.caster_defense.value()*skillMultipliers.defPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true); 
          }
     }
 
@@ -355,12 +355,12 @@ class Hero {
     if (skillMultipliers !== null) {
         console.log("atkPercent is ", skillMultipliers.atkPercent);
         if(skillMultipliers.atkPercent!== undefined){
-        skillDamage = this.getAtk(skillId)*skillMultipliers.atkPercent*dmgConst*this.target.defensivePower({ penetrate: () => skillMultipliers.penetrate }, true);
+        skillDamage = this.getAtk(skillId)*skillMultipliers.atkPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true);
          }
         else{
         console.log("caster_defense is ", elements.caster_defense.value());
         console.log("defPercent is ", skillMultipliers.defPercent);
-        skillDamage = elements.caster_defense.value()*skillMultipliers.defPercent*dmgConst*this.target.defensivePower({ penetrate: () => skillMultipliers.penetrate }, true); 
+        skillDamage = elements.caster_defense.value()*skillMultipliers.defPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true); 
          }
     }
 
@@ -373,12 +373,12 @@ class Hero {
     const artiMultipliers = this.artifact.getAfterMathMultipliers(skill, skillId);
     if (artiMultipliers !== null) {
       if(artiMultipliers.atkPercent!== undefined){
-      return this.getAtk()*artiMultipliers.atkPercent*dmgConst*this.target.defensivePower({ penetrate: () => artiMultipliers.penetrate }, true);
+      return this.getAtk()*artiMultipliers.atkPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => artiMultipliers.penetrate }, true);
       }
       else if(artiMultipliers.defPercent!== undefined){
-      return elements.caster_defense.value()*artiMultipliers.defPercent*dmgConst*this.target.defensivePower({ penetrate: () => artiMultipliers.penetrate }, true);
+      return elements.caster_defense.value()*artiMultipliers.defPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => artiMultipliers.penetrate }, true);
       }else{
-      return elements.caster_max_hp.value()*artiMultipliers.hpPercent*dmgConst*this.target.defensivePower({ penetrate: () => artiMultipliers.penetrate }, true);
+      return elements.caster_max_hp.value()*artiMultipliers.hpPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => artiMultipliers.penetrate }, true);
         
       }
     }
@@ -403,11 +403,11 @@ class Hero {
     const dotDamageRate = this.dotDamageUp? Number(this.dotDamageUp)  : 1 ;
     switch (type) {
       case dot.bleed:
-        return this.getAtk()*0.3*dmgConst*this.target.defensivePower({ penetrate: () => 0.7 }, true)*dotDamageRate;
+        return this.getAtk()*0.3*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => 0.7 }, true)*dotDamageRate;
       case dot.burn:
-        return this.getAtk()*0.6*dmgConst*this.target.defensivePower({ penetrate: () => 0.7 }, true)*dotDamageRate;
+        return this.getAtk()*0.6*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => 0.7 }, true)*dotDamageRate;
       case dot.bomb:
-        return this.getAtk()*1.5*dmgConst*this.target.defensivePower({ penetrate: () => 0.7 }, true)*dotDamageRate;
+        return this.getAtk()*1.5*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => 0.7 }, true)*dotDamageRate;
       default: return 0;
     }
   }
@@ -431,13 +431,28 @@ class Target {
         ? Number(document.getElementById('pen-set').value)
         : 0;
     const pendef = (100-Number(document.getElementById('target-pendef').value))/100;
-    return Math.min(1, (1-base*pendef) * (1-set) * (1-artifact*pendef));
+    return Math.min(1, (1-base*pendef) * (1-set*pendef) * (1-artifact*pendef));
+  }
+
+  getPenetrationNoDef(skill) {
+    const base = skill && skill.penetrate ? skill.penetrate() : 0;
+    const artifact = this.casterArtifact.getDefensePenetration(skill);
+    const set = (getSkillType(skill) === skillTypes.single) && document.getElementById('pen-set') && document.getElementById('pen-set').checked
+        ? Number(document.getElementById('pen-set').value)
+        : 0;
+    return Math.min(1, (1-base) * (1-set) * (1-artifact));
   }
 
   defensivePower(skill, noReduc = false) {
     const dmgReduc = noReduc ? 0 : Number(document.getElementById('dmg-reduc').value)/100;
     const dmgTrans = skill.noTrans === true ? 0 : Number(document.getElementById('dmg-trans').value)/100;
     return ((1-dmgReduc)*(1-dmgTrans))/(((this.def / 300)*this.getPenetration(skill)) + 1);
+  }
+
+  defensivePowerNoDef(skill, noReduc = false) {
+    const dmgReduc = noReduc ? 0 : Number(document.getElementById('dmg-reduc').value)/100;
+    const dmgTrans = skill.noTrans === true ? 0 : Number(document.getElementById('dmg-trans').value)/100;
+    return ((1-dmgReduc)*(1-dmgTrans))/(((this.def / 300)*this.getPenetrationNoDef(skill)) + 1);
   }
 }
 
