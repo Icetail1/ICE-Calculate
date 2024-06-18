@@ -480,7 +480,7 @@ const elements = {
   caster_blood: {
     ref: 'caster_blood',
     id: 'caster-blood',
-    label: 'Caster has Blood',
+    label: '处于血气状态',
     type: 'checkbox',
     value: () => document.getElementById('caster-blood') ? document.getElementById('caster-blood').checked : false,
   },
