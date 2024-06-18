@@ -477,6 +477,13 @@ const elements = {
     type: 'checkbox',
     value: () => document.getElementById('caster-starshelter') ? document.getElementById('caster-starshelter').checked : false,
   },
+  caster_blood: {
+    ref: 'caster_blood',
+    id: 'caster-blood',
+    label: 'Caster has Blood',
+    type: 'checkbox',
+    value: () => document.getElementById('caster-blood') ? document.getElementById('caster-blood').checked : false,
+  },
   caster_justice: {
     ref: 'caster_justice',
     id: 'caster-justice',
