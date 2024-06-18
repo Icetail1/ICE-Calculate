@@ -972,7 +972,7 @@ const heroes = {
         rate: 0.3,
         pow: 1,
         flat: () => elements.caster_max_hp.value()*0.1,
-        flatTip: () => ({ caster_max_hp: 10 }),
+        flatTip: () => ({ caster_max_hp: 3 }),
 	penetrate: () => 1.0,
         enhance: [0.05, 0.1, 0.15],
         single: true,
@@ -985,7 +985,6 @@ const heroes = {
 	flat: () => elements.caster_max_hp.value()*0.1,
         flatTip: () => ({ caster_max_hp: 10 }),
 	penetrate: () => 1.0,
-        enhance_from: 's1',
       },
       s2: {
         enhance: [0.05, 0.05, 0.05, 0.1, 0.1, 0.15]
