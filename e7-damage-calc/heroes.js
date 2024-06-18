@@ -963,7 +963,7 @@ const heroes = {
     element: element.dark,
     classType: classType.soul_weaver,
     baseAtk: 621,
-    form: [elements.caster_max_hp],
+    form: [elements.caster_max_hp,elements.caster_blood],
     barrier: () => elements.caster_max_hp.value()*0.3,
     barrierEnhance: 's2',
     skills: {
@@ -995,6 +995,8 @@ const heroes = {
         pow: 1,
         flat: () => elements.caster_max_hp.value()*0.14,
         flatTip: () => ({ caster_max_hp: 14 }),
+	mult: () => elements.caster_blood.value() ? 2 : 1,
+        multTip: () => ({ caster_blood: 100 }),
         penetrate: () => 1.0,
         enhance: [0.05, 0.05, 0, 0.05, 0.05, 0.1],
         single: true,
