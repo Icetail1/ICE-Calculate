@@ -996,7 +996,6 @@ const heroes = {
         flat: () => elements.caster_max_hp.value()*0.14,
         flatTip: () => ({ caster_max_hp: 14 }),
 	mult: () => elements.caster_blood.value() ? 2 : 1,
-        multTip: () => ({ caster_blood: 100 }),
         penetrate: () => 1.0,
         enhance: [0.05, 0.05, 0, 0.05, 0.05, 0.1],
         single: true,
