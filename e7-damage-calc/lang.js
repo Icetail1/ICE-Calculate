@@ -744,7 +744,7 @@
       ezra:'爱自拉',
       amiki:'雅米琪',
       claudia:'克劳蒂亚',
-      eternal_wanderer_ludwig:'暗正太',
+      eternal_wanderer_ludwig:'暗轮椅 永雏塔菲 暗鲁特比',
       byblis:'花园弓 大葱 水卧龙',
       blooming_lidica:'木高潮 花刺',
       dragon_king_sharun:'龙王莎伦',
