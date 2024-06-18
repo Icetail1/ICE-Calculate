@@ -971,7 +971,7 @@ const heroes = {
 	noCrit: true,	
         rate: 0.3,
         pow: 1,
-        flat: () => elements.caster_max_hp.value()*0.1,
+        flat: () => elements.caster_max_hp.value()*0.03,
         flatTip: () => ({ caster_max_hp: 3 }),
 	penetrate: () => 1.0,
         enhance: [0.05, 0.1, 0.15],
