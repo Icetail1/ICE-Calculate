@@ -8436,6 +8436,36 @@ albedo: {
       }
     }
   },
+  						
+immortal_wukong: {
+    name: 'Immortal Wukong',
+    element: element.earth,
+    classType: classType.warrior,
+    baseAtk: 1208,
+    form: [elements.target_attack,elements.caster_max_hp],
+    barrier: () => elements.caster_max_hp.value()*0.3,
+    skills: {
+      s1: {
+        rate: (soulburn) => soulburn ? 0.85 : 1.1,
+        pow: 1,
+        enhance: [0.05, 0, 0.1, 0, 0.15],
+        aoe: true,
+      },
+      s3: {
+        rate: 1.5,
+        pow: 1,
+        mult: () => {          const targetAtk = elements.target_attack.value();
+          const casterAtk = currentHero.getAtk('s3');
+
+          const atkDiff = (casterAtk - targetAtk) * 0.000175;
+
+          return Math.max((1 + Math.min(atkDiff, 0.7)), 1);} ,
+        multTip: () => ({caster_target_atk_diff: 0.0175 }),
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        single: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
