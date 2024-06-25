@@ -107,9 +107,11 @@ const getModTooltip = (hero, skillId, soulburn = false) => {
   if (values.elemAdv !== null) content += `${skillLabel('elemAdv')}: <i class="fas ${values.elemAdv ? 'fa-check-square' : 'fa-times-circle'} float-right"></i><br/>`;
   if (values.afterMathFormula !== null && values.afterMathFormula.atkPercent!== undefined) {content += `${skillLabel('afterMathFormula')}/${skillLabel('att_rate')}: <b class="float-right">${Math.round(values.afterMathFormula.atkPercent*100)}%</b><br/>`;}
   if (values.afterMathFormula !== null && values.afterMathFormula.defPercent!== undefined) {content += `${skillLabel('afterMathFormula')}/${skillLabel('def_rate')}: <b class="float-right">${Math.round(values.afterMathFormula.defPercent*100)}%</b><br/>`;}
+  if (values.afterMathFormula !== null && values.afterMathFormula.hpPercent!== undefined) {content += `${skillLabel('afterMathFormula')}/${skillLabel('hp_rate')}: <b class="float-right">${Math.round(values.afterMathFormula.hpPercent*100)}%</b><br/>`;}
   if (values.afterMathFormula !== null) content += `${skillLabel('afterMathFormula')}/${skillLabel('pen')}: <b class="float-right">${Math.round(values.afterMathFormula.penetrate*100)}%</b><br/>`;
   if (values.afterMathFormulaNoAdd !== null && values.afterMathFormulaNoAdd.atkPercent!== undefined) {content += `${skillLabel('afterMathFormulaNoAdd')}/${skillLabel('att_rate')}: <b class="float-right">${Math.round(values.afterMathFormulaNoAdd.atkPercent*100)}%</b><br/>`;}
   if (values.afterMathFormulaNoAdd !== null && values.afterMathFormulaNoAdd.defPercent!== undefined) {content += `${skillLabel('afterMathFormulaNoAdd')}/${skillLabel('def_rate')}: <b class="float-right">${Math.round(values.afterMathFormulaNoAdd.defPercent*100)}%</b><br/>`;}
+  if (values.afterMathFormulaNoAdd !== null && values.afterMathFormulaNoAdd.hpPercent!== undefined) {content += `${skillLabel('afterMathFormulaNoAdd')}/${skillLabel('hp_rate')}: <b class="float-right">${Math.round(values.afterMathFormulaNoAdd.hpPercent*100)}%</b><br/>`;}
   if (values.afterMathFormulaNoAdd !== null) content += `${skillLabel('afterMathFormulaNoAdd')}/${skillLabel('pen')}: <b class="float-right">${Math.round(values.afterMathFormulaNoAdd.penetrate*100)}%</b><br/>`;
   if (values.afterMathDmg !== null) content += `${skillLabel('afterMathDmg')}: <b class="float-right">${Math.round(values.afterMathDmg)}</b><br/>`;
   if (values.afterMathDmgNoAdd !== null) content += `${skillLabel('afterMathDmgNoAdd')}: <b class="float-right">${Math.round(values.afterMathDmgNoAdd)}</b><br/>`;
@@ -338,10 +340,10 @@ class Hero {
         if(skillMultipliers.atkPercent!== undefined){
         skillDamage = this.getAtk(skillId)*skillMultipliers.atkPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true);
          }
-        else{
-        console.log("caster_defense is ", elements.caster_defense.value());
-        console.log("defPercent is ", skillMultipliers.defPercent);
+        else if(skillMultipliers.defPercent!== undefined) {
         skillDamage = elements.caster_defense.value()*skillMultipliers.defPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true); 
+         }else{
+        skillDamage = elements.caster_defense.value()*skillMultipliers.hpPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true); 
          }
     }
 
@@ -357,10 +359,10 @@ class Hero {
         if(skillMultipliers.atkPercent!== undefined){
         skillDamage = this.getAtk(skillId)*skillMultipliers.atkPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true);
          }
-        else{
-        console.log("caster_defense is ", elements.caster_defense.value());
-        console.log("defPercent is ", skillMultipliers.defPercent);
+        else if(skillMultipliers.defPercent!== undefined){
         skillDamage = elements.caster_defense.value()*skillMultipliers.defPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true); 
+         }else{
+       skillDamage = elements.caster_defense.value()*skillMultipliers.hpPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true); 
          }
     }
 
