@@ -8446,7 +8446,8 @@ immortal_wukong: {
     barrier: () => elements.caster_max_hp.value()*0.3,
     skills: {
       s1: {
-        rate: (soulburn) => soulburn ? 0.85 : 1.1,
+	soulburn: true,
+        rate: (soulburn) => soulburn ? 1.1 : 0.85,
         pow: 1,
         enhance: [0.05, 0, 0.1, 0, 0.15],
         aoe: true,
