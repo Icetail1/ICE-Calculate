@@ -343,7 +343,7 @@ class Hero {
         else if(skillMultipliers.defPercent!== undefined) {
         skillDamage = elements.caster_defense.value()*skillMultipliers.defPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true); 
          }else{
-        skillDamage = elements.caster_defense.value()*skillMultipliers.hpPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true); 
+        skillDamage = elements.caster_max_hp.value()*skillMultipliers.hpPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true); 
          }
     }
 
@@ -362,7 +362,7 @@ class Hero {
         else if(skillMultipliers.defPercent!== undefined){
         skillDamage = elements.caster_defense.value()*skillMultipliers.defPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true); 
          }else{
-       skillDamage = elements.caster_defense.value()*skillMultipliers.hpPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true); 
+       skillDamage = elements.caster_max_hp.value()*skillMultipliers.hpPercent*dmgConst*this.target.defensivePowerNoDef({ penetrate: () => skillMultipliers.penetrate }, true); 
          }
     }
 
