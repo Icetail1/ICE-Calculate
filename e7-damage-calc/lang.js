@@ -435,6 +435,9 @@
       wandering_prince_cidd:'流浪王子席德',
       hanayome_senya:'龙之伴侣赛纳',
       birgitta:'碧尔姬达',
+      new_moon_luna:'新月露娜',
+      immortal_wukong:'不灭神机悟空',
+      
     },
     nicknames: {
       achates:	'小火奶',   
@@ -759,6 +762,8 @@
       wandering_prince_cidd:'光猴子',
       hanayome_senya:'光塞纳',
       birgitta:'碧尔姬达',
+      new_moon_luna:'光露娜 光水龙',
+      immortal_wukong:'悟空 马喽',
     },
     artifacts: {
       no_proc: '无神器',
