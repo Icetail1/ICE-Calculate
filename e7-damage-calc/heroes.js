@@ -8410,6 +8410,32 @@ albedo: {
       }
    }
  },
+  new_moon_luna: {
+    name: 'New Moon Luna',
+    element: element.light,
+    classType: classType.mage,
+    baseAtk: 1039,
+    form: [elements.caster_max_hp],
+    skills: {
+      s1: {
+        rate: 0.7,
+        pow: 1,
+        flat: () => elements.caster_max_hp.value()*0.12,
+        flatTip: () => ({ caster_max_hp: 12 }),
+        enhance: [0.05, 0, 0.05, 0.05,0, 0.15],
+        single: true,
+      },
+      s2: {
+        rate: 0.7,
+        pow: 0.95,
+        flat: () => elements.caster_max_hp.value()*0.2,
+        flatTip: () => ({ caster_max_hp: 20 }),
+        afterMath: (hitType,soulburn) => (hitType !== hitTypes.miss) ? { hpPercent: 0.16, penetrate: 0.7 } : null,
+        enhance: [0.05, 0.05, 0.05, 0.05,0.05, 0.1],
+        single: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
