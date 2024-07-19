@@ -5098,13 +5098,13 @@ const heroes = {
     baseAtk: 1283,
     skills: {
       s1: {
-        rate: 1,
+        rate: 1.2,
         pow: 1,
         enhance: [0.05, 0, 0.1, 0, 0.15],
         single: true,
       },
       s3: {
-        rate: 1.3,
+        rate: 1.4,
         pow: 1,
         penetrate: () => 0.5,
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
@@ -6248,18 +6248,18 @@ const heroes = {
     element: element.light,
     classType: classType.mage,
     baseAtk: 1359,
-    form: [elements.attack_skill_stack_3],
-    atkUp: () => 1 + elements.attack_skill_stack_3.value() * 0.15,
+    form: [elements.attack_skill_stack_3,elements.nb_targets],
+    atkUp: () => 1 + elements.attack_skill_stack_3.value() * 0.2,
     skills: {
       s1: {
-        rate: 1,
+        rate: 1.1,
         pow: 1,
         enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
         single: true,
       },
       s1_soulburn: {
         name: infoLabel('s1_soulburn'),
-        rate: 1,
+        rate: 1.1,
         pow: 1,
         enhance_from: 's1',
         aoe: true,
@@ -6267,6 +6267,8 @@ const heroes = {
       s3: {
         rate: 1.1,
         pow: 1,
+	mult: () => 1 + (elements.nb_targets.value()-1)*0.1,
+        multTip: () => ({ per_target: 10 }),
         enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
         aoe: true,
       },
