@@ -1062,8 +1062,8 @@ const heroes = {
         single: true,
       },
       s3: {
-        rate: 1.5,
-        pow: 0.95,
+        rate: 1.6,
+        pow: 0.9,
         enhance: [0.05, 0.05, 0.05, 0, 0.05, 0.05, 0.1],
         mult: () => 1 + (100 - elements.target_hp_pc.value())*0.01,
         multTip: () => ({ target_lost_hp_pc: 1 }),
@@ -2551,24 +2551,28 @@ const heroes = {
     element: element.light,
     classType: classType.warrior,
     baseAtk: 957,
+    form: [elements.target_max_hpc],
     skills: {
       s1: {
         rate: 1,
         pow: 1,
-        critDmgBoost: () => 0.2,
+        flat: () => elements.target_max_hp.value()*0.03,
+        flatTip: () => ({ target_max_hp: 3 }),
         enhance: [0.05, 0.05, 0.1, 0.1],
         single: true,
       },
       s2: {
-        rate: 1,
+        rate: 1.1,
         pow: 1,
         enhance: [0.05, 0.05, 0.1, 0.1],
         aoe: true,
       },
       s3: {
         soulburn: true,
-        rate: (soulburn) => soulburn ? 2.5 : 1.8,
+        rate: (soulburn) => soulburn ? 2.3 : 1.6,
         pow: 0.9,
+        flat: () => elements.target_max_hp.value()*0.04,
+        flatTip: () => ({ target_max_hp: 4 }),
         enhance: [0.05, 0.05, 0, 0.05, 0.05, 0.05, 0.15],
         single: true,
       }
@@ -4278,46 +4282,26 @@ const heroes = {
     atkUp: () => elements.caster_immense_power.value() ? 1.15 : 1,
     skills: {
       s1: {
-        rate: 0.8,
+        rate: 1,
         pow: 0.95,
         enhance: [0.05, 0.05, 0.05, 0.1, 0.1]
       },
       s2: {
-        soulburn: true,
-        rate: (soulburn) => soulburn ? 0.9 : 0.7,
+        rate: 0.75,
         pow: 0.9,
-        mult: () => {
-          switch (elements.nb_targets.value()) {
-            case 1: return 1.9;
-            case 2: return 1.6;
-            case 3: return 1.3;
-            default: return 1;
-          }
-        },
-        multTip: () => ({ per_fewer_target: 30 }),
         enhance: [0.05, 0.05, 0.1, 0.1, 0.1],
         aoe: true,
       },
       s2_bis: {
         name: infoLabel('s2_wave_2'),
-        rate: 0.35,
+        rate: 0.75,
         pow: 0.9,
-        mult: () => {
-          switch (elements.nb_targets.value()) {
-            case 1: return 1.9;
-            case 2: return 1.6;
-            case 3: return 1.3;
-            default: return 1;
-          }
-        },
-        multTip: () => ({ per_fewer_target: 30 }),
         enhance_from: 's2',
         aoe: true,
       },
       s3: {
-        rate: 1.15,
+        rate: 1.2,
         pow: 0.95,
-        critDmgBoost: () => 0.2,
         mult: () => 1 + (100-elements.target_hp_pc.value())*0.003,
         multTip: () => ({ caster_lost_hp_pc: 0.3 }),
         enhance: [0.05, 0.05, 0, 0.1, 0.15],
@@ -6831,22 +6815,12 @@ const heroes = {
     element: element.ice,
     classType: classType.ranger,
     baseAtk: 1158,
-    form: [elements.caster_speed, elements.nb_targets, elements.exclusive_equipment_3],
+    form: [elements.nb_targets, elements.exclusive_equipment_3],
     skills: {
       s1: {
         soulburn: true,
-        rate: (soulburn) => soulburn ? 0.85 : 0.6,
+        rate: (soulburn) => soulburn ? 1.1 : 0.9,
         pow: 0.8,
-        mult: () => {
-          let mult = 1 + elements.caster_speed.value()*0.00075;
-          switch (elements.nb_targets.value()) {
-            case 3: mult += 0.2; break;
-            case 2: mult += 0.4; break;
-            case 1: mult += 0.6; break;
-          }
-          return mult;
-        },
-        multTip: () => ({ caster_speed: 0.075, per_fewer_target: 20 }),
         enhance: [0.05, 0.05, 0.05, 0.1, 0.1, 0.1],
         aoe: true,
       },
