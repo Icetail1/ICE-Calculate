@@ -47,8 +47,10 @@
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify({
-                            inputs: base64Image, // 输入的图片 base64 编码
-                            prompt: prompt // 文本提示
+                        inputs: {
+                            prompt: prompt,
+                            image: base64Image
+                    }
                         }),
                     });
 
