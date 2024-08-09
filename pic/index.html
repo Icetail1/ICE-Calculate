@@ -54,7 +54,7 @@
                 const response = await fetch('https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2', {
                     method: 'POST',
                     headers: {
-                        'Authorization': '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',
+                        'Authorization': 'Bearer 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',
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({ inputs: 'a scenic landscape' }),
