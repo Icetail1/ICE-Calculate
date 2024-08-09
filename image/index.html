@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">ice帮你用图片生成图片</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generation with Stable Diffusion XL Refiner</title>
 </head>
 <body>
-    <h1>Ice生成图片！</h1>
+    <h1>Generate Image with Stable Diffusion XL Refiner</h1>
     <input type="file" id="inputImage" accept="image/*" />
     <br>
-    <textarea id="prompt" rows="4" cols="50" placeholder="输入描述词..."></textarea>
+    <textarea id="prompt" rows="4" cols="50" placeholder="Enter your prompt here..."></textarea>
     <br>
-    <button onclick="generateImage()">生成图片</button>
+    <button onclick="generateImage()">Generate Image</button>
     <p id="status"></p>
-    <img id="generatedImage" alt="生成图片" style="max-width: 100%; height: auto;"/>
+    <img id="generatedImage" alt="Generated Image" style="max-width: 100%; height: auto;"/>
 
     <script>
         async function generateImage() {
@@ -22,11 +23,11 @@
             const img = document.getElementById('generatedImage');
 
             if (!inputImage) {
-                alert('你图片呢!');
+                alert('Please upload an image!');
                 return;
             }
             if (!prompt) {
-                alert('艹填提示词!');
+                alert('Please enter a prompt!');
                 return;
             }
 
@@ -47,8 +48,8 @@
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify({
-                            inputs: base64Image, // 输入的图片 base64 编码
-                            parameters: {
+                            inputs: {
+                                image: base64Image, // 输入的图片 base64 编码
                                 prompt: prompt // 文本提示
                             }
                         }),
