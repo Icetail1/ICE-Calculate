@@ -2,18 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Generation with Stable Diffusion XL Refiner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">ice帮你用图片生成图片</title>
 </head>
 <body>
-    <h1>Generate Image with Stable Diffusion XL Refiner</h1>
+    <h1>Ice生成图片！</h1>
     <input type="file" id="inputImage" accept="image/*" />
     <br>
-    <textarea id="prompt" rows="4" cols="50" placeholder="Enter your prompt here..."></textarea>
+    <textarea id="prompt" rows="4" cols="50" placeholder="输入描述词..."></textarea>
     <br>
-    <button onclick="generateImage()">Generate Image</button>
+    <button onclick="generateImage()">生成图片</button>
     <p id="status"></p>
-    <img id="generatedImage" alt="Generated Image" style="max-width: 100%; height: auto;"/>
+    <img id="generatedImage" alt="生成图片" style="max-width: 100%; height: auto;"/>
 
     <script>
         async function generateImage() {
@@ -23,11 +22,11 @@
             const img = document.getElementById('generatedImage');
 
             if (!inputImage) {
-                alert('Please upload an image!');
+                alert('你图片呢!');
                 return;
             }
             if (!prompt) {
-                alert('Please enter a prompt!');
+                alert('艹填提示词!');
                 return;
             }
 
@@ -36,36 +35,36 @@
 
             try {
                 // Convert image to base64
- const reader = new FileReader();
-reader.onloadend = async function () {
-    const base64Image = reader.result.split(',')[1];
+                const reader = new FileReader();
+                reader.onloadend = async function () {
+                    const base64Image = reader.result.split(',')[1];
 
-    // 发送图像数据到 API
-    const response = await fetch('https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-refiner-1.0', {
-        method: 'POST',
-        headers: {
-            'Authorization': 'Bearer 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',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            inputs: {
-                image: base64Image,
-                prompt: prompt
-            }
-        }),
-    });
+                    // Call Hugging Face API
+                    const response = await fetch('https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-refiner-1.0', {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': 'Bearer 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', // 替换为你的 Hugging Face API 密钥
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            inputs: base64Image, // 输入的图片 base64 编码
+                            parameters: {
+                                prompt: prompt // 文本提示
+                            }
+                        }),
+                    });
 
-    // 处理 API 响应
-    if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`Error: ${response.status} - ${errorText}`);
-    }
+                    if (!response.ok) {
+                        const errorText = await response.text();
+                        throw new Error(`Error: ${response.status} - ${errorText}`);
+                    }
 
-    const data = await response.blob();
-    const imageUrl = URL.createObjectURL(data);
-    img.src = imageUrl;
-};
-reader.readAsDataURL(inputImage);
+                    const data = await response.blob(); // 处理返回的 Blob 数据
+                    const imageUrl = URL.createObjectURL(data); // 创建图片 URL
+                    img.src = imageUrl;
+                    status.innerText = 'Image generated successfully!';
+                };
+                reader.readAsDataURL(inputImage); // 读取图像为 base64
             } catch (error) {
                 status.innerText = 'Error generating image. Please try again.';
                 console.error('Error:', error.message);
