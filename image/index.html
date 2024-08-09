@@ -2,18 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Generation with Stable Diffusion XL Refiner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">ice帮你用图片生成图片</title>
 </head>
 <body>
     <h1>Generate Image with Stable Diffusion XL Refiner</h1>
     <input type="file" id="inputImage" accept="image/*" />
     <br>
-    <textarea id="prompt" rows="4" cols="50" placeholder="Enter your prompt here..."></textarea>
+    <textarea id="prompt" rows="4" cols="50" placeholder="输入描述词..."></textarea>
     <br>
-    <button onclick="generateImage()">Generate Image</button>
+    <button onclick="generateImage()">生成图片</button>
     <p id="status"></p>
-    <img id="generatedImage" alt="Generated Image" style="max-width: 100%; height: auto;"/>
+    <img id="generatedImage" alt="生成图片" style="max-width: 100%; height: auto;"/>
 
     <script>
         async function generateImage() {
@@ -23,11 +22,11 @@
             const img = document.getElementById('generatedImage');
 
             if (!inputImage) {
-                alert('Please upload an image!');
+                alert('你图片呢!');
                 return;
             }
             if (!prompt) {
-                alert('Please enter a prompt!');
+                alert('艹填提示词!');
                 return;
             }
 
