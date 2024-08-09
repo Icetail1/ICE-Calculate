@@ -31,8 +31,7 @@
                 const response = await fetch('https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5', {
                     method: 'POST',
                     headers: {
-                        'Authorization': 'Bearer ${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}', // 替换为你的 Hugging Face API 密钥
-                        'Content-Type': 'application/json'
+                        'Authorization': 'Bearer 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', // 替换为你的 Hugging Face API 密钥
                     },
                     body: JSON.stringify({
                         inputs: prompt // 输入的文本提示
