@@ -40,7 +40,7 @@
             promptText.innerText = ''; // Clear previous prompt text
 
             try {
-                // Step 1: Use ResNet-50 to generate a prompt from the image
+                // Step 1: Use ResNet-50 to generate prompts from the image
                 const reader = new FileReader();
                 reader.onloadend = async function () {
                     const base64Image = reader.result.split(',')[1];
@@ -63,10 +63,10 @@
                     }
 
                     const resnetData = await resnetResponse.json();
-                    const imagePrompt = resnetData[0].label; // Assuming the prompt is the label of the top prediction
 
-                    // Combine user input prompt with image prompt
-                    const combinedPrompt = `${userPrompt}, ${imagePrompt}`;
+                    // Combine tags based on their confidence level (using all tags in this case)
+                    const tags = resnetData.map(item => item.label).join(", ");
+                    const combinedPrompt = `${userPrompt}, ${tags}`;
                     promptText.innerText = `Combined Prompt: ${combinedPrompt}`;
                     
                     // Step 2: Use Stable Diffusion to generate a new image with the combined prompt
