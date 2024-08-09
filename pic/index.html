@@ -3,79 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hugging Face Image Generator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        input[type="text"] {
-            width: 300px;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        img {
-            margin-top: 20px;
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    <title>Stable Diffusion Image Generator</title>
 </head>
 <body>
-    <h1>Hugging Face Image Generator</h1>
-    <input type="text" id="prompt" placeholder="Enter your prompt here">
+    <h1>Generate Image with Stable Diffusion</h1>
+    <textarea id="prompt" rows="4" cols="50" placeholder="Enter your prompt here..."></textarea>
+    <br>
     <button onclick="generateImage()">Generate Image</button>
-    <div id="result">
-        <p id="status"></p>
-        <img id="generatedImage" alt="Generated Image">
-    </div>
+    <p id="status"></p>
+    <img id="generatedImage" alt="Generated Image" style="max-width: 100%; height: auto;"/>
 
     <script>
-async function generateImage() {
-    const prompt = document.getElementById('prompt').value;
-    const status = document.getElementById('status');
-    const img = document.getElementById('generatedImage');
+        async function generateImage() {
+            const prompt = document.getElementById('prompt').value;
+            const status = document.getElementById('status');
+            const img = document.getElementById('generatedImage');
 
-    if (!prompt) {
-        alert('Please enter a prompt!');
-        return;
-    }
+            if (!prompt) {
+                alert('Please enter a prompt!');
+                return;
+            }
 
-    status.innerText = 'Generating image...';
-    img.src = ''; // Clear any previous image
+            status.innerText = 'Generating image...';
+            img.src = ''; // Clear any previous image
 
-    try {
-        const response = await fetch('https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2', {
-            method: 'POST',
-            headers: {
-                'Authorization': 'Bearer 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', // 确保 Token 正确
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                inputs: prompt // 输入的文本提示
-            }),
-        });
+            try {
+                const response = await fetch('https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': 'Bearer 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', // 替换为你的 Hugging Face API 密钥
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        inputs: prompt // 输入的文本提示
+                    }),
+                });
 
-        if (!response.ok) {
-            const errorText = await response.text();
-            throw new Error(`Error: ${response.status} - ${errorText}`);
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`Error: ${response.status} - ${errorText}`);
+                }
+
+                const data = await response.blob(); // 处理返回的 Blob 数据
+                const imageUrl = URL.createObjectURL(data); // 创建图片 URL
+                img.src = imageUrl;
+                status.innerText = 'Image generated successfully!';
+            } catch (error) {
+                status.innerText = 'Error generating image. Please try again.';
+                console.error('Error:', error.message);
+            }
         }
-
-        const data = await response.blob(); // 处理返回的 Blob 数据
-        const imageUrl = URL.createObjectURL(data); // 创建图片 URL
-        img.src = imageUrl;
-        status.innerText = 'Image generated successfully!';
-    } catch (error) {
-        status.innerText = 'Error generating image. Please try again.';
-        console.error('Error:', error.message);
-    }
-}
     </script>
 </body>
 </html>
