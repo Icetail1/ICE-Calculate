@@ -931,7 +931,7 @@ const heroes = {
     element: element.dark,
     classType: classType.thief,
     baseAtk: 1138,
-    form: [elements.caster_hp_pc],
+    form: [elements.caster_hp_pc, elements.exclusive_equipment_3],
     atkUp: () => {
       let boost = 0.0051;
       for (let i = 0; i < Number(document.getElementById(`molagora-s2`).value); i++) {
@@ -954,6 +954,7 @@ const heroes = {
         rate: (soulburn) => soulburn ? 1.45 : 1.2,
         pow: 0.95,
         enhance: [0.05, 0.05, 0, 0.1, 0.15],
+	exEq: () => elements.exclusive_equipment_3.value() ? 0.1 : 0,
         aoe: true,
       },
     }
