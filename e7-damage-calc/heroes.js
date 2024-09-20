@@ -8444,8 +8444,8 @@ immortal_wukong: {
       }
     }
   },
-  ervalen: {
-    name: 'Ervalen',
+  fenris: {
+    name: 'Fenris',
     element: element.earth,
     classType: classType.ranger,
     baseAtk: 1327,
