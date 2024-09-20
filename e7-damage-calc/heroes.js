@@ -8444,6 +8444,35 @@ immortal_wukong: {
       }
     }
   },
+  ervalen: {
+    name: 'Ervalen',
+    element: element.earth,
+    classType: classType.ranger,
+    baseAtk: 1327,
+    form: [elements.target_max_hp, elements.caster_max_hp],
+    skills: {
+      s1: {
+        rate: (soulburn) => soulburn ? 1.9 : 1.2,
+        pow: 1,
+        enhance: [0.05, 0, 0.1, 0, 0.15],
+        single: true,
+      },
+      s2: {
+        rate:  0.7,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        AOE: true,
+      },
+      s3: {
+        rate: 1.3,
+        pow: 1,
+        mult: () => elements.caster_max_hp.value() < elements.target_max_hp.value() ? 1 + Math.min((elements.target_max_hp.value() - elements.caster_max_hp.value()) *0.00005, 0.7) : 1,
+        multTip: () => ({caster_vs_target_hp_diff: 5}),
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        single: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
