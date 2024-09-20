@@ -437,6 +437,7 @@
       birgitta:'碧尔姬达',
       new_moon_luna:'新月露娜',
       immortal_wukong:'不灭神机悟空',
+      fenris:'佩里斯',
       
     },
     nicknames: {
@@ -764,6 +765,7 @@
       birgitta:'碧尔姬达',
       new_moon_luna:'光露娜 光水龙',
       immortal_wukong:'悟空 马喽',
+      fenris:'木卧龙',
     },
     artifacts: {
       no_proc: '无神器',
