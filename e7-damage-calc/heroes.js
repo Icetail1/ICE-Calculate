@@ -8452,6 +8452,7 @@ immortal_wukong: {
     form: [elements.target_max_hp, elements.caster_max_hp],
     skills: {
       s1: {
+	soulburn: true,
         rate: (soulburn) => soulburn ? 1.9 : 1.2,
         pow: 1,
         enhance: [0.05, 0, 0.1, 0, 0.15],
