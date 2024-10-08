@@ -2,98 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ice!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">ice帮你用图片生成图片</title>
 </head>
 <body>
-    <h1>ice生图</h1>
-    
+    <h1>Ice生成图片！</h1>
     <input type="file" id="inputImage" accept="image/*" />
     <br>
-    <textarea id="userPrompt" rows="4" cols="50" placeholder="填入tag..."></textarea>
+    <textarea id="prompt" rows="4" cols="50" placeholder="输入描述词..."></textarea>
     <br>
-    <button onclick="generateImage()">ice生图</button>
-    
+    <button onclick="generateImage()">生成图片</button>
     <p id="status"></p>
-    <p id="promptText"></p>
-    <img id="generatedImage" alt="生图" style="max-width: 100%; height: auto;"/>
+    <img id="generatedImage" alt="生成图片" style="max-width: 100%; height: auto;"/>
 
     <script>
         async function generateImage() {
             const inputImage = document.getElementById('inputImage').files[0];
-            const userPrompt = document.getElementById('userPrompt').value;
+            const prompt = document.getElementById('prompt').value;
             const status = document.getElementById('status');
             const img = document.getElementById('generatedImage');
-            const promptText = document.getElementById('promptText');
 
             if (!inputImage) {
-                alert('Please upload an image!');
+                alert('你图片呢!');
                 return;
             }
-            if (!userPrompt) {
-                alert('Please enter a prompt!');
+            if (!prompt) {
+                alert('艹填提示词!');
                 return;
             }
 
-            status.innerText = 'Analyzing image with ResNet-50...';
+            status.innerText = 'Generating image...';
             img.src = ''; // Clear any previous image
-            promptText.innerText = ''; // Clear previous prompt text
 
             try {
-                // Step 1: Use ResNet-50 to generate prompts from the image
+                // Convert image to base64
                 const reader = new FileReader();
                 reader.onloadend = async function () {
                     const base64Image = reader.result.split(',')[1];
 
-                    // Call Hugging Face API to use ResNet-50 model
-                    const resnetResponse = await fetch('https://api-inference.huggingface.co/models/microsoft/resnet-50', {
+                    // Call Hugging Face API
+                    const response = await fetch('https://api-inference.huggingface.co/models/timbrooks/instruct-pix2pix', {
                         method: 'POST',
                         headers: {
-                            'Authorization': 'Bearer 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', // Replace with your Hugging Face API key
+                            'Authorization': 'Bearer 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', // 替换为你的 Hugging Face API 密钥
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify({
-                            inputs: base64Image // Input image in base64 format
+                        image: base64Image,
+                        prompt: prompt
                         }),
                     });
 
-                    if (!resnetResponse.ok) {
-                        const errorText = await resnetResponse.text();
-                        throw new Error(`ResNet-50 Error: ${resnetResponse.status} - ${errorText}`);
+                    if (!response.ok) {
+                        const errorText = await response.text();
+                        throw new Error(`Error: ${response.status} - ${errorText}`);
                     }
 
-                    const resnetData = await resnetResponse.json();
-
-                    // Combine tags based on their confidence level (using all tags in this case)
-                    const tags = resnetData.map(item => item.label).join(", ");
-                    const combinedPrompt = `${userPrompt}, ${tags}`;
-                    promptText.innerText = `Combined Prompt: ${combinedPrompt}`;
-                    
-                    // Step 2: Use Stable Diffusion to generate a new image with the combined prompt
-                    status.innerText = 'Generating image with Stable Diffusion...';
-
-                    const sdResponse = await fetch('https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-3-medium-diffusers', {
-                        method: 'POST',
-                        headers: {
-                            'Authorization': 'Bearer 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', // Replace with your Hugging Face API key
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            inputs: combinedPrompt // Using the combined prompt
-                        }),
-                    });
-
-                    if (!sdResponse.ok) {
-                        const errorText = await sdResponse.text();
-                        throw new Error(`Stable Diffusion Error: ${sdResponse.status} - ${errorText}`);
-                    }
-
-                    const sdData = await sdResponse.blob(); // Handle returned blob data
-                    const imageUrl = URL.createObjectURL(sdData); // Create image URL
+                    const data = await response.blob(); // 处理返回的 Blob 数据
+                    const imageUrl = URL.createObjectURL(data); // 创建图片 URL
                     img.src = imageUrl;
                     status.innerText = 'Image generated successfully!';
                 };
-                reader.readAsDataURL(inputImage); // Read the image as base64 data
+                reader.readAsDataURL(inputImage); // 读取图像为 base64
             } catch (error) {
                 status.innerText = 'Error generating image. Please try again.';
                 console.error('Error:', error.message);
