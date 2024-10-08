@@ -589,7 +589,7 @@
       lidica:	'火弓 火高潮 高潮脸', 
       lilias:	'llys 火盾 火莉莉',  
       lilibet:	'剪刀 llb',  
-      lionheart_cermia:	'王夏娜 狮心王 光夏娜',   
+      lionheart_cermia:	'王夏娜 狮心王 光夏娜 举手人',   
       little_queen_charlotte:	'光呆毛',   
       lorina:	'暗枪(未转职)',
       lots:	'木拉兹 木拉',  
