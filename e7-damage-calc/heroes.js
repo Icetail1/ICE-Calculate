@@ -8481,12 +8481,14 @@ afternoon_soak_flan: {
     baseAtk: 1182,
     skills: {
       s1: {
+	onlyCrit: true,      
         rate: 1.1,
         pow: 1,
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         single: true,
       },
       s1_extra: {
+	onlyCrit: true,
         name: 'S1 AOE',
         rate: 0.7,
         pow: 1,
@@ -8494,6 +8496,7 @@ afternoon_soak_flan: {
         aoe: true,
       },
       s3: {
+	onlyCrit: true,
         rate: 1.5,
         pow: 1,
 	enhance: [0.05, 0.05, 0, 0.1, 0.1],
