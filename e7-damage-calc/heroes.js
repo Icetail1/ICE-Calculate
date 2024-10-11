@@ -8474,6 +8474,33 @@ immortal_wukong: {
       }
     }
   },
+afternoon_soak_flan: {
+    name: 'Afternoon Soak Flan',
+    element: element.fire,
+    classType: classType.ranger,
+    baseAtk: 1182,
+    skills: {
+      s1: {
+        rate: 1.1,
+        pow: 1,
+        enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        single: true,
+      },
+      s1_extra: {
+        name: 'S1 AOE',
+        rate: 0.7,
+        pow: 1,
+        enhance_from: 's1',
+        aoe: true,
+      },
+      s3: {
+        rate: 1.5,
+        pow: 1,
+	enhance: [0.05, 0.05, 0, 0.1, 0.1],
+        single: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
