@@ -5841,6 +5841,9 @@ const heroes = {
         detonation: () => 1,
         aoe: true,
       },
+      s2: {
+	  name: infoLabel('生命值处填效果命中用于转化攻击力计算，懒得改代码力'),
+	   }   
       s3: {
         rate: 0.9,
         pow: 1,
