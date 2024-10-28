@@ -101,6 +101,7 @@
       ml_celine_nimble_sword: 'Nimble Sword',
       run: '暴走(计算心理阴影伤害时修改攻击力加成到100%-300%)',
       run_soulburn: '暴走烧魂(计算心理阴影伤害时修改攻击力加成到100%-300%)',
+      hptrans: '在生命值填入效果命中用于转化攻击力计算，懒得改代码力',
       s1_extra_attack: 'S1 Extra Attack',
       s1_soulburn: 'S1 烧魂',
       s2_wave_2: 'S2 Wave 2',
