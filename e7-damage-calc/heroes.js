@@ -5838,7 +5838,7 @@ const heroes = {
         rate: 0.5,
         pow: 1.3,
         enhance_from: 's1',
-	detonate: dot.burn,
+        detonate: [dot.burn],
         detonation: () => 1,
         aoe: true,
       },
