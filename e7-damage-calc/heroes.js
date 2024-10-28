@@ -5824,7 +5824,8 @@ const heroes = {
     classType: classType.mage,
     baseAtk: 1197,
     hpTransAtk: () => elements.caster_max_hp.value()*0.09,
-    dot: [dot.burn,elements.caster_max_hp],
+    dot: [dot.burn],
+    form: [elements.caster_max_hp],
     skills: {
       s1: {
         rate: 1,
