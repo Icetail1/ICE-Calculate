@@ -5834,7 +5834,7 @@ const heroes = {
         single: true,
       },
       s1_extra: {
-        name: infoLabel('s1 追加'),
+        name: infoLabel('hptrans'),
         rate: 0.5,
         pow: 1.3,
         enhance_from: 's1',
@@ -5842,11 +5842,6 @@ const heroes = {
         detonation: () => 1,
         aoe: true,
       },
-      s2: {
-	  name: infoLabel('生命值处填效果命中用于转化攻击力计算，懒得改代码力'),
-          rate: 0,
-          pow: 0,
-	   },   
       s3: {
         rate: 0.9,
         pow: 1,
