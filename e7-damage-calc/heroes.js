@@ -5823,7 +5823,7 @@ const heroes = {
     element: element.light,
     classType: classType.mage,
     baseAtk: 1197,
-    form: [elements.caster_max_hp,elements.target_burn_detonate],
+    form: [elements.target_burn_detonate,elements.caster_max_hp],
     hpTransAtk: () => elements.caster_max_hp.value()*0.09,
     dot: [dot.burn],
     skills: {
