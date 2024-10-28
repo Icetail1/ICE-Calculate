@@ -2021,8 +2021,9 @@ const heroes = {
       s3: {
         rate: 0.6,
         pow: 1,
-        flat: () => elements.caster_defense.value()*1.15,
-        flatTip: () => ({ caster_defense: 115 }),
+        flat: () => elements.caster_defense.value()*1,
+        flatTip: () => ({ caster_defense: 100 }),
+	penetrate: () => 0.5,
         enhance: [0.05, 0.05, 0, 0.05, 0.15],
         aoe: true,
       }
@@ -4479,15 +4480,15 @@ const heroes = {
     form: [elements.caster_max_hp, elements.exclusive_equipment_3],
     skills: {
       s1: {
-        rate: 0.7,
+        rate: 1,
         pow: 1,
-        flat: () => elements.caster_max_hp.value()*0.08,
-        flatTip: () => ({ caster_max_hp: 8 }),
+        flat: () => elements.caster_max_hp.value()*0.1,
+        flatTip: () => ({ caster_max_hp: 10 }),
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         single: true,
       },
       s3: {
-        rate: 0.7,
+        rate: 1,
         pow: 1,
         flat: () => elements.caster_max_hp.value()*0.15,
         flatTip: () => ({ caster_max_hp: 15 }),
@@ -5822,6 +5823,7 @@ const heroes = {
     element: element.light,
     classType: classType.mage,
     baseAtk: 1197,
+    hpTransAtk: () => elements.caster_max_hp.value()*0.09,
     dot: [dot.burn],
     skills: {
       s1: {
@@ -5835,6 +5837,8 @@ const heroes = {
         rate: 0.5,
         pow: 1.3,
         enhance_from: 's1',
+	detonate: dot.burn,
+        detonation: () => 1,
         aoe: true,
       },
       s3: {
