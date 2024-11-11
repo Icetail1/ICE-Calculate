@@ -4477,7 +4477,7 @@ const heroes = {
     element: element.earth,
     classType: classType.knight,
     baseAtk: 957,
-    form: [elements.caster_max_hp, elements.exclusive_equipment_3],
+    form: [elements.caster_max_hp, elements.exclusive_equipment_3,elements.target_is_highest_max_hp],
     skills: {
       s1: {
         rate: 1,
@@ -4493,6 +4493,10 @@ const heroes = {
         flat: () => elements.caster_max_hp.value()*0.15,
         flatTip: () => ({ caster_max_hp: 15 }),
         exEq: () => elements.exclusive_equipment_3.value() ? 0.1 : 0,
+	penetrate: () => {
+          if (!elements.target_is_highest_max_hp.value()) return 0;
+          return 0.7;
+        },
         enhance: [0.05, 0.05, 0, 0.1, 0.1],
         aoe: true,
       }
