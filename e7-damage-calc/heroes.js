@@ -8527,7 +8527,7 @@ bystander_hwayoung: {
       },
       s3: {
 	soulburn: true,
-        rate: 1.8,
+        rate: (soulburn) => soulburn ? 2.3 : 1.8,
         pow: 0.95,
 	mult: (soulburn) => {
           if (!document.getElementById(`elem-adv`).checked) return 1;
