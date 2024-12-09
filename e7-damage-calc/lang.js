@@ -440,6 +440,7 @@
       immortal_wukong:'不灭神机悟空',
       fenris:'佩里斯',
       afternoon_soak_flan:'午时戏水芙兰',
+      bystander_hwayoung:'旁观者何英',
       
     },
     nicknames: {
@@ -769,6 +770,7 @@
       immortal_wukong:'悟空 马喽',
       fenris:'木卧龙',
       afternoon_soak_flan:'火芙兰',
+      bystander_hwayoung:'暗火腿 暗腿',
     },
     artifacts: {
       no_proc: '无神器',
