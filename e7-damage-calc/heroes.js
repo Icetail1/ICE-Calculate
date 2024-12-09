@@ -8513,6 +8513,33 @@ afternoon_soak_flan: {
       }
     }
   },
+bystander_hwayoung: {
+    name: 'Bystander Hwayoung',
+    element: element.dark,
+    classType: classType.warrior,
+    baseAtk: 1208,
+    skills: {
+      s1: {
+        rate: 1.2,
+        pow: 1,
+        enhance: [0.05, 0.05, 0.05, 0.05, 0.1],
+        single: true,
+      },
+      s3: {
+        rate: 1.8,
+        pow: 0.95,
+	mult: (soulburn) => {
+          if (!document.getElementById(`elem-adv`).checked) return 1;
+
+          return soulburn ? 2.2 : 2;
+        },
+        multTip: () => ({ elemental_advantage: 100 }),
+	multTip: (soulburn) => ({ elemental_advantage: soulburn ? 120 : 100 }),
+        enhance: [0.05, 0.05, 0.05,0, 0.05,0.05, 0.1],
+        single: true,
+      },
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
