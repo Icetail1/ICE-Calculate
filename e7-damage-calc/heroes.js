@@ -8526,6 +8526,7 @@ bystander_hwayoung: {
         single: true,
       },
       s3: {
+	soulburn: true,
         rate: 1.8,
         pow: 0.95,
 	mult: (soulburn) => {
