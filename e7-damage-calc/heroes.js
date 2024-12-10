@@ -8558,7 +8558,7 @@ bystander_hwayoung: {
         rate: 1,
         pow: 1,
         afterMath: (hitType,soulburn) => (hitType !== hitTypes.miss) ? { hpPercent: 0.15, penetrate: 0.7 } : null,
-        single: true,
+        aoe: true,
       }
     }
   },
