@@ -8541,6 +8541,27 @@ bystander_hwayoung: {
       },
     }
   },
+  young_senya: {
+    name: 'Young Senya',
+    element: element.earth,
+    classType: classType.soul_weaver,
+    baseAtk: 1039,
+    form: [elements.caster_max_hp],
+    skills: {
+      s1: {
+        rate: 1,
+        pow: 1,
+        enhance: [0.05,0.05, 0.05,0.05, 0.1],
+        single: true,
+      },
+      s2: {
+        rate: 1,
+        pow: 1,
+        afterMath: (hitType,soulburn) => (hitType !== hitTypes.miss) ? { hpPercent: 0.15, penetrate: 0.7 } : null,
+        single: true,
+      }
+    }
+  },
   astromancer_Elena: {
     name: 'Astromancer Elena',
     element: element.light,
