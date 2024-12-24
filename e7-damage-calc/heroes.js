@@ -448,8 +448,9 @@ const heroes = {
         single: true,
       },
       s2: {
-        rate: 0.6,
+        rate: 0.45,
         pow: 1.3,
+	afterMath: (hitType,soulburn) => (hitType !== hitTypes.miss) ? { atkPercent: 0.4, penetrate: 0.7 } : null,
         aoe: true,
       },
       s3: {
@@ -1708,7 +1709,7 @@ const heroes = {
         single: true,
       },
       s1_alt: {
-        rate: 1.2,
+        rate: 1.4,
         pow: 1,
         name: 'S1 Demolition',
         mult: () => 1 + (100-elements.target_hp_pc.value())*0.004,
@@ -6767,7 +6768,7 @@ const heroes = {
     element: element.earth,
     classType: classType.warrior,
     baseAtk: 1228,
-    form: [elements.target_has_silence, elements.exclusive_equipment_2],
+    form: [elements.target_has_debuff, elements.exclusive_equipment_2],
     skills: {
       s1: {
         rate: 1,
@@ -6784,8 +6785,8 @@ const heroes = {
       s3: {
         rate: 2,
         pow: 0.95,
-        penetrate: () => document.getElementById(`target-has-silence`).checked ? 0.7 : 0,
-        penetrateTip: () => ({target_has_silence:70}),
+        mult: () => elements.target_has_debuff.value() ? 1.5 : 1,
+        multTip: () => ({ target_has_debuff: 50 }),
         enhance: [0.05, 0.05, 0, 0.05, 0.1, 0.1],
         single: true,
       }
@@ -7392,10 +7393,10 @@ const heroes = {
     element: element.fire,
     classType: classType.ranger,
     baseAtk: 1283,
-    form: [elements.caster_speed, elements.target_speed],
+    form: [elements.caster_speed],
     skills: {
       s1: {
-        rate: 0.95,
+        rate: 0.85,
         pow: 0.9,
         enhance: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.1],
         mult: () => 1 + elements.caster_speed.value()*0.00075,
@@ -7403,20 +7404,14 @@ const heroes = {
         single: true,
       },
       s2: {
-        rate: 0.75,
+        rate: 1.4,
         pow: 1.3,
-        mult: () => {
-          const casterSpd = elements.caster_speed.value();
-          const targetSpd = elements.target_speed.value();
-
-          const spdDiff = (casterSpd-targetSpd)*0.025;
-          return Math.min(Math.max(0, spdDiff)+1, 3);
-        },
-        multTip: () => ({ caster_target_spd_diff: 2.5 }),
+        mult: () => 1 + elements.caster_speed.value()*0.0015,
+        multTip: () => ({ caster_speed: 0.15 }),
         single: true,
       },
       s3: {
-        rate: 1.5,
+        rate: 1.2,
         pow: 1,
         enhance: [0.05, 0.05, 0, 0, 0, 0.1, 0.1],
         single: true,
