@@ -4291,7 +4291,7 @@ const heroes = {
       },
       s2: {
         rate: 0.75,
-        pow: 0.9,
+        pow: 1,
         enhance: [0.05, 0, 0.1, 0, 0.15],
         aoe: true,
       },
