@@ -3814,7 +3814,7 @@ const heroes = {
     element: element.fire,
     classType: classType.knight,
     baseAtk: 821,
-    form: [elements.caster_max_hp, elements.highest_ally_attack],
+    form: [elements.caster_max_hp, elements.highest_ally_attack,elements.target_has_provoke],
     skills: {
       s1: {
         rate: 0.8,
@@ -3828,7 +3828,8 @@ const heroes = {
         rate: 1.1,
         pow: 1,
         atk: () =>  elements.highest_ally_attack.value(),
-        noBuff: true,
+	mult: () => elements.target_has_provoke.value()  ? 1.8 : 1,
+        multTip: () => ({ target_has_provoke: 80 }),
         enhance: [0.05, 0.05, 0, 0.05, 0.05, 0.1],
         aoe: true,
       }
